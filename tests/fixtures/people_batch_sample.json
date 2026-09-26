@@ -1,0 +1,148 @@
+{
+ "copyright": "Copyright 2026 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+ "people": [
+  {
+   "id": 694973,
+   "fullName": "Paul Skenes",
+   "link": "/api/v1/people/694973",
+   "firstName": "Paul",
+   "lastName": "Skenes",
+   "primaryNumber": "30",
+   "birthDate": "2002-05-29",
+   "currentAge": 24,
+   "birthCity": "Fullerton",
+   "birthStateProvince": "CA",
+   "birthCountry": "USA",
+   "height": "6' 6\"",
+   "weight": 260,
+   "active": true,
+   "primaryPosition": {
+    "code": "1",
+    "name": "Pitcher",
+    "type": "Pitcher",
+    "abbreviation": "P"
+   },
+   "useName": "Paul",
+   "useLastName": "Skenes",
+   "middleName": "David",
+   "boxscoreName": "Skenes",
+   "gender": "M",
+   "isPlayer": true,
+   "isVerified": true,
+   "draftYear": 2023,
+   "mlbDebutDate": "2024-05-11",
+   "batSide": {
+    "code": "R",
+    "description": "Right"
+   },
+   "pitchHand": {
+    "code": "R",
+    "description": "Right"
+   },
+   "nameFirstLast": "Paul Skenes",
+   "nameSlug": "paul-skenes-694973",
+   "firstLastName": "Paul Skenes",
+   "lastFirstName": "Skenes, Paul",
+   "lastInitName": "Skenes, P",
+   "initLastName": "P Skenes",
+   "fullFMLName": "Paul David Skenes",
+   "fullLFMName": "Skenes, Paul David",
+   "strikeZoneTop": 3.478,
+   "strikeZoneBottom": 1.755
+  },
+  {
+   "id": 805810,
+   "fullName": "Blake Mitchell",
+   "link": "/api/v1/people/805810",
+   "firstName": "Blake",
+   "lastName": "Mitchell",
+   "birthDate": "2004-08-03",
+   "currentAge": 22,
+   "birthCity": "Clear Lake",
+   "birthStateProvince": "TX",
+   "birthCountry": "USA",
+   "height": "6' 0\"",
+   "weight": 202,
+   "active": true,
+   "primaryPosition": {
+    "code": "2",
+    "name": "Catcher",
+    "type": "Catcher",
+    "abbreviation": "C"
+   },
+   "useName": "Blake",
+   "useLastName": "Mitchell",
+   "middleName": "Austin",
+   "boxscoreName": "Mitchell",
+   "gender": "M",
+   "isPlayer": true,
+   "isVerified": true,
+   "draftYear": 2023,
+   "batSide": {
+    "code": "L",
+    "description": "Left"
+   },
+   "pitchHand": {
+    "code": "R",
+    "description": "Right"
+   },
+   "nameFirstLast": "Blake Mitchell",
+   "nameSlug": "blake-mitchell-805810",
+   "firstLastName": "Blake Mitchell",
+   "lastFirstName": "Mitchell, Blake",
+   "lastInitName": "Mitchell, B",
+   "initLastName": "B Mitchell",
+   "fullFMLName": "Blake Austin Mitchell",
+   "fullLFMName": "Mitchell, Blake Austin",
+   "strikeZoneTop": 3.203,
+   "strikeZoneBottom": 1.617
+  },
+  {
+   "id": 814522,
+   "fullName": "Caden Kendle",
+   "link": "/api/v1/people/814522",
+   "firstName": "Caden",
+   "lastName": "Kendle",
+   "birthDate": "2002-03-13",
+   "currentAge": 24,
+   "birthCity": "Newport Beach",
+   "birthStateProvince": "CA",
+   "birthCountry": "USA",
+   "height": "5' 11\"",
+   "weight": 200,
+   "active": true,
+   "primaryPosition": {
+    "code": "O",
+    "name": "Outfield",
+    "type": "Outfielder",
+    "abbreviation": "OF"
+   },
+   "useName": "Caden",
+   "useLastName": "Kendle",
+   "middleName": "Thomas",
+   "boxscoreName": "Kendle",
+   "gender": "M",
+   "isPlayer": true,
+   "isVerified": true,
+   "draftYear": 2024,
+   "batSide": {
+    "code": "R",
+    "description": "Right"
+   },
+   "pitchHand": {
+    "code": "R",
+    "description": "Right"
+   },
+   "nameFirstLast": "Caden Kendle",
+   "nameSlug": "caden-kendle-814522",
+   "firstLastName": "Caden Kendle",
+   "lastFirstName": "Kendle, Caden",
+   "lastInitName": "Kendle, C",
+   "initLastName": "C Kendle",
+   "fullFMLName": "Caden Thomas Kendle",
+   "fullLFMName": "Kendle, Caden Thomas",
+   "strikeZoneTop": 3.165,
+   "strikeZoneBottom": 1.598
+  }
+ ]
+}

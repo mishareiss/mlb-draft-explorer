@@ -1,0 +1,386 @@
+{
+ "copyright": "Copyright 2026 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+ "drafts": {
+  "draftYear": 2023,
+  "rounds": [
+   {
+    "round": "1",
+    "picks": [
+     {
+      "bisPlayerId": 5010764,
+      "pickRound": "1",
+      "pickNumber": 1,
+      "displayPickNumber": 1,
+      "roundPickNumber": 1,
+      "rank": 1,
+      "pickValue": "9721000",
+      "signingBonus": "9200000",
+      "home": {
+       "city": "Lake Forest",
+       "state": "California",
+       "country": "USA"
+      },
+      "scoutingReport": "https://www.mlb.com/video/2023-draft-paul-skenes-rhp?t=mlb-draft",
+      "school": {
+       "name": "LSU",
+       "schoolClass": "4YR JR",
+       "city": "Baton Rouge",
+       "country": "USA",
+       "state": "LA"
+      },
+      "blurb": "Part of an outlandish Louisiana State recruiting class, Skenes spent his first two college seasons at Air Force and pitched two summers with the U.S. collegiate national team before coming to Baton Rouge and winning a College World Series championship this spring. The only NCAA Division I player to reach double figures in wins and home runs in 2022, he might be the top two-way player in the 2023 class. But he's also the best college pitching prospect since Stephen Strasburg in 2009 and a potential No. 1 overall pick on the mound, so he hasn't picked up a bat this spring. He won Southeastern Conference pitcher of the year honors, led NCAA Division I in strikeouts (209, breaking Ben McDonald's school and SEC record), strikeouts per nine innings (15.3) and WHIP (0.75) and ranked second in wins (12), ERA (1.69) and opponents' average (.165). After working at 93-95 mph and touching 99 with his fastball as a sophomore, Skenes has averaged 98 mph and hit 102 at LSU, with the flat approach angle and carry on his heater making it almost impossible to hit. His slider has improved under the tutelage of Tigers pitching coach Wes Johnson, becoming an 85-89 mph beast with sharp break and absurd swing-and-miss and chase rates. His power changeup arrives at 88-93 mph with fade and is a solid offering when he lands it in the strike zone. Physically imposing at 6-foot-6 and 235 pounds, Skenes is athletic with the body control to repeat a sound delivery and provide plenty of strikes. A classic No. 1 starter, he'd also factor into the top three rounds as a position player thanks to his huge right-handed power to all fields and projected solid defense at first base. He caught some at Air Force but is too big for the position.",
+      "headshotLink": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:silo:current.png/w_120,q_auto:best/v1/people/694973/headshot/draft/current",
+      "person": {
+       "id": 694973,
+       "fullName": "Paul Skenes",
+       "link": "/api/v1/people/694973",
+       "firstName": "Paul",
+       "lastName": "Skenes",
+       "primaryNumber": "30",
+       "birthDate": "2002-05-29",
+       "currentAge": 24,
+       "birthCity": "Fullerton",
+       "birthStateProvince": "CA",
+       "birthCountry": "USA",
+       "height": "6' 6\"",
+       "weight": 260,
+       "active": true,
+       "primaryPosition": {
+        "code": "1",
+        "name": "Pitcher",
+        "type": "Pitcher",
+        "abbreviation": "P"
+       },
+       "useName": "Paul",
+       "useLastName": "Skenes",
+       "middleName": "David",
+       "boxscoreName": "Skenes",
+       "gender": "M",
+       "isPlayer": true,
+       "isVerified": true,
+       "draftYear": 2023,
+       "mlbDebutDate": "2024-05-11",
+       "batSide": {
+        "code": "R",
+        "description": "Right"
+       },
+       "pitchHand": {
+        "code": "R",
+        "description": "Right"
+       },
+       "nameFirstLast": "Paul Skenes",
+       "nameSlug": "paul-skenes-694973",
+       "firstLastName": "Paul Skenes",
+       "lastFirstName": "Skenes, Paul",
+       "lastInitName": "Skenes, P",
+       "initLastName": "P Skenes",
+       "fullFMLName": "Paul David Skenes",
+       "fullLFMName": "Skenes, Paul David",
+       "strikeZoneTop": 3.478,
+       "strikeZoneBottom": 1.755
+      },
+      "team": {
+       "springLeague": {
+        "id": 115,
+        "name": "Grapefruit League",
+        "link": "/api/v1/league/115",
+        "abbreviation": "GL"
+       },
+       "allStarStatus": "N",
+       "id": 134,
+       "name": "Pittsburgh Pirates",
+       "link": "/api/v1/teams/134"
+      },
+      "draftType": {
+       "code": "JR",
+       "description": "Rule 4 / June Amateur Draft"
+      },
+      "isDrafted": true,
+      "isPass": false,
+      "year": "2023"
+     },
+     {
+      "bisPlayerId": 5020491,
+      "pickRound": "1",
+      "pickNumber": 8,
+      "displayPickNumber": 8,
+      "roundPickNumber": 8,
+      "rank": 14,
+      "pickValue": "5980100",
+      "signingBonus": "4897500",
+      "home": {
+       "city": "Sinton",
+       "state": "Texas",
+       "country": "USA"
+      },
+      "scoutingReport": "https://www.mlb.com/video/2023-draft-blake-mitchell-c?t=mlb-draft",
+      "school": {
+       "name": "Sinton HS",
+       "schoolClass": "HS SR",
+       "city": "Sinton",
+       "country": "USA",
+       "state": "TX"
+      },
+      "blurb": "Although the high school catching demographic scares clubs in the first round, it's otherwise hard to find fault with Mitchell, who could go in the top 15 picks come July. He has tools on both sides of the ball, a fallback option as a pitcher and a long track record of performance. He played for the U.S. junior team the last two summers, winning the gold-medal game at the 18-and-under World Cup with 2 2/3 scoreless innings against Taiwan in September. He also led Sinton HS to the Texas 4-A title as a junior and won Gatorade state player of the year honors in both 2022 and 2023. Mitchell's strength, bat speed and patient approach should allow him to hit for power and average from the left side of the plate. A Louisiana State recruit, he shows the aptitude to work counts in search of pitches he can drive and attacks them with a left-handed stroke with loft that produces pop to all fields. He doesn't have the smoothest swing and his power comes with some strikeouts, but he still makes a lot of hard contact. Mitchell would fit the offensive profile in right field if he couldn't stick behind the plate, but there's no reason to doubt he'll be a catcher. Although he's a well-below-average runner, he's an athletic and agile defender who projects at least as an average receiver and blocker with double-plus arm strength. He'd fit into the top two rounds as a pitcher, with an easy delivery that produces a fastball that reaches 97 mph, a downer curveball and a promising changeup with tumble.",
+      "headshotLink": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:silo:current.png/w_120,q_auto:best/v1/people/805810/headshot/draft/current",
+      "person": {
+       "id": 805810,
+       "fullName": "Blake Mitchell",
+       "link": "/api/v1/people/805810",
+       "firstName": "Blake",
+       "lastName": "Mitchell",
+       "birthDate": "2004-08-03",
+       "currentAge": 22,
+       "birthCity": "Clear Lake",
+       "birthStateProvince": "TX",
+       "birthCountry": "USA",
+       "height": "6' 0\"",
+       "weight": 202,
+       "active": true,
+       "primaryPosition": {
+        "code": "2",
+        "name": "Catcher",
+        "type": "Catcher",
+        "abbreviation": "C"
+       },
+       "useName": "Blake",
+       "useLastName": "Mitchell",
+       "middleName": "Austin",
+       "boxscoreName": "Mitchell",
+       "gender": "M",
+       "isPlayer": true,
+       "isVerified": true,
+       "draftYear": 2023,
+       "batSide": {
+        "code": "L",
+        "description": "Left"
+       },
+       "pitchHand": {
+        "code": "R",
+        "description": "Right"
+       },
+       "nameFirstLast": "Blake Mitchell",
+       "nameSlug": "blake-mitchell-805810",
+       "firstLastName": "Blake Mitchell",
+       "lastFirstName": "Mitchell, Blake",
+       "lastInitName": "Mitchell, B",
+       "initLastName": "B Mitchell",
+       "fullFMLName": "Blake Austin Mitchell",
+       "fullLFMName": "Mitchell, Blake Austin",
+       "strikeZoneTop": 3.203,
+       "strikeZoneBottom": 1.617
+      },
+      "team": {
+       "springLeague": {
+        "id": 114,
+        "name": "Cactus League",
+        "link": "/api/v1/league/114",
+        "abbreviation": "CL"
+       },
+       "allStarStatus": "N",
+       "id": 118,
+       "name": "Kansas City Royals",
+       "link": "/api/v1/teams/118"
+      },
+      "draftType": {
+       "code": "JR",
+       "description": "Rule 4 / June Amateur Draft"
+      },
+      "isDrafted": true,
+      "isPass": false,
+      "year": "2023"
+     }
+    ]
+   },
+   {
+    "round": "CB-A",
+    "picks": [
+     {
+      "bisPlayerId": 5026221,
+      "pickRound": "CB-A",
+      "pickNumber": 30,
+      "displayPickNumber": 30,
+      "roundPickNumber": 1,
+      "rank": 53,
+      "pickValue": "2732500",
+      "signingBonus": "2500000",
+      "home": {
+       "city": "Tyrone",
+       "state": "Georgia",
+       "country": "USA"
+      },
+      "scoutingReport": "https://www.mlb.com/video/2023-draft-tai-peete-ss-rhp?t=mlb-draft",
+      "school": {
+       "name": "Trinity Christian School",
+       "schoolClass": "HS SR",
+       "city": "Sharpsburg",
+       "country": "USA",
+       "state": "GA"
+      },
+      "blurb": "Peete intrigues scouts because he's one of the youngest players (he won't turn 18 until August) and has as much bat speed as anyone in the prep class. He's also somewhat of an enigma because he walked off the mound at the East Coast Pro showcase last August with an apparent elbow injury that has never been clarified. He hasn't pitched this spring after running his fastball to 95 mph and showing advanced feel for a changeup last summer. With an electric left-handed swing and projectable strength and leverage in his 6-foot-2 frame, Peete sports well-above-average raw power. He needs more polish at the plate, as he rarely uses the opposite field and is less effective when he lapses into trying to launch balls as far as possible. He'll also have to prove he can make consistent contact against quality pitching after struggling to do so previously. One of the better all-around athletes among 2023 high schoolers, Peete has plus speed and had displayed similar arm strength in the past. The Georgia Tech recruit rarely has cut loose while throwing from a low arm slot this spring. He has range to both sides at shortstop and should he have to move, he would fit the offensive profile at third base and the defensive profile in center field.",
+      "headshotLink": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:silo:current.png/w_120,q_auto:best/v1/people/806191/headshot/draft/current",
+      "person": {
+       "id": 806191,
+       "fullName": "Tai Peete",
+       "link": "/api/v1/people/806191",
+       "firstName": "Tai",
+       "lastName": "Peete",
+       "primaryNumber": "89",
+       "birthDate": "2005-08-11",
+       "currentAge": 21,
+       "birthCity": "Riverdale",
+       "birthStateProvince": "GA",
+       "birthCountry": "USA",
+       "height": "6' 2\"",
+       "weight": 193,
+       "active": true,
+       "primaryPosition": {
+        "code": "O",
+        "name": "Outfield",
+        "type": "Outfielder",
+        "abbreviation": "OF"
+       },
+       "useName": "Tai",
+       "useLastName": "Peete",
+       "middleName": "Jordan",
+       "boxscoreName": "Peete",
+       "gender": "M",
+       "isPlayer": true,
+       "isVerified": true,
+       "draftYear": 2023,
+       "batSide": {
+        "code": "L",
+        "description": "Left"
+       },
+       "pitchHand": {
+        "code": "R",
+        "description": "Right"
+       },
+       "nameFirstLast": "Tai Peete",
+       "nameSlug": "tai-peete-806191",
+       "firstLastName": "Tai Peete",
+       "lastFirstName": "Peete, Tai",
+       "lastInitName": "Peete, T",
+       "initLastName": "T Peete",
+       "fullFMLName": "Tai Jordan Peete",
+       "fullLFMName": "Peete, Tai Jordan",
+       "strikeZoneTop": 3.299,
+       "strikeZoneBottom": 1.665
+      },
+      "team": {
+       "springLeague": {
+        "id": 114,
+        "name": "Cactus League",
+        "link": "/api/v1/league/114",
+        "abbreviation": "CL"
+       },
+       "allStarStatus": "N",
+       "id": 136,
+       "name": "Seattle Mariners",
+       "link": "/api/v1/teams/136"
+      },
+      "draftType": {
+       "code": "JR",
+       "description": "Rule 4 / June Amateur Draft"
+      },
+      "isDrafted": true,
+      "isPass": false,
+      "year": "2023"
+     }
+    ]
+   },
+   {
+    "round": "10",
+    "picks": [
+     {
+      "bisPlayerId": 5013188,
+      "pickRound": "10",
+      "pickNumber": 305,
+      "displayPickNumber": 305,
+      "roundPickNumber": 21,
+      "pickValue": "165900",
+      "home": {
+       "city": "Huntington Beach",
+       "state": "California",
+       "country": "USA"
+      },
+      "school": {
+       "name": "University of California - Irvine",
+       "schoolClass": "4YR JR",
+       "city": "Irvine",
+       "country": "USA",
+       "state": "CA"
+      },
+      "headshotLink": "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:silo:current.png/w_120,q_auto:best/v1/people/814522/headshot/draft/current",
+      "person": {
+       "id": 814522,
+       "fullName": "Caden Kendle",
+       "link": "/api/v1/people/814522",
+       "firstName": "Caden",
+       "lastName": "Kendle",
+       "birthDate": "2002-03-13",
+       "currentAge": 24,
+       "birthCity": "Newport Beach",
+       "birthStateProvince": "CA",
+       "birthCountry": "USA",
+       "height": "5' 11\"",
+       "weight": 200,
+       "active": true,
+       "primaryPosition": {
+        "code": "O",
+        "name": "Outfield",
+        "type": "Outfielder",
+        "abbreviation": "OF"
+       },
+       "useName": "Caden",
+       "useLastName": "Kendle",
+       "middleName": "Thomas",
+       "boxscoreName": "Kendle",
+       "gender": "M",
+       "isPlayer": true,
+       "isVerified": true,
+       "draftYear": 2024,
+       "batSide": {
+        "code": "R",
+        "description": "Right"
+       },
+       "pitchHand": {
+        "code": "R",
+        "description": "Right"
+       },
+       "nameFirstLast": "Caden Kendle",
+       "nameSlug": "caden-kendle-814522",
+       "firstLastName": "Caden Kendle",
+       "lastFirstName": "Kendle, Caden",
+       "lastInitName": "Kendle, C",
+       "initLastName": "C Kendle",
+       "fullFMLName": "Caden Thomas Kendle",
+       "fullLFMName": "Kendle, Caden Thomas",
+       "strikeZoneTop": 3.165,
+       "strikeZoneBottom": 1.598
+      },
+      "team": {
+       "springLeague": {
+        "id": 115,
+        "name": "Grapefruit League",
+        "link": "/api/v1/league/115",
+        "abbreviation": "GL"
+       },
+       "allStarStatus": "N",
+       "id": 138,
+       "name": "St. Louis Cardinals",
+       "link": "/api/v1/teams/138"
+      },
+      "draftType": {
+       "code": "JR",
+       "description": "Rule 4 / June Amateur Draft"
+      },
+      "isDrafted": true,
+      "isPass": false,
+      "year": "2023"
+     }
+    ]
+   }
+  ]
+ }
+}

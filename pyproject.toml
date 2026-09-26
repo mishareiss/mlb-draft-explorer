@@ -1,0 +1,32 @@
+[project]
+name = "college-draft-explorer"
+version = "0.1.0"
+description = "How MLB draftees' outcomes vary by school, position, age, slot and bonus (draft classes 2012-2025)."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "requests",
+    "pandas",
+    "pyarrow",
+    "duckdb",
+    "pybaseball",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]
+addopts = "-m 'not live'"
+markers = ["live: hits the real network; deselected by default"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
