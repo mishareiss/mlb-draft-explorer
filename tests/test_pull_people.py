@@ -17,11 +17,32 @@ def test_250_ids_make_3_requests_of_at_most_100(tmp_path, monkeypatch):
     assert len(urls) == 3
     sizes = [len(u.split("personIds=")[1].split(",")) for u in urls]
     assert sizes == [100, 100, 50]
-    assert sorted(p.name for p in (tmp_path / "people").iterdir()) == [
-        "batch_000.json",
-        "batch_001.json",
-        "batch_002.json",
-    ]
+    names = {p.name for p in (tmp_path / "people").iterdir()}
+    assert names == {
+        pull_people.batch_filename(range(1, 101)),
+        pull_people.batch_filename(range(101, 201)),
+        pull_people.batch_filename(range(201, 251)),
+    }
+
+
+def test_batch_filename_tracks_the_id_set():
+    name = pull_people.batch_filename([3, 1, 2])
+    assert name == pull_people.batch_filename([1, 2, 3])  # order-independent
+    assert name != pull_people.batch_filename([1, 2, 4])
+    assert name.startswith("batch_") and len(name) == len("batch_") + 12 + len(".json")
+
+
+def test_changed_id_set_does_not_reuse_stale_cache(tmp_path, monkeypatch):
+    monkeypatch.setattr(pull_people.paths, "RAW", tmp_path)
+    calls = []
+
+    def fake_fetch(url, path, force=False):
+        calls.append(path.name)
+        return {"people": []}
+
+    pull_people.fetch_people([1, 2, 3], fetch=fake_fetch)
+    pull_people.fetch_people([1, 2, 4], fetch=fake_fetch)
+    assert calls[0] != calls[1]
 
 
 def test_flatten_people_keeps_fields(people_payload):

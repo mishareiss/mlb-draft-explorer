@@ -1,0 +1,24 @@
+# Conference moves effective July 2024 (2024-25 season), D1 baseball.
+# Derived by ingest/build_school_ref.py from Wikipedia 'List of NCAA Division I
+# baseball programs': revision 1228412379 (2024-06-11) vs 1248629719 (2024-09-30).
+# conference_pre2024 overrides conference_2024 for these schools. Delete this file
+# to regenerate; edit rows by hand if a move is wrong.
+wiki_school,conference_pre2024,conference_2024
+Kennesaw State University,ASUN,Conference USA
+University of Oklahoma,Big 12,Southeastern
+University of Texas at Austin,Big 12,Southeastern
+Merrimack College,Northeast,MAAC
+Sacred Heart University,Northeast,MAAC
+University of Arizona,Pac-12,Big 12
+Arizona State University,Pac-12,Big 12
+"University of California, Berkeley",Pac-12,Atlantic Coast
+University of Oregon,Pac-12,Big Ten
+Oregon State University,Pac-12,Independent
+Stanford University,Pac-12,Atlantic Coast
+"University of California, Los Angeles",Pac-12,Big Ten
+University of Southern California,Pac-12,Big Ten
+University of Utah,Pac-12,Big 12
+University of Washington,Pac-12,Big Ten
+Washington State University,Pac-12,Mountain West
+Stephen F. Austin State University,Western Athletic,Southland
+University of Texas Rio Grande Valley,Western Athletic,Southland

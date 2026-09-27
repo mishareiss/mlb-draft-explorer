@@ -6,6 +6,7 @@ python -m ingest.pull_people [--force]
 from __future__ import annotations
 
 import argparse
+import hashlib
 import logging
 from collections.abc import Callable, Iterable, Sequence
 
@@ -25,16 +26,22 @@ def batched(ids: Sequence[int], size: int = BATCH_SIZE) -> list[list[int]]:
     return [list(ids[i : i + size]) for i in range(0, len(ids), size)]
 
 
+def batch_filename(batch: Sequence[int]) -> str:
+    """Cache name keyed by the batch's contents, so a changed id set never reads a stale file."""
+    digest = hashlib.sha1(",".join(map(str, sorted(batch))).encode()).hexdigest()
+    return f"batch_{digest[:12]}.json"
+
+
 def fetch_people(
     ids: Iterable[int],
     force: bool = False,
     fetch: Callable[..., dict] = fetch_json_cached,
 ) -> list[dict]:
-    """Fetch /people in batches of 100, caching each batch as batch_NNN.json."""
+    """Fetch /people in batches of 100, caching each batch as batch_<sha1 of its ids>.json."""
     people: list[dict] = []
-    for n, batch in enumerate(batched(sorted(set(ids)))):
+    for batch in batched(sorted(set(ids))):
         url = PEOPLE_URL.format(ids=",".join(map(str, batch)))
-        payload = fetch(url, paths.RAW / "people" / f"batch_{n:03d}.json", force=force)
+        payload = fetch(url, paths.RAW / "people" / batch_filename(batch), force=force)
         people.extend(payload.get("people", []))
     return people
 

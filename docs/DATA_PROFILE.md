@@ -268,6 +268,395 @@ Of 1,953 drafted people with an `mlbDebutDate`, **1,953 (100.0%)** appear in WAR
 | 643599 | Harrison Wenson | 2016 | 39 | 1185 | Pittsburgh Pirates | Michigan |  |  |
 | 643599 | Harrison Wenson | 2017 | 24 | 715 | Los Angeles Angels | Michigan |  | 3000.0 |
 
+## Bonus backfill (Baseball-Reference)
+
+Joined on `(draft_year, overall_pick)` = `(draft_year, pick_number)`. Supplemental and competitive-balance picks are listed on the numbered-round page they follow, so they join by overall pick like any other.
+
+| draft_year | mlb_picks | bbref_rows | joined | name_mismatch |
+|---|---|---|---|---|
+| 2012 | 1237 | 1238 | 1237 | 9 |
+| 2013 | 1215 | 1216 | 1215 | 16 |
+| 2014 | 1214 | 1215 | 1214 | 5 |
+| 2015 | 1214 | 1215 | 1214 | 12 |
+| 2016 | 1216 | 1216 | 1216 | 14 |
+| 2017 | 1215 | 1215 | 1215 | 9 |
+
+Join match rate: **7,311 of 7,311 MLB picks (100.0%)**. Name check (token-sort ratio < 85) flags **65** joined rows as mismatches; their bonus is withheld.
+
+60 of the 65 share last name and first initial (nicknames: Mike/Michael, Jake/Jacob); `same_last_name_initial` marks them for Task 3. First 10:
+
+| draft_year | pick_number | mlb_name | bbref_name | name_match_score |
+|---|---|---|---|---|
+| 2012 | 253 | Alfredo Escalera | Alfredo Escalera-Maldonado | 76.2 |
+| 2012 | 316 | Patrick Ludwig | Pat Ludwig | 83.3 |
+| 2012 | 442 | Lucas Moran | Luke Moran | 76.2 |
+| 2012 | 559 | Derek De Young | Derek DeYoung | 81.5 |
+| 2012 | 738 | Michael Mason | Mike Mason | 78.3 |
+| 2012 | 860 | Jacob Marks | Jake Marks | 76.2 |
+| 2012 | 868 | Joseph Rapp | Joe Rapp | 84.2 |
+| 2012 | 886 | Jacob Post | Jake Post | 73.7 |
+| 2012 | 1072 | Michael Sheppard | Mike Sheppard | 82.8 |
+| 2013 | 193 | Stephen Janas | Steve Janas | 83.3 |
+
+4 Baseball-Reference rows have no MLB pick at that overall pick (the MLB API skips the number):
+
+| draft_year | overall_pick | name | team |
+|---|---|---|---|
+| 2012 | 586 | Michael Petersen | Pirates |
+| 2013 | 940 | Michael Petersen | Rangers |
+| 2014 | 718 | Michael Petersen | Giants |
+| 2015 | 511 | Michael Petersen | Brewers |
+
+Bonus coverage, % of all picks with a bonus, **before** (MLB only):
+
+| draft_year | 1-5 | 6-10 | 11-20 | 21+ | supplemental |
+|---|---|---|---|---|---|
+| 2012 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| 2013 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| 2014 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| 2015 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| 2016 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| 2017 | 100.0 | 100.0 | 99.7 | 100.0 | 100.0 |
+
+**After** (MLB, else Baseball-Reference):
+
+| draft_year | 1-5 | 6-10 | 11-20 | 21+ | supplemental |
+|---|---|---|---|---|---|
+| 2012 | 96.2 | 97.3 | 34.8 | 2.5 | 100.0 |
+| 2013 | 97.4 | 95.3 | 32.3 | 4.8 | 91.7 |
+| 2014 | 96.7 | 97.3 | 11.0 | 1.3 | 100.0 |
+| 2015 | 98.0 | 98.0 | 47.8 | 5.8 | 91.7 |
+| 2016 | 99.3 | 98.0 | 67.0 | 15.2 | 92.9 |
+| 2017 | 100.0 | 100.0 | 99.7 | 100.0 | 100.0 |
+
+Baseball-Reference leaves the bonus blank for unsigned picks, and also lacks it for many signed picks after round 10. Among picks it marks as signed, % with a bonus after backfill:
+
+| draft_year | 1-5 | 6-10 | 11-20 | 21+ | supplemental |
+|---|---|---|---|---|---|
+| 2012 | 100.0 | 100.0 | 41.9 | 4.4 | 100.0 |
+| 2013 | 99.3 | 99.3 | 37.6 | 8.9 | 100.0 |
+| 2014 | 99.3 | 98.6 | 12.9 | 2.4 | 100.0 |
+| 2015 | 100.0 | 99.3 | 54.6 | 9.6 | 100.0 |
+| 2016 | 99.3 | 98.7 | 79.1 | 26.6 | 100.0 |
+| 2017 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+
+### 2017 cross-check (both sources have a bonus)
+
+449 picks: **99.8%** identical, **99.8%** within 1%. Disagreements (1, up to the 10 largest):
+
+| pick_number | mlb_name | signing_bonus_usd | bbref_bonus_usd | diff |
+|---|---|---|---|---|
+| 788 | Cameron Bishop | 0.0 | 605000.0 | 605000.0 |
+
+## School reference
+
+`reference/schools.csv`: **1,403** non-high-school raw names, **1,038** canonical schools, **284** alias groups, **563** rows flagged `needs_review`.
+
+| school_type | division | schools |
+|---|---|---|
+| 4YR | D1 | 484 |
+| 4YR | UNKNOWN | 460 |
+| JC | JUCO | 381 |
+| OTHER | UNKNOWN | 78 |
+
+| type_source | schools |
+|---|---|
+| mlb_class | 520 |
+| bbref_type | 515 |
+| name_regex | 290 |
+| unknown | 78 |
+
+Picks from a listed college (4YR or JC): 9,416. With a D1 conference: **75.9%** of those, **86.8%** of 4YR picks. Picks whose school is not in the table (high schools, missing names): 3,444.
+
+<details><summary>All alias groups (canonical: raw names)</summary>
+
+- Abilene Christian University: `Abilene Christian`, `Abilene Christian (TX)`, `Abilene Christian U`
+- Adelphi University: `Adelphi`, `Adelphi University`
+- Adrian College: `Adrian (MI)`, `Adrian College`
+- Alabama State University: `Alabama St U`, `Alabama State`, `Alabama State University`
+- Amherst College: `Amherst`, `Amherst (MA)`
+- Angelo State University: `Angelo State`, `Angelo State (TX)`
+- Arizona Christian University: `Arizona Christian`, `Arizona Christian University`
+- Arizona State University: `Arizona St U`, `Arizona State`
+- Ashland University: `Ashland`, `Ashland University`
+- Austin Peay State University: `Austin Peay`, `Austin Peay State`
+- Azusa Pacific University: `Azusa Pacific`, `Azusa Pacific (CA)`, `Azusa Pacific University`
+- Barry University: `Barry`, `Barry University`
+- Baylor University: `Baylor`, `Baylor U`
+- Bellevue University: `Bellevue University`, `Bellevue, NE`
+- Belmont Abbey College: `Belmont Abbey`, `Belmont Abbey College`
+- Belmont University: `Belmont`, `Belmont College`, `Belmont University`, `Belmont University `
+- Bethune–Cookman University: `Bethune-Cookman`, `Bethune-Cookman University`
+- Binghamton University: `Binghamton University`, `SUNY - Binghamton`, `SUNY Binghamton`
+- Boston College: `Boston Col`, `Boston College`
+- Bowling Green State University: `Bowling Green`, `Bowling Green State`
+- Bradley University: `Bradley`, `Bradley University`
+- Brigham Young University: `BYU`, `Brigham Young`, `Brigham Young U`
+- Brunswick Community College: `Brunswick CC`, `Brunswick CC, NJ`
+- California Baptist University: `California Baptist`, `California Baptist U`, `California Baptist University`
+- California Polytechnic State University, San Luis Obispo: `Cal Poly - San Luis Obispo`, `Cal Poly San Luis Obispo`
+- California State University, Bakersfield: `CSU Bakersfield`, `Cal State Bakersfield`
+- California State University, Chico: `Cal State Chico`, `Chico State (CA)`
+- California State University, Dominguez Hills: `Cal State - Dominguez Hills`, `Cal State Dominguez Hills`
+- California State University, East Bay: `Cal State - East Bay`, `Cal State East Bay`
+- California State University, Long Beach: `Cal St Long Beach`, `Cal State - Long Beach`, `Cal State Long Beach`, `Cal State-Long Beach`, `Long Beach State`
+- California State University, Sacramento: `Cal State Sacramento`, `Sacramento State`
+- California State University, San Marcos: `Cal State - San Marcos`, `Cal State San Marcos`
+- Campbell University: `Campbell`, `Campbell U`, `Campbell University`
+- Canisius University: `Canisius`, `Canisius College`
+- Catawba College: `Catawba`, `Catawba (NC)`, `Catawba College`
+- Central Arizona College: `Central Arizona Col`, `Central Arizona College`
+- Central Connecticut State University: `Central Connecticut State`, `Central Connecticut State University`
+- Chandler-Gilbert Community College: `Chandler Gilbert CC`, `Chandler-Gilbert CC`
+- Chattahoochee Valley Community College: `Chattahoochee Valley CC`, `Chattahoochee Valley CC, TN`
+- Chipola College: `Chipola College`, `Chipola Junior College`
+- Coastal Carolina University: `Coastal Carolina`, `Coastal Carolina U`
+- Cochise College: `Cochise CC, AZ`, `Cochise College`, `Cochise Junior College`
+- Colby Community College: `Colby CC`, `Colby CC `
+- College of Marin: `College of Marin`, `Marin CC, CA`
+- College of Southern Idaho: `Col of Southern Idaho`, `College of Southern Idaho`
+- College of Southern Nevada: `CC of Southern Nevada`, `College of Southern Nevada`
+- College of William & Mary: `Col of William and Mary`, `College of William & Mary`, `College of William and Mary`, `William & Mary`
+- College of the Canyons: `Canyons CC, CA`, `College of the Canyons`
+- Colorado Mesa University: `Colorado Mesa`, `Colorado Mesa University`, `Mesa State`
+- Columbus State University: `Columbus State`, `Columbus State University`
+- Creighton University: `Creighton`, `Creighton U`
+- Crowder College: `Crowder CC`, `Crowder College`
+- Cypress College: `Cypress CC`, `Cypress College`
+- Davenport University: `Davenport`, `Davenport University`
+- Drury University: `Drury`, `Drury (MO)`
+- East Tennessee State University: `East Tennessee St U`, `East Tennessee State`
+- Eastern Illinois University: `Eastern Illinois`, `Eastern Illinois U`
+- Eastern Kentucky University: `Eastern Kentucky`, `Eastern Kentucky U`
+- Eckerd College: `Eckerd`, `Eckerd College`
+- Elon University: `Elon`, `Elon University`
+- Fairfield University: `Fairfield`, `Fairfield U`
+- Faulkner University: `Faulkner (AL)`, `Faulkner University`
+- Florence-Darlington Technical College: `Florence-Darlington Tech`, `Florence-Darlington Tech (SC)`
+- Florida Gulf Coast University: `Florida Gulf Coast`, `Florida Gulf Coast University`
+- Florida SouthWestern State College: `Florida SouthWestern State College`, `Florida Southwestern State Col`, `Florida Southwestern State JC`
+- Florida Southern College: `Florida Southern`, `Florida Southern College`
+- Folsom Lake College: `Folsom Lake CC, CA`, `Folsom Lake College`
+- Franklin Pierce University: `Franklin Pierce`, `Franklin Pierce University`
+- Galveston College: `Galveston College`, `Galveston JC, TX`
+- Gardner–Webb University: `Gardner-Webb`, `Gardner-Webb University`
+- GateWay Community College: `GateWay JC, AZ`, `Gateway CC`
+- George Washington University: `George Washington`, `George Washington University`
+- Georgia Gwinnett College: `Georgia Gwinnett`, `Georgia Gwinnett College`
+- Georgia State University: `Georgia St U`, `Georgia State`
+- Grand Canyon University: `Grand Canyon`, `Grand Canyon University`
+- Grayson College: `Grayson CC`, `Grayson College`
+- Gulf Coast State College: `Gulf Coast CC`, `Gulf Coast JC, FL`
+- High Point University: `High Point`, `High Point University`
+- Hofstra University: `Hofstra`, `Hofstra U`
+- Hope International University: `Hope International (CA)`, `Hope International University`
+- Houston Christian University: `Houston Baptist`, `Houston Baptist (TX)`, `Houston Christian U`
+- Howard College: `Howard College`, `Howard College `
+- Hutchinson Community College: `Hutchinson CC`, `Hutchinson CC, KS`
+- Indian River State College: `Indain River CC`, `Indian River State JC, FL`
+- Indiana University Bloomington: `Indiana`, `Indiana `, `Indiana U`
+- Jackson Community College: `Jackson CC, MI`, `Jackson College`
+- Jacksonville University: `Jacksonville`, `Jacksonville University`
+- James Madison University: `James Madison`, `James Madison U`, `James Madison University`
+- Jefferson College: `Jefferson CC, MO`, `Jefferson CC, NY`, `Jefferson College`, `Jefferson JC, MO`
+- John A. Logan College: `John A. Logan CC`, `John A. Logan CC `, `John A. Logan College`
+- Lackawanna College: `Lackawanna (PA)`, `Lackawanna College`
+- Lamar University: `Lamar`, `Lamar University`
+- Lander University: `Lander`, `Lander University`
+- Lane Community College: `Lane CC`, `Lane CC, OR`
+- Lee University: `Lee`, `Lee University`
+- Lehigh University: `Lehigh`, `Lehigh U`
+- Lenoir-Rhyne University: `Lenoir-Rhyne`, `Lenoir-Rhyne (NC)`, `Lenoir-Rhyne University`
+- Lewis-Clark State College: `Lewis and Clark CC`, `Lewis-Clark State`, `Lewis-Clark State (ID)`, `Lewis-Clark State College`
+- Liberty University: `Liberty`, `Liberty University`
+- Lipscomb University: `Lipscomb`, `Lipscomb University`
+- Long Island University: `Long Island`, `Long Island U`, `Long Island University`
+- Longwood University: `Longwood`, `Longwood University`
+- Louisiana State University: `LSU`, `Louisiana State`
+- Louisiana Tech University: `Louisiana Tech`, `Louisiana Tech U`
+- Loyola Marymount University: `Loyola Marymount`, `Loyola Marymount University`
+- Lynn University: `Lynn (FL)`, `Lynn U`, `Lynn University`
+- Manhattan University: `Manhattan`, `Manhattan College`
+- Marist College: `Marist`, `Marist College`
+- McLennan Community College: `McLennan CC`, `McLennan JC, TX`
+- Menlo College: `Menlo`, `Menlo (CA)`, `Menlo College`
+- Merced College: `Merced CC, CA`, `Merced College`, `Merced JC (CA)`
+- Mercer University: `Mercer`, `Mercer County CC`, `Mercer U`, `Mercer University`
+- Mercyhurst University: `Mercyhurst`, `Mercyhurst (PA)`
+- Miami University: `Miami (OH)`, `Miami University`
+- Midland College: `Midland College`, `Midland College (TX)`, `Midland JC, TX`
+- Millersville University of Pennsylvania: `Millersville (PA)`, `Millersville University of Pennsylvania`
+- Minnesota State University, Mankato: `Mankato State`, `Minnesota State - Mankato`, `Minnesota State-Mankato`
+- Mission College: `Mission Col`, `Mission College`
+- Mississippi State University: `Mississippi St U`, `Mississippi State`
+- Monmouth University: `Monmouth`, `Monmouth University`
+- Monroe Community College: `Monroe (NY)`, `Monroe CC`
+- Murray State University: `Murray State (KY)`, `Murray State University`
+- New Jersey Institute of Technology: `New Jersey Inst of Tech`, `New Jersey Institute of Technology`
+- Niagara County Community College: `Niagara County CC`, `Niagara County CC, NY`
+- Niagara University: `Niagara`, `Niagara U`
+- North Carolina Central University: `North Carolina Central`, `North Carolina Central University`
+- North Carolina State University: `NC State`, `North Carolina State`
+- North Dakota State University: `North Dakota St U`, `North Dakota State`
+- North Greenville University: `North Greenville`, `North Greenville (NC)`, `North Greenville University`
+- Northeastern State University: `Northeastern State`, `Northeastern State University`
+- Northern Oklahoma College-Enid: `Northern Oklahoma College`, `Northern Oklahoma College-Enid`, `Northern Oklahoma JC`
+- Northwest Florida State College: `Northwest Florida State`, `Northwest Florida State JC`
+- Northwood University: `Northwood (MI)`, `Northwood University`
+- Nova Southeastern University: `Nova Southeastern`, `Nova Southeastern (FL)`, `Nova Southeastern University`
+- Oakland University: `Oakland CC`, `Oakland University`
+- Ohio Dominican University: `Ohio Dominican`, `Ohio Dominican University`
+- Ohio University: `Ohio`, `Ohio University`
+- Oklahoma Baptist University: `Oklahoma Baptist`, `Oklahoma Baptist University`
+- Oklahoma Christian University: `Oklahoma Christian`, `Oklahoma Christian University`
+- Oklahoma City University: `Oklahoma City`, `Oklahoma City University`
+- Oral Roberts University: `Oral Roberts`, `Oral Roberts U`
+- Orange Coast College: `Orange Coast CC`, `Orange Coast College`
+- Oxnard College: `Oxnard CC, CA`, `Oxnard College`
+- Pace University: `Pace`, `Pace University`
+- Palm Beach State College: `Palm Beach CC`, `Palm Beach State CC`, `Palm Beach State JC, FL`
+- Palomar College: `Palomar CC`, `Palomar College`
+- Panola College: `Panola College`, `Panola JC, TX`
+- Parkland College: `Parkland CC, IL`, `Parkland College`
+- Patrick & Henry Community College: `Patrick Henry CC`, `Patrick Henry CC, IL`
+- Pennsylvania State University: `Penn St U`, `Penn State`
+- Pepperdine University: `Pepperdine`, `Pepperdine University`
+- Pierce College: `Pierce CC, WA`, `Pierce College`
+- Pittsburg State University: `Pittsburg State`, `Pittsburg State University`
+- Point Loma Nazarene University: `Point Loma Nazarene`, `Point Loma Nazarene (CA)`, `Point Loma Nazarene University`
+- Polk State College: `Polk JC, FL`, `Polk State CC`, `Polk State College`
+- Quincy University: `Quincy (IL)`, `Quincy U`, `Quincy University`
+- Quinnipiac University: `Quinnipiac`, `Quinnipiac University`
+- Ramapo College: `Ramapo College`, `Ramapo College of New Jersey`
+- Rollins College: `Rollins (FL)`, `Rollins College`
+- Rowan College of South Jersey-Gloucester: `Rowan Col at Gloucester County`, `Rowan College at Gloucester County`
+- Sacred Heart University: `Sacred Heart College`, `Sacred Heart University`
+- Saddleback College: `Saddleback CC`, `Saddleback College`
+- Saint Joseph's University: `Saint Joseph's`, `St Josephs`, `St. Joseph's (PA)`
+- Saint Leo University: `Saint Leo`, `Saint Leo University`
+- Saint Louis University: `Saint Louis University`, `St. Louis`, `St. Louis University`
+- Saint Mary's College of California: `Saint Mary's`, `St Marys Col`, `St. Mary's`, `St. Mary's College`, `St. Marys`
+- Sam Houston State University: `Sam Houston`, `Sam Houston State`
+- Samford University: `Samford`, `Samford University`
+- San Diego State University: `San Diego St U`, `San Diego State`
+- San Jacinto College, North Campus: `San Jacinto College`, `San Jacinto North JC, TX`
+- San Joaquin Delta College: `San Joaquin Delta CC`, `San Joaquin Delta College`
+- Santa Clara University: `Santa Clara`, `Santa Clara University`
+- Santa Fe College: `Santa Fe CC (NM)`, `Santa Fe College (FL)`
+- Savannah State University: `Savannah State`, `Savannah State University`
+- Seattle University: `Seattle`, `Seattle University`
+- Seminole State College: `Seminole St Col`, `Seminole State`, `Seminole State Col`, `Seminole State College`, `Seminole State College (OK)`
+- Seton Hill University: `Seton Hill`, `Seton Hill University`
+- Shelton State Community College: `Shelton State CC`, `Shelton State CC `
+- Shenandoah University: `Shenandoah`, `Shenandoah University`
+- Shepherd University: `Shepherd College`, `Shepherd University`
+- Siena College: `Siena`, `Siena `, `Siena College`
+- Sonoma State University: `Sonoma State`, `Sonoma State (CA)`
+- Southeast Missouri State University: `SE Missouri State`, `Southeast Missouri St U`, `Southeast Missouri State`
+- Southeastern Louisiana University: `Southeastern Louisiana`, `Southeastern Louisiana U`, `Southeastern Louisiana University`
+- Southeastern University: `Southeastern`, `Southeastern University`
+- Southern Arkansas University: `Southern Arkansas`, `Southern Arkansas University`
+- Southern Illinois University Carbondale: `Southern Illinois`, `Southern Illinois Carbondale`, `Southern Illinois U Carbondale`, `Southern Illinois University Carbondale`
+- St. Edward's University: `St. Edward's`, `St. Edward's (TX)`
+- St. John's University: `St Johns U`, `St. John's`, `St. John's (NY)`
+- St. Johns River State College: `St. John's River JC, FL`, `St. John's River State`, `St. Johns River State College`, `St. Johns River State JC, FL`
+- St. Mary's University: `Saint Mary's (TX)`, `St. Mary's University`
+- St. Thomas University: `St. Thomas University`, `St. Thomas University (FL)`
+- State College of Florida, Manatee-Sarasota: `State College of Florida Manatee - Sarasota`, `State College of Florida, Manatee-Sarasota`, `State JC of Florida`
+- Stetson University: `Stetson`, `Stetson University`
+- Tarleton State University: `Tarleton St U`, `Tarleton State`
+- Temple University: `Temple Col`, `Temple College `
+- Texas A&M University-Victoria: `Houston - Victoria`, `Houston-Victoria`
+- Texas Christian University: `TCU`, `Texas Christian`
+- Texas Southern University: `Texas Southern`, `Texas Southern U`
+- The Master's University: `The Master's College`, `The Master's University`, `The Masters (CA)`, `The Masters College`
+- Towson University: `Towson`, `Towson University`
+- Troy University: `Troy`, `Troy University`
+- Tusculum University: `Tusculum (TN)`, `Tusculum College`
+- United States Air Force Academy: `Air Force`, `Air Force `
+- United States Naval Academy: `Navy`, `U.S. Naval Academy`
+- University at Albany, The State University of New York: `SUNY Albany`, `University at Albany`
+- University at Buffalo, State University of New York: `Buffalo`, `SUNY Buffalo`, `U Buffalo`, `University of Buffalo`
+- University of Alabama: `Alabama`, `Alabama - Tuscaloosa`
+- University of Alabama at Birmingham: `Alabama - Birmingham`, `Alabama-Birmingham`, `UAB`
+- University of Arizona: `Arizona`, `Arizona `
+- University of Arkansas: `Arkansas`, `Arkansas Fayetteville`, `U Arkansas Fayetteville`
+- University of Arkansas at Little Rock: `Arkansas - Little Rock`, `University of Arkansas - Little Rock`
+- University of British Columbia: `British Columbia`, `University of British Columbia`
+- University of California, Berkeley: `California`, `UC Berkeley`
+- University of California, Davis: `UC Davis`, `University of California - Davis`
+- University of California, Irvine: `UC Irvine`, `University of California - Irvine`
+- University of California, Riverside: `UC Riverside`, `University of California - Riverside`
+- University of California, San Diego: `California College San Diego`, `UC San Diego`
+- University of Central Missouri: `Central Missouri`, `University of Central Missouri`
+- University of Central Oklahoma: `Central Oklahoma`, `University of Central Oklahoma`
+- University of Delaware: `Delaware`, `University of Delaware`
+- University of Georgia: `Georgia`, `Georgia `
+- University of Hartford: `Hartford`, `University of Hartford`
+- University of Illinois Chicago: `Illinois - Chicago`, `University of Illinois at Chicago`
+- University of Illinois Urbana–Champaign: `Illinois`, `Illinois-Champaign`, `University of Illinois`
+- University of Kansas: `Kansas`, `Kansas `
+- University of Louisiana at Lafayette: `Louisiana - Lafayette`, `University of Louisiana - Lafayette`, `University of Louisiana at Lafayette`
+- University of Louisiana at Monroe: `Louisiana - Monroe`, `University of Louisiana - Monroe`
+- University of Maine: `Maine Orono`, `University of Maine`, `University of Maine - Orono`
+- University of Maryland, Baltimore County: `Maryland - Baltimore County`, `University of Maryland-Baltimore County`
+- University of Maryland, College Park: `Maryland`, `Maryland College Park`
+- University of Massachusetts Lowell: `Massachusetts - Lowell`, `Massachusetts-Lowell`, `UMass Lowell`
+- University of Memphis: `Memphis`, `University of Memphis`
+- University of Miami: `Miami`, `Miami `
+- University of Mississippi: `Mississippi`, `Ole Miss`
+- University of Missouri: `Missouri`, `Missouri Columbia`, `U Missouri Columbia`
+- University of Mobile: `Mobile`, `Mobile (AL)`, `University of Mobile`
+- University of Montevallo: `Montevallo`, `University of Montevallo`
+- University of Mount Olive: `Mount Olive (NC)`, `Mount Olive College`, `Mt Olive Col`, `University of Mount Olive`
+- University of Nebraska Omaha: `Nebraska - Omaha`, `Nebraska-Omaha`
+- University of Nebraska–Lincoln: `Nebraska`, `Nebraska Lincoln`
+- University of Nevada, Las Vegas: `Nevada - Las Vegas`, `UNLV`
+- University of Nevada, Reno: `Nevada`, `Nevada - Reno`
+- University of New Haven: `New Haven`, `New Haven (CT)`, `University of New Haven`
+- University of New Orleans: `New Orleans`, `University of New Orleans`
+- University of North Carolina at Chapel Hill: `North Carolina`, `UNC Chapel Hill`
+- University of North Carolina at Charlotte: `Charlotte`, `UNC Charlotte`
+- University of North Florida: `North Florida`, `University of North Florida`
+- University of Northern Colorado: `Northern Colorado`, `University of Northern Colorado`
+- University of Portland: `Portland`, `University of Portland`
+- University of Rhode Island: `Rhode Island`, `Rhode Island College`, `University of Rhode Island`
+- University of Rochester: `Rochester`, `University of Rochester`
+- University of San Diego: `San Diego`, `University of San Diego`
+- University of San Francisco: `San Francisco`, `University of San Francisco`
+- University of Science and Arts of Oklahoma: `Science & Arts, OK`, `University of Science and Arts of Oklahoma`
+- University of South Alabama: `South Alabama`, `University of South Alabama`
+- University of South Carolina: `South Carolina`, `South Carolina Columbia`
+- University of South Carolina Sumter: `South Carolina - Sumter`, `South Carolina-Sumter`
+- University of South Carolina Upstate: `South Carolina - Upstate`, `South Carolina-Upstate`, `University of South Carolina - Upstate`, `University of South Carolina Upstate`
+- University of Southern California: `Southern California`, `USC`
+- University of Southern Indiana: `Southern Indiana`, `University of Southern Indiana`
+- University of Tampa: `Tampa`, `University of Tampa`
+- University of Texas Rio Grande Valley: `Texas-Rio Grande Valley`, `University of Texas Rio Grande Valley`
+- University of Texas at Arlington: `Texas-Arlington`, `University of Texas - Arlington`
+- University of Texas at San Antonio: `Texas - San Antonio`, `University of Texas - San Antonio`
+- University of Virginia: `Virginia`, `Virginia `
+- University of Washington: `Washington`, `Washington U`
+- University of West Alabama: `University of West Alabama`, `West Alabama`
+- University of West Florida: `University of West Florida`, `West Florida`
+- University of Wisconsin–Milwaukee: `Milwaukee`, `University of Wisconsin - Milwaukee`, `Wisconsin - Milwaukee`, `Wisconsin-Milwaukee`
+- University of the Pacific: `Pacific`, `University of the Pacific`
+- Valdosta State University: `Valdosta State`, `Valdosta State University`
+- Vanguard University of Southern California: `Vanguard (CA)`, `Vanguard University`
+- Villanova University: `Villanova`, `Villanova U`
+- Virginia Commonwealth University: `VCU`, `Virginia Commonwealth`, `Virginia Commonwealth U`
+- Wagner College: `Wagner`, `Wagner College`
+- Washburn University: `Washburn`, `Washburn University`
+- Western Carolina University: `Western Carolina`, `Western Carolina U`
+- Western Oregon University: `Western Oregon`, `Western Oregon University`
+- William Carey University: `William Carey (MS)`, `William Carey University`
+- Wingate University: `Wingate (NC)`, `Wingate U`, `Wingate University`
+- Wofford College: `Wofford`, `Wofford College`
+- Wright State University: `Wright State`, `Wright State University`
+- Xavier University: `Xavier`, `Xavier U`
+
+</details>
+
 ## Notes for Task 2
 
 1. `signingBonus` is null for every pick in [2012, 2013, 2014, 2015, 2016]; bonus analysis is effectively limited to the other years.

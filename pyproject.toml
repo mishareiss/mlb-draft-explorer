@@ -10,6 +10,8 @@ dependencies = [
     "pyarrow",
     "duckdb",
     "pybaseball",
+    "lxml>=6.1.3",
+    "rapidfuzz>=3.14.6",
 ]
 
 [dependency-groups]

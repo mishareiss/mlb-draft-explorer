@@ -1,0 +1,1404 @@
+school_name_raw,school_canonical,school_type,division,conference_pre2024,conference_2024,state,type_source,conf_source,needs_review
+ASA College Miami,ASA College Miami,JC,JUCO,,,FL,mlb_class,,False
+Abilene Christian,Abilene Christian University,4YR,D1,Western Athletic,Western Athletic,TX,mlb_class,wikipedia,False
+Abilene Christian (TX),Abilene Christian University,4YR,D1,Western Athletic,Western Athletic,TX,bbref_type,wikipedia,False
+Abilene Christian U,Abilene Christian University,4YR,D1,Western Athletic,Western Athletic,TX,mlb_class,wikipedia,False
+Adams State (CO),Adams State University,4YR,UNKNOWN,,,CO,bbref_type,,True
+Adelphi,Adelphi University,4YR,UNKNOWN,,,NY,bbref_type,,True
+Adelphi University,Adelphi University,4YR,UNKNOWN,,,NY,name_regex,,True
+Adrian (MI),Adrian College,4YR,UNKNOWN,,,MI,bbref_type,,True
+Adrian College,Adrian College,4YR,UNKNOWN,,,MI,mlb_class,,True
+Air Force,United States Air Force Academy,4YR,D1,Mountain West,Mountain West,CO,mlb_class,wikipedia,False
+Air Force ,United States Air Force Academy,4YR,D1,Mountain West,Mountain West,CO,mlb_class,wikipedia,False
+Akron,University of Akron,4YR,D1,Mid-American,Mid-American,OH,bbref_type,wikipedia,False
+Alabama,University of Alabama,4YR,D1,Southeastern,Southeastern,AL,mlb_class,wikipedia,False
+Alabama - Birmingham,University of Alabama at Birmingham,4YR,D1,The American,The American,AL,bbref_type,wikipedia,False
+Alabama - Huntsville,University of Alabama in Huntsville,4YR,UNKNOWN,,,AL,bbref_type,,True
+Alabama - Tuscaloosa,University of Alabama,4YR,D1,Southeastern,Southeastern,AL,bbref_type,wikipedia,True
+Alabama St U,Alabama State University,4YR,D1,SWAC,SWAC,AL,mlb_class,wikipedia,False
+Alabama State,Alabama State University,4YR,D1,SWAC,SWAC,AL,bbref_type,wikipedia,False
+Alabama State University,Alabama State University,4YR,D1,SWAC,SWAC,AL,mlb_class,wikipedia,False
+Alabama-Birmingham,University of Alabama at Birmingham,4YR,D1,The American,The American,AL,bbref_type,wikipedia,False
+Alcorn State,Alcorn State University,4YR,D1,SWAC,SWAC,MS,bbref_type,wikipedia,False
+Allan Hancock College,Allan Hancock College,JC,JUCO,,,CA,bbref_type,,False
+Allen CC,Allen Community College,JC,JUCO,,,KS,name_regex,,False
+Alvin CC,Alvin CC,JC,JUCO,,,TX,name_regex,,False
+Amherst,Amherst College,4YR,UNKNOWN,,,MA,bbref_type,,True
+Amherst (MA),Amherst College,4YR,UNKNOWN,,,MA,bbref_type,,True
+Anderson University (IN),Anderson University,4YR,UNKNOWN,,,IN,bbref_type,,True
+Angelina College,Angelina College,JC,JUCO,,,TX,bbref_type,,False
+Angelo St U,Angelo St U,4YR,UNKNOWN,,,TX,mlb_class,,True
+Angelo State,Angelo State University,4YR,UNKNOWN,,,TX,mlb_class,,True
+Angelo State (TX),Angelo State University,4YR,UNKNOWN,,,TX,bbref_type,,True
+Anne Arundel CC,Anne Arundel Community College,JC,JUCO,,,MD,name_regex,,False
+Antelope Valley Col,Antelope Valley Col,OTHER,UNKNOWN,,,CA,unknown,,True
+Appalachian State,Appalachian State University,4YR,D1,Sun Belt,Sun Belt,NC,mlb_class,wikipedia,False
+Arizona,University of Arizona,4YR,D1,Pac-12,Big 12,AZ,mlb_class,wikipedia,False
+Arizona ,University of Arizona,4YR,D1,Pac-12,Big 12,AZ,mlb_class,wikipedia,False
+Arizona Christian,Arizona Christian University,4YR,UNKNOWN,,,AZ,bbref_type,,True
+Arizona Christian University,Arizona Christian University,4YR,UNKNOWN,,,AZ,name_regex,,True
+Arizona St U,Arizona State University,4YR,D1,Pac-12,Big 12,AZ,mlb_class,wikipedia,False
+Arizona State,Arizona State University,4YR,D1,Pac-12,Big 12,AZ,mlb_class,wikipedia,False
+Arizona Western College,Arizona Western College,JC,JUCO,,,AZ,mlb_class,,False
+Arkansas,University of Arkansas,4YR,D1,Southeastern,Southeastern,AR,mlb_class,wikipedia,False
+Arkansas - Little Rock,University of Arkansas at Little Rock,4YR,D1,Ohio Valley,Ohio Valley,AR,bbref_type,wikipedia,False
+Arkansas - Pine Bluff,University of Arkansas at Pine Bluff,4YR,D1,SWAC,SWAC,AR,bbref_type,wikipedia,False
+Arkansas Fayetteville,University of Arkansas,4YR,D1,Southeastern,Southeastern,AR,bbref_type,wikipedia,True
+Arkansas State,Arkansas State University,4YR,D1,Sun Belt,Sun Belt,AR,mlb_class,wikipedia,False
+Arkansas Tech,Arkansas Tech University,4YR,UNKNOWN,,,AR,bbref_type,,True
+Armstrong Atlantic State,Armstrong State University,4YR,UNKNOWN,,,GA,bbref_type,,True
+Army,Army,OTHER,UNKNOWN,,,,unknown,,True
+Army West Point,Army West Point,4YR,UNKNOWN,,,NY,mlb_class,,True
+Ashland,Ashland University,4YR,UNKNOWN,,,OH,bbref_type,,True
+Ashland University,Ashland University,4YR,UNKNOWN,,,OH,mlb_class,,True
+Assumption Col,Assumption Col,4YR,UNKNOWN,,,MA,mlb_class,,True
+Auburn,Auburn University,4YR,D1,Southeastern,Southeastern,AL,mlb_class,wikipedia,False
+Auburn - Montgomery,Auburn University at Montgomery,4YR,UNKNOWN,,,AL,bbref_type,,True
+Augustana (SD),Augustana University,4YR,UNKNOWN,,,SD,bbref_type,,True
+Augustana College,Augustana College,OTHER,UNKNOWN,,,IL,unknown,,True
+Augustana U,Augustana U,4YR,UNKNOWN,,,SD,mlb_class,,True
+Austin Peay,Austin Peay State University,4YR,D1,ASUN,ASUN,TN,mlb_class,wikipedia,False
+Austin Peay State,Austin Peay State University,4YR,D1,ASUN,ASUN,TN,bbref_type,wikipedia,False
+Azusa Pacific,Azusa Pacific University,4YR,UNKNOWN,,,CA,bbref_type,,True
+Azusa Pacific (CA),Azusa Pacific University,4YR,UNKNOWN,,,CA,bbref_type,,True
+Azusa Pacific U,Azusa Pacific U,4YR,UNKNOWN,,,CA,mlb_class,,True
+Azusa Pacific University,Azusa Pacific University,4YR,UNKNOWN,,,CA,mlb_class,,True
+BYU,Brigham Young University,4YR,D1,Big 12,Big 12,UT,mlb_class,wikipedia,False
+Bacone College,Bacone College,JC,JUCO,,,OK,bbref_type,,False
+Bakersfield College,Bakersfield College,JC,JUCO,,,CA,bbref_type,,False
+Baldwin Wallace,Baldwin Wallace University,4YR,UNKNOWN,,,OH,bbref_type,,True
+Baldwin-Wallace Col,Baldwin-Wallace Col,OTHER,UNKNOWN,,,OH,unknown,,True
+Ball State,Ball State University,4YR,D1,Mid-American,Mid-American,IN,mlb_class,wikipedia,False
+Barry,Barry University,4YR,UNKNOWN,,,FL,bbref_type,,True
+Barry University,Barry University,4YR,UNKNOWN,,,FL,name_regex,,True
+Barton Col,Barton Col,OTHER,UNKNOWN,,,NC,unknown,,True
+Barton County CC,Barton County CC,JC,JUCO,,,KS,name_regex,,False
+Baylor,Baylor University,4YR,D1,Big 12,Big 12,TX,mlb_class,wikipedia,False
+Baylor U,Baylor University,4YR,D1,Big 12,Big 12,TX,name_regex,wikipedia,False
+Belhaven,Belhaven University,4YR,UNKNOWN,,,MS,bbref_type,,True
+Bellarmine,Bellarmine,OTHER,UNKNOWN,,,,unknown,,True
+Bellarmine University,Bellarmine University,4YR,D1,ASUN,ASUN,KY,mlb_class,wikipedia,False
+Bellevue CC,Bellevue College,JC,JUCO,,,WA,name_regex,,False
+Bellevue University,Bellevue University,4YR,UNKNOWN,,,NE,bbref_type,,True
+"Bellevue, NE",Bellevue University,4YR,UNKNOWN,,,NE,bbref_type,,True
+Belmont,Belmont University,4YR,D1,Missouri Valley,Missouri Valley,TN,bbref_type,wikipedia,False
+Belmont Abbey,Belmont Abbey College,4YR,UNKNOWN,,,NC,bbref_type,,True
+Belmont Abbey College,Belmont Abbey College,OTHER,UNKNOWN,,,NC,unknown,,True
+Belmont College,Belmont University,4YR,D1,Missouri Valley,Missouri Valley,TN,bbref_type,wikipedia,False
+Belmont University,Belmont University,4YR,D1,Missouri Valley,Missouri Valley,TN,mlb_class,wikipedia,False
+Belmont University ,Belmont University,4YR,D1,Missouri Valley,Missouri Valley,TN,mlb_class,wikipedia,False
+Benedictine College,Benedictine College,OTHER,UNKNOWN,,,KS,unknown,,True
+Benedictine U Mesa,Benedictine U Mesa,4YR,UNKNOWN,,,AZ,mlb_class,,True
+Bentley,Bentley University,4YR,UNKNOWN,,,MA,bbref_type,,True
+Berry College,Berry College,OTHER,UNKNOWN,,,GA,unknown,,True
+Bethel University (MN),Bethel University,4YR,UNKNOWN,,,MN,bbref_type,,True
+Bethune-Cookman,Bethune–Cookman University,4YR,D1,SWAC,SWAC,FL,bbref_type,wikipedia,False
+Bethune-Cookman University,Bethune–Cookman University,4YR,D1,SWAC,SWAC,FL,mlb_class,wikipedia,False
+Big Bend CC,Big Bend Community College,JC,JUCO,,,WA,name_regex,,False
+Binghamton University,Binghamton University,4YR,D1,America East,America East,NY,mlb_class,wikipedia,False
+Biola University,Biola University,4YR,UNKNOWN,,,CA,mlb_class,,True
+Birmingham-Southern,Birmingham-Southern College,4YR,UNKNOWN,,,AL,bbref_type,,True
+"Black Hawk CC, IL",Black Hawk College,JC,JUCO,,,IL,name_regex,,False
+Blinn College,Blinn College,JC,JUCO,,,TX,mlb_class,,False
+Bloomsburg (PA),Bloomsburg University of Pennsylvania,4YR,UNKNOWN,,,PA,bbref_type,,True
+Bloomsburg University,Bloomsburg University,4YR,UNKNOWN,,,PA,name_regex,,True
+Boise State,Boise State University,4YR,UNKNOWN,,,ID,bbref_type,,True
+Bossier Parish CC,Bossier Parish Community College,JC,JUCO,,,LA,name_regex,,False
+Boston Col,Boston College,4YR,D1,Atlantic Coast,Atlantic Coast,MA,mlb_class,wikipedia,False
+Boston College,Boston College,4YR,D1,Atlantic Coast,Atlantic Coast,MA,mlb_class,wikipedia,False
+Bowling Green,Bowling Green State University,4YR,D1,Mid-American,Mid-American,OH,mlb_class,wikipedia,False
+Bowling Green State,Bowling Green State University,4YR,D1,Mid-American,Mid-American,OH,bbref_type,wikipedia,False
+Bradley,Bradley University,4YR,D1,Missouri Valley,Missouri Valley,IL,bbref_type,wikipedia,False
+Bradley University,Bradley University,4YR,D1,Missouri Valley,Missouri Valley,IL,mlb_class,wikipedia,False
+Brevard College,Brevard College,4YR,UNKNOWN,,,NC,bbref_type,,True
+Brewton-Parker College,Brewton-Parker College,JC,JUCO,,,GA,bbref_type,,False
+Brigham Young,Brigham Young University,4YR,D1,Big 12,Big 12,UT,bbref_type,wikipedia,False
+Brigham Young U,Brigham Young University,4YR,D1,Big 12,Big 12,UT,mlb_class,wikipedia,False
+British Columbia,University of British Columbia,4YR,UNKNOWN,,,BC,bbref_type,,True
+Brock University,Brock University,4YR,UNKNOWN,,,ON,bbref_type,,True
+Brookdale CC,Brookdale Community College,JC,JUCO,,,NJ,name_regex,,False
+Broward College,Broward College,JC,JUCO,,,FL,mlb_class,,False
+Brown,Brown University,4YR,D1,Ivy League,Ivy League,RI,bbref_type,wikipedia,False
+Brunswick CC,Brunswick Community College,JC,JUCO,,,NC,name_regex,,False
+"Brunswick CC, NJ",Brunswick Community College,JC,JUCO,,,NC,name_regex,,False
+Bryan (TN),Bryan College,4YR,UNKNOWN,,,TN,bbref_type,,True
+Bryant University,Bryant University,4YR,D1,America East,America East,RI,mlb_class,wikipedia,False
+Bucknell,Bucknell University,4YR,D1,Patriot League,Patriot League,PA,mlb_class,wikipedia,False
+Buena Vista,Buena Vista University,4YR,UNKNOWN,,,IA,bbref_type,,True
+Buffalo,"University at Buffalo, State University of New York",4YR,UNKNOWN,,,NY,bbref_type,,True
+Butler,Butler University,4YR,D1,Big East,Big East,IN,mlb_class,wikipedia,False
+Butler County CC,Butler County CC,JC,JUCO,,,KS,name_regex,,False
+CC of Southern Nevada,College of Southern Nevada,JC,JUCO,,,NV,name_regex,,False
+CSU Bakersfield,"California State University, Bakersfield",4YR,D1,Big West,Big West,CA,mlb_class,wikipedia,False
+"Cabrillo CC, CA",Cabrillo College,JC,JUCO,,,CA,name_regex,,False
+Cal Lutheran,California Lutheran University,4YR,UNKNOWN,,,CA,bbref_type,,True
+Cal Poly,California Polytechnic State University,4YR,D1,Big West,Big West,CA,mlb_class,wikipedia,False
+Cal Poly - San Luis Obispo,"California Polytechnic State University, San Luis Obispo",4YR,UNKNOWN,,,CA,mlb_class,,True
+Cal Poly Pomona,"California State Polytechnic University, Pomona",4YR,UNKNOWN,,,CA,mlb_class,,True
+Cal Poly San Luis Obispo,"California Polytechnic State University, San Luis Obispo",4YR,UNKNOWN,,,CA,mlb_class,,True
+Cal St Long Beach,"California State University, Long Beach",4YR,D1,Big West,Big West,CA,bbref_type,wikipedia,True
+Cal St Los Angeles,"California State University, Los Angeles",4YR,UNKNOWN,,,CA,bbref_type,,True
+Cal State - Dominguez Hills,"California State University, Dominguez Hills",4YR,UNKNOWN,,,CA,bbref_type,,True
+Cal State - East Bay,"California State University, East Bay",4YR,UNKNOWN,,,CA,bbref_type,,True
+Cal State - Long Beach,"California State University, Long Beach",4YR,D1,Big West,Big West,CA,bbref_type,wikipedia,True
+Cal State - San Marcos,"California State University, San Marcos",4YR,UNKNOWN,,,CA,bbref_type,,True
+Cal State Bakersfield,"California State University, Bakersfield",4YR,D1,Big West,Big West,CA,bbref_type,wikipedia,True
+Cal State Chico,"California State University, Chico",4YR,UNKNOWN,,,CA,bbref_type,,True
+Cal State Dominguez Hills,"California State University, Dominguez Hills",4YR,UNKNOWN,,,CA,bbref_type,,True
+Cal State East Bay,"California State University, East Bay",4YR,UNKNOWN,,,CA,bbref_type,,True
+Cal State Fullerton,"California State University, Fullerton",4YR,D1,Big West,Big West,CA,mlb_class,wikipedia,False
+Cal State LA,Cal State LA,OTHER,UNKNOWN,,,,unknown,,True
+Cal State Long Beach,"California State University, Long Beach",4YR,D1,Big West,Big West,CA,bbref_type,wikipedia,True
+Cal State Monterey Bay,"California State University, Monterey Bay",4YR,UNKNOWN,,,CA,bbref_type,,True
+Cal State Northridge,"California State University, Northridge",4YR,D1,Big West,Big West,CA,mlb_class,wikipedia,False
+Cal State Sacramento,"California State University, Sacramento",4YR,D1,Western Athletic,Western Athletic,CA,bbref_type,wikipedia,True
+Cal State San Bernardino,"California State University, San Bernardino",4YR,UNKNOWN,,,CA,bbref_type,,True
+Cal State San Marcos,"California State University, San Marcos",4YR,UNKNOWN,,,CA,bbref_type,,True
+Cal State Stanislaus,"California State University, Stanislaus",4YR,UNKNOWN,,,CA,bbref_type,,True
+Cal State-Long Beach,"California State University, Long Beach",4YR,D1,Big West,Big West,CA,bbref_type,wikipedia,True
+California,"University of California, Berkeley",4YR,D1,Pac-12,Atlantic Coast,CA,mlb_class,wikipedia,False
+California Baptist,California Baptist University,4YR,D1,Western Athletic,Western Athletic,CA,bbref_type,wikipedia,False
+California Baptist U,California Baptist University,4YR,D1,Western Athletic,Western Athletic,CA,mlb_class,wikipedia,False
+California Baptist University,California Baptist University,4YR,D1,Western Athletic,Western Athletic,CA,mlb_class,wikipedia,False
+California College San Diego,"University of California, San Diego",4YR,D1,Big West,Big West,CA,bbref_type,wikipedia,True
+California State University Stanislaus,California State University Stanislaus,4YR,UNKNOWN,,,CA,name_regex,,True
+California University of Pennsylvania,Pennsylvania Western University California,4YR,UNKNOWN,,,PA,bbref_type,,True
+Calumet Col of St Joseph,Calumet College of St. Joseph,4YR,UNKNOWN,,,IN,bbref_type,,True
+Campbell,Campbell University,4YR,D1,Coastal Athletic,Coastal Athletic,NC,bbref_type,wikipedia,False
+Campbell U,Campbell University,4YR,D1,Coastal Athletic,Coastal Athletic,NC,mlb_class,wikipedia,False
+Campbell University,Campbell University,4YR,D1,Coastal Athletic,Coastal Athletic,NC,mlb_class,wikipedia,False
+Canisius,Canisius University,4YR,D1,MAAC,MAAC,NY,bbref_type,wikipedia,False
+Canisius College,Canisius University,4YR,D1,MAAC,MAAC,NY,mlb_class,wikipedia,False
+"Canyons CC, CA",College of the Canyons,JC,JUCO,,,CA,name_regex,,False
+Carroll College,Carroll College,4YR,UNKNOWN,,,MT,bbref_type,,True
+Carson-Newman College,Carson-Newman College,OTHER,UNKNOWN,,,TN,unknown,,True
+Case Western Reserve,Case Western Reserve University,4YR,UNKNOWN,,,OH,bbref_type,,True
+Catawba,Catawba College,4YR,UNKNOWN,,,NC,bbref_type,,True
+Catawba (NC),Catawba College,4YR,UNKNOWN,,,NC,bbref_type,,True
+Catawba College,Catawba College,OTHER,UNKNOWN,,,NC,unknown,,True
+Catawba Valley CC,Catawba Valley CC,JC,JUCO,,,NC,name_regex,,False
+Cedar Valley College,Cedar Valley College,JC,JUCO,,,TX,bbref_type,,False
+Cedarville,Cedarville University,4YR,UNKNOWN,,,OH,bbref_type,,True
+Cegep De Maisonneuve,Cegep de Maisonneuve,4YR,UNKNOWN,,,QC,bbref_type,,True
+Centenary College of Louisiana,Centenary College of Louisiana,4YR,UNKNOWN,,,LA,bbref_type,,True
+Central Alabama CC,Central Alabama Community College,JC,JUCO,,,AL,name_regex,,False
+Central Arizona Col,Central Arizona College,JC,JUCO,,,AZ,mlb_class,,False
+Central Arizona College,Central Arizona College,JC,JUCO,,,AZ,mlb_class,,False
+Central Arkansas,University of Central Arkansas,4YR,D1,ASUN,ASUN,AR,mlb_class,wikipedia,False
+Central Baptist College,Central Baptist College,OTHER,UNKNOWN,,,AR,unknown,,True
+Central Connecticut State,Central Connecticut State University,4YR,D1,Northeast,Northeast,CT,bbref_type,wikipedia,False
+Central Connecticut State University,Central Connecticut State University,4YR,D1,Northeast,Northeast,CT,name_regex,wikipedia,False
+Central Florida,University of Central Florida,4YR,D1,Big 12,Big 12,FL,mlb_class,wikipedia,False
+Central Methodist University,Central Methodist University,4YR,UNKNOWN,,,MO,name_regex,,True
+Central Michigan,Central Michigan University,4YR,D1,Mid-American,Mid-American,MI,mlb_class,wikipedia,False
+Central Missouri,University of Central Missouri,4YR,UNKNOWN,,,MO,bbref_type,,True
+Central Oklahoma,University of Central Oklahoma,4YR,UNKNOWN,,,OK,bbref_type,,True
+Central Piedmont CC,Central Piedmont Community College,JC,JUCO,,,NC,name_regex,,False
+Central Washington,Central Washington University,4YR,UNKNOWN,,,WA,bbref_type,,True
+Century College,Century College,4YR,UNKNOWN,,,MN,bbref_type,,True
+Cerritos College,Cerritos College,JC,JUCO,,,CA,bbref_type,,False
+Chabot College,Chabot College,JC,JUCO,,,CA,bbref_type,,False
+Chaffey College,Chaffey College,JC,JUCO,,,CA,bbref_type,,False
+Chandler Gilbert CC,Chandler-Gilbert Community College,JC,JUCO,,,AZ,name_regex,,False
+Chandler-Gilbert CC,Chandler-Gilbert Community College,JC,JUCO,,,AZ,name_regex,,False
+Chapman University,Chapman University,4YR,UNKNOWN,,,CA,mlb_class,,True
+Charleston Southern,Charleston Southern University,4YR,D1,Big South,Big South,SC,mlb_class,wikipedia,False
+Charlotte,University of North Carolina at Charlotte,4YR,D1,The American,The American,NC,bbref_type,wikipedia,False
+Chattahoochee Valley CC,Chattahoochee Valley Community College,JC,JUCO,,,AL,name_regex,,False
+"Chattahoochee Valley CC, TN",Chattahoochee Valley Community College,JC,JUCO,,,AL,name_regex,,False
+Chattanooga State CC,Chattanooga State CC,JC,JUCO,,,TN,name_regex,,False
+Chicago State,Chicago State University,4YR,UNKNOWN,,,IL,bbref_type,,True
+Chico State (CA),"California State University, Chico",4YR,UNKNOWN,,,CA,bbref_type,,True
+Chipola College,Chipola College,JC,JUCO,,,FL,mlb_class,,False
+Chipola Junior College,Chipola College,JC,JUCO,,,FL,name_regex,,False
+Chowan,Chowan University,JC,JUCO,,,NC,bbref_type,,False
+Christopher Newport,Christopher Newport,OTHER,UNKNOWN,,,,unknown,,True
+Cincinnati,University of Cincinnati,4YR,D1,Big 12,Big 12,OH,mlb_class,wikipedia,False
+Cisco JC,Cisco JC,JC,JUCO,,,TX,name_regex,,False
+Cisco Junior College,Cisco College,JC,JUCO,,,TX,name_regex,,False
+"Citrus CC, CA",Citrus College,JC,JUCO,,,CA,name_regex,,False
+Claflin,Claflin University,4YR,UNKNOWN,,,SC,bbref_type,,True
+Clarendon,Clarendon College,JC,JUCO,,,TX,bbref_type,,False
+Clark CC,Clark College,JC,JUCO,,,WA,name_regex,,False
+Clemson,Clemson University,4YR,D1,Atlantic Coast,Atlantic Coast,SC,mlb_class,wikipedia,False
+Cleveland State CC,Cleveland State Community College,JC,JUCO,,,OH,name_regex,,False
+"Cloud County CC, KS","Cloud County CC, KS",JC,JUCO,,,KS,name_regex,,False
+Coastal Carolina,Coastal Carolina University,4YR,D1,Sun Belt,Sun Belt,SC,mlb_class,wikipedia,False
+Coastal Carolina U,Coastal Carolina University,4YR,D1,Sun Belt,Sun Belt,SC,name_regex,wikipedia,False
+"Cochise CC, AZ",Cochise College,JC,JUCO,,,AZ,name_regex,,False
+Cochise College,Cochise College,JC,JUCO,,,AZ,mlb_class,,False
+Cochise Junior College,Cochise College,JC,JUCO,,,AZ,name_regex,,False
+Coffeyville CC,Coffeyville Community College,JC,JUCO,,,KS,name_regex,,False
+Coker,Coker University,4YR,UNKNOWN,,,SC,bbref_type,,True
+Col of Central Florida,Col of Central Florida,JC,JUCO,,,FL,mlb_class,,False
+Col of Southern Idaho,College of Southern Idaho,JC,JUCO,,,ID,mlb_class,,False
+Col of William and Mary,College of William & Mary,4YR,D1,Coastal Athletic,Coastal Athletic,VA,bbref_type,wikipedia,False
+Colby CC,Colby Community College,JC,JUCO,,,KS,name_regex,,False
+Colby CC ,Colby Community College,JC,JUCO,,,KS,name_regex,,False
+College of Charleston,College of Charleston,4YR,D1,Coastal Athletic,Coastal Athletic,SC,mlb_class,wikipedia,False
+College of Idaho,College of Idaho,4YR,UNKNOWN,,,ID,bbref_type,,True
+College of Marin,College of Marin,JC,JUCO,,,CA,bbref_type,,False
+College of San Mateo,College of San Mateo,JC,JUCO,,,CA,bbref_type,,False
+College of Southern Idaho,College of Southern Idaho,JC,JUCO,,,ID,mlb_class,,False
+College of Southern Nevada,College of Southern Nevada,JC,JUCO,,,NV,mlb_class,,False
+College of William & Mary,College of William & Mary,4YR,D1,Coastal Athletic,Coastal Athletic,VA,bbref_type,wikipedia,False
+College of William and Mary,College of William & Mary,4YR,D1,Coastal Athletic,Coastal Athletic,VA,bbref_type,wikipedia,False
+College of Wooster,College of Wooster,OTHER,UNKNOWN,,,OH,unknown,,True
+College of the Canyons,College of the Canyons,JC,JUCO,,,CA,mlb_class,,False
+College of the Sequoias,College of the Sequoias,JC,JUCO,,,CA,mlb_class,,False
+Colorado Mesa,Colorado Mesa University,4YR,UNKNOWN,,,CO,bbref_type,,True
+Colorado Mesa U,Colorado Mesa U,4YR,UNKNOWN,,,CO,mlb_class,,True
+Colorado Mesa University,Colorado Mesa University,4YR,UNKNOWN,,,CO,mlb_class,,True
+Colorado School of Mines,Colorado School of Mines,OTHER,UNKNOWN,,,CO,unknown,,True
+Colorado St U Pueblo,Colorado St U Pueblo,4YR,UNKNOWN,,,CO,name_regex,,True
+Colorado State - Pueblo,Colorado State University-Pueblo,4YR,UNKNOWN,,,CO,bbref_type,,True
+Columbia,Columbia University,4YR,D1,Ivy League,Ivy League,NY,mlb_class,wikipedia,False
+Columbia College,Columbia College,4YR,UNKNOWN,,,MO,mlb_class,,True
+Columbia State CC,Columbia State Community College,JC,JUCO,,,TN,name_regex,,False
+Columbia-Greene CC,Columbia-Greene Community College,JC,JUCO,,,NY,name_regex,,False
+Columbus State,Columbus State University,4YR,UNKNOWN,,,GA,bbref_type,,True
+Columbus State University,Columbus State University,4YR,UNKNOWN,,,GA,name_regex,,True
+Compton CC,Compton College,JC,JUCO,,,CA,name_regex,,False
+Concord U,Concord U,4YR,UNKNOWN,,,WV,name_regex,,True
+Concordia ,Concordia University Irvine,4YR,UNKNOWN,,,CA,bbref_type,,True
+Concordia (MN),Concordia (MN),4YR,UNKNOWN,,,MN,bbref_type,,True
+Concordia (TX),Concordia University Texas,4YR,UNKNOWN,,,TX,bbref_type,,True
+Concordia University,Concordia University,4YR,UNKNOWN,,,MN,name_regex,,True
+Connecticut,University of Connecticut,4YR,D1,Big East,Big East,CT,mlb_class,wikipedia,False
+Connecticut - Avery Point,University of Connecticut at Avery Point,JC,JUCO,,,CT,bbref_type,,False
+Connors St Col,Connors St Col,JC,JUCO,,,OK,mlb_class,,False
+Connors State,Connors State,JC,JUCO,,,OK,mlb_class,,False
+Connors State Junior College,Connors State College,JC,JUCO,,,OK,name_regex,,False
+Contra Costa CC,Contra Costa College,JC,JUCO,,,CA,name_regex,,False
+Corban College,Corban College,OTHER,UNKNOWN,,,OR,unknown,,True
+Cornell,Cornell University,4YR,D1,Ivy League,Ivy League,NY,bbref_type,wikipedia,False
+Cornerstone,Cornerstone University,4YR,UNKNOWN,,,MI,bbref_type,,True
+Cosumnes River College,Cosumnes River College,JC,JUCO,,,CA,mlb_class,,False
+Cowley CC,Cowley Community College,JC,JUCO,,,KS,name_regex,,False
+Cowley County CC,Cowley County CC,JC,JUCO,,,KS,name_regex,,False
+Creighton,Creighton University,4YR,D1,Big East,Big East,NE,mlb_class,wikipedia,False
+Creighton U,Creighton University,4YR,D1,Big East,Big East,NE,mlb_class,wikipedia,False
+Crowder CC,Crowder College,JC,JUCO,,,MO,name_regex,,False
+Crowder College,Crowder College,JC,JUCO,,,MO,mlb_class,,False
+Cumberland,Cumberland University,4YR,UNKNOWN,,,TN,bbref_type,,True
+Cumberland County College,Cumberland County College,OTHER,UNKNOWN,,,NJ,unknown,,True
+Cuyahoga CC,Cuyahoga CC,JC,JUCO,,,OH,name_regex,,False
+Cypress CC,Cypress College,JC,JUCO,,,CA,name_regex,,False
+Cypress College,Cypress College,JC,JUCO,,,CA,mlb_class,,False
+Dallas Baptist,Dallas Baptist University,4YR,D1,Conference USA,Conference USA,TX,mlb_class,wikipedia,False
+Dartmouth,Dartmouth College,4YR,D1,Ivy League,Ivy League,NH,mlb_class,wikipedia,False
+Darton State,Darton State College,JC,JUCO,,,GA,bbref_type,,False
+Davenport,Davenport University,4YR,UNKNOWN,,,MI,bbref_type,,True
+Davenport University,Davenport University,4YR,UNKNOWN,,,MI,name_regex,,True
+Davidson,Davidson College,4YR,D1,Atlantic 10,Atlantic 10,NC,mlb_class,wikipedia,False
+Dawson CC,Dawson CC,JC,JUCO,,,MT,name_regex,,False
+Dayton,University of Dayton,4YR,D1,Atlantic 10,Atlantic 10,OH,mlb_class,wikipedia,False
+Daytona State,Daytona State College,JC,JUCO,,,FL,bbref_type,,False
+Delaware,University of Delaware,4YR,D1,Coastal Athletic,Coastal Athletic,DE,bbref_type,wikipedia,False
+Delaware State University,Delaware State University,4YR,D1,Northeast,Northeast,DE,mlb_class,wikipedia,False
+Delgado CC,Delgado Community College,JC,JUCO,,,LA,name_regex,,False
+Delgado Col,Delgado Col,JC,JUCO,,,LA,mlb_class,,False
+Delta State,Delta State University,4YR,UNKNOWN,,,MS,bbref_type,,True
+Des Moines Area CC,Des Moines Area Community College,JC,JUCO,,,IA,name_regex,,False
+Diablo Valley College,Diablo Valley College,JC,JUCO,,,CA,bbref_type,,False
+Dixie State,Dixie State,OTHER,UNKNOWN,,,UT,unknown,,True
+Dixie State (UT),Dixie State (UT),OTHER,UNKNOWN,,,UT,unknown,,True
+Dowling College,Dowling College,4YR,UNKNOWN,,,NY,bbref_type,,True
+Drury,Drury University,4YR,UNKNOWN,,,MO,bbref_type,,True
+Drury (MO),Drury University,4YR,UNKNOWN,,,MO,bbref_type,,True
+Duke,Duke University,4YR,D1,Atlantic Coast,Atlantic Coast,NC,mlb_class,wikipedia,False
+Dyersburg State CC,Dyersburg State CC,JC,JUCO,,,TN,name_regex,,False
+EDUTEC,EDUTEC,OTHER,UNKNOWN,,,,unknown,,True
+East Carolina,East Carolina University,4YR,D1,The American,The American,NC,mlb_class,wikipedia,False
+East Central CC,East Central CC,JC,JUCO,,,MS,name_regex,,False
+East Central College (MO),East Central College (MO),OTHER,UNKNOWN,,,MO,unknown,,True
+East Central College (MS),East Central College (MS),OTHER,UNKNOWN,,,MS,unknown,,True
+East Mississippi Junior College,East Mississippi Community College,JC,JUCO,,,MS,name_regex,,False
+East Stroudsburg,East Stroudsburg University of Pennsylvania,4YR,UNKNOWN,,,PA,bbref_type,,True
+East Stroudsburg U,East Stroudsburg U,4YR,UNKNOWN,,,PA,mlb_class,,True
+East Tennessee St U,East Tennessee State University,4YR,D1,Southern,Southern,TN,mlb_class,wikipedia,False
+East Tennessee State,East Tennessee State University,4YR,D1,Southern,Southern,TN,mlb_class,wikipedia,False
+East Texas Baptist,East Texas Baptist University,4YR,UNKNOWN,,,TX,bbref_type,,True
+East Texas Baptist U,East Texas Baptist U,4YR,UNKNOWN,,,TX,name_regex,,True
+Eastern Florida State,Eastern Florida State College,JC,JUCO,,,FL,bbref_type,,False
+Eastern Illinois,Eastern Illinois University,4YR,D1,Ohio Valley,Ohio Valley,IL,mlb_class,wikipedia,False
+Eastern Illinois U,Eastern Illinois University,4YR,D1,Ohio Valley,Ohio Valley,IL,mlb_class,wikipedia,False
+Eastern Illinous,Eastern Illinous,OTHER,UNKNOWN,,,,unknown,,True
+Eastern Kentucky,Eastern Kentucky University,4YR,D1,ASUN,ASUN,KY,mlb_class,wikipedia,False
+Eastern Kentucky U,Eastern Kentucky University,4YR,D1,ASUN,ASUN,KY,mlb_class,wikipedia,False
+Eastern Michigan,Eastern Michigan University,4YR,D1,Mid-American,Mid-American,MI,mlb_class,wikipedia,False
+Eastern New Mexico,Eastern New Mexico University,4YR,UNKNOWN,,,NM,bbref_type,,True
+Eastern Oklahoma St JC,Eastern Oklahoma St JC,JC,JUCO,,,OK,name_regex,,False
+Eastern Oklahoma State College,Eastern Oklahoma State College,JC,JUCO,,,OK,bbref_type,,False
+Eastern Oklahoma State JC,Eastern Oklahoma State JC,JC,JUCO,,,OK,name_regex,,False
+Eckerd,Eckerd College,4YR,UNKNOWN,,,FL,bbref_type,,True
+Eckerd College,Eckerd College,OTHER,UNKNOWN,,,FL,unknown,,True
+Edmonds CC,Edmonds College,JC,JUCO,,,WA,name_regex,,False
+El Camino CC,El Camino College,JC,JUCO,,,CA,name_regex,,False
+El Paso CC,El Paso Community College,JC,JUCO,,,TX,name_regex,,False
+Elon,Elon University,4YR,D1,Coastal Athletic,Coastal Athletic,NC,bbref_type,wikipedia,False
+Elon University,Elon University,4YR,D1,Coastal Athletic,Coastal Athletic,NC,mlb_class,wikipedia,False
+Embry-Riddle University,Embry-Riddle Aeronautical University,4YR,UNKNOWN,,,FL,bbref_type,,True
+Emory,Emory University,4YR,UNKNOWN,,,GA,bbref_type,,True
+Emporia State,Emporia State University,4YR,UNKNOWN,,,KS,bbref_type,,True
+Endicott College,Endicott College,4YR,UNKNOWN,,,MA,bbref_type,,True
+Enterprise St JC,Enterprise St JC,JC,JUCO,,,AL,name_regex,,False
+Erskine College,Erskine College,4YR,UNKNOWN,,,SC,bbref_type,,True
+Evangel,Evangel University,4YR,UNKNOWN,,,MO,bbref_type,,True
+Evansville,University of Evansville,4YR,D1,Missouri Valley,Missouri Valley,IN,mlb_class,wikipedia,False
+Everett CC,Everett Community College,JC,JUCO,,,WA,name_regex,,False
+Fairfield,Fairfield University,4YR,D1,MAAC,MAAC,CT,mlb_class,wikipedia,False
+Fairfield U,Fairfield University,4YR,D1,MAAC,MAAC,CT,mlb_class,wikipedia,False
+Fairleigh Dickinson,Fairleigh Dickinson University,4YR,D1,Northeast,Northeast,NJ,bbref_type,wikipedia,False
+Faulkner (AL),Faulkner University,4YR,UNKNOWN,,,AL,bbref_type,,True
+Faulkner State CC,Faulkner State College,JC,JUCO,,,AL,name_regex,,False
+Faulkner University,Faulkner University,4YR,UNKNOWN,,,AL,bbref_type,,True
+Feather River CC,Feather River College,JC,JUCO,,,CA,name_regex,,False
+Feather River Col,Feather River Col,JC,JUCO,,,CA,mlb_class,,False
+Felician,Felician University,4YR,UNKNOWN,,,NJ,bbref_type,,True
+Felician Col,Felician Col,4YR,UNKNOWN,,,NJ,mlb_class,,True
+Felician College,Felician College,4YR,UNKNOWN,,,NJ,mlb_class,,True
+Ferrum College,Ferrum College,4YR,UNKNOWN,,,VA,bbref_type,,True
+Finger Lakes CC,Finger Lakes CC,JC,JUCO,,,NY,name_regex,,False
+Fisher College,Fisher College,4YR,UNKNOWN,,,MA,bbref_type,,True
+Flagler College,Flagler College,4YR,UNKNOWN,,,FL,bbref_type,,True
+Florence-Darlington Tech,Florence-Darlington Technical College,JC,JUCO,,,SC,mlb_class,,False
+Florence-Darlington Tech (SC),Florence-Darlington Technical College,JC,JUCO,,,SC,bbref_type,,False
+Florida,University of Florida,4YR,D1,Southeastern,Southeastern,FL,mlb_class,wikipedia,False
+Florida A&M,Florida Agricultural and Mechanical University,4YR,D1,SWAC,SWAC,FL,mlb_class,wikipedia,False
+Florida Atlantic,Florida Atlantic University,4YR,D1,The American,The American,FL,mlb_class,wikipedia,False
+Florida Gulf Coast,Florida Gulf Coast University,4YR,D1,ASUN,ASUN,FL,bbref_type,wikipedia,False
+Florida Gulf Coast University,Florida Gulf Coast University,4YR,D1,ASUN,ASUN,FL,mlb_class,wikipedia,False
+Florida Institute of Technology,Florida Institute of Technology,4YR,UNKNOWN,,,FL,bbref_type,,True
+Florida International,Florida International University,4YR,D1,Conference USA,Conference USA,FL,mlb_class,wikipedia,False
+Florida SouthWestern State College,Florida SouthWestern State College,JC,JUCO,,,FL,mlb_class,,False
+Florida Southern,Florida Southern College,4YR,UNKNOWN,,,FL,mlb_class,,True
+Florida Southern College,Florida Southern College,OTHER,UNKNOWN,,,FL,unknown,,True
+Florida Southwestern State Col,Florida SouthWestern State College,JC,JUCO,,,FL,mlb_class,,False
+Florida Southwestern State JC,Florida SouthWestern State College,JC,JUCO,,,FL,name_regex,,False
+Florida State,Florida State University,4YR,D1,Atlantic Coast,Atlantic Coast,FL,mlb_class,wikipedia,False
+Florida Tech,Florida Tech,OTHER,UNKNOWN,,,FL,unknown,,True
+"Folsom Lake CC, CA",Folsom Lake College,JC,JUCO,,,CA,name_regex,,False
+Folsom Lake College,Folsom Lake College,JC,JUCO,,,CA,mlb_class,,False
+Fordham,Fordham University,4YR,D1,Atlantic 10,Atlantic 10,NY,mlb_class,wikipedia,False
+Francis Marion,Francis Marion University,4YR,UNKNOWN,,,SC,bbref_type,,True
+Frank Phillips College,Frank Phillips College,JC,JUCO,,,TX,bbref_type,,False
+Franklin Pierce,Franklin Pierce University,4YR,UNKNOWN,,,NH,bbref_type,,True
+Franklin Pierce University,Franklin Pierce University,4YR,UNKNOWN,,,NH,name_regex,,True
+Freed Hardeman (TN),Freed-Hardeman University,4YR,UNKNOWN,,,TN,bbref_type,,True
+Fresno CC,Fresno CC,JC,JUCO,,,CA,name_regex,,False
+Fresno City College,Fresno City College,JC,JUCO,,,CA,bbref_type,,False
+Fresno Pacific,Fresno Pacific University,4YR,UNKNOWN,,,CA,mlb_class,,True
+Fresno State,"California State University, Fresno",4YR,D1,Mountain West,Mountain West,CA,mlb_class,wikipedia,False
+Furman,Furman University,4YR,UNKNOWN,,,SC,bbref_type,,True
+Galveston College,Galveston College,JC,JUCO,,,TX,bbref_type,,False
+"Galveston JC, TX",Galveston College,JC,JUCO,,,TX,name_regex,,False
+Gannon,Gannon University,4YR,UNKNOWN,,,PA,bbref_type,,True
+Gardner-Webb,Gardner–Webb University,4YR,D1,Big South,Big South,NC,bbref_type,wikipedia,False
+Gardner-Webb University,Gardner–Webb University,4YR,D1,Big South,Big South,NC,mlb_class,wikipedia,False
+"GateWay JC, AZ",GateWay Community College,JC,JUCO,,,AZ,name_regex,,False
+Gateway CC,GateWay Community College,JC,JUCO,,,AZ,name_regex,,False
+George Mason,George Mason University,4YR,D1,Atlantic 10,Atlantic 10,VA,mlb_class,wikipedia,False
+George Wallace CC,George Wallace CC,JC,JUCO,,,AL,name_regex,,False
+George Washington,George Washington University,4YR,D1,Atlantic 10,Atlantic 10,DC,bbref_type,wikipedia,False
+George Washington University,George Washington University,4YR,D1,Atlantic 10,Atlantic 10,DC,mlb_class,wikipedia,False
+Georgetown,Georgetown University,4YR,D1,Big East,Big East,DC,mlb_class,wikipedia,False
+Georgetown College,Georgetown College,OTHER,UNKNOWN,,,KY,unknown,,True
+Georgia,University of Georgia,4YR,D1,Southeastern,Southeastern,GA,mlb_class,wikipedia,False
+Georgia ,University of Georgia,4YR,D1,Southeastern,Southeastern,GA,mlb_class,wikipedia,False
+Georgia College,Georgia College,OTHER,UNKNOWN,,,GA,unknown,,True
+Georgia College and State,Georgia College & State University,4YR,UNKNOWN,,,GA,bbref_type,,True
+Georgia Gwinnett,Georgia Gwinnett College,4YR,UNKNOWN,,,GA,bbref_type,,True
+Georgia Gwinnett College,Georgia Gwinnett College,OTHER,UNKNOWN,,,GA,unknown,,True
+Georgia Highlands College,Georgia Highlands College,JC,JUCO,,,GA,mlb_class,,False
+Georgia Perimeter College,Georgia Perimeter College,JC,JUCO,,,GA,bbref_type,,False
+Georgia Southern,Georgia Southern University,4YR,D1,Sun Belt,Sun Belt,GA,mlb_class,wikipedia,False
+Georgia St U,Georgia State University,4YR,D1,Sun Belt,Sun Belt,GA,mlb_class,wikipedia,False
+Georgia State,Georgia State University,4YR,D1,Sun Belt,Sun Belt,GA,mlb_class,wikipedia,False
+Georgia Tech,Georgia Institute of Technology,4YR,D1,Atlantic Coast,Atlantic Coast,GA,mlb_class,wikipedia,False
+Glendale CC,Glendale Community College,JC,JUCO,,,AZ,name_regex,,False
+Glendale College,Glendale College,JC,JUCO,,,CA,mlb_class,,False
+Golden West College,Golden West College,JC,JUCO,,,CA,mlb_class,,False
+Gonzaga,Gonzaga University,4YR,D1,West Coast,West Coast,WA,mlb_class,wikipedia,False
+Gordon State College,Gordon State College,JC,JUCO,,,GA,mlb_class,,False
+Grambling State,Grambling State University,4YR,D1,SWAC,SWAC,LA,mlb_class,wikipedia,False
+Grand Canyon,Grand Canyon University,4YR,D1,Western Athletic,Western Athletic,AZ,bbref_type,wikipedia,False
+Grand Canyon University,Grand Canyon University,4YR,D1,Western Athletic,Western Athletic,AZ,mlb_class,wikipedia,False
+Grand Valley State,Grand Valley State University,4YR,UNKNOWN,,,MI,bbref_type,,True
+Grayson CC,Grayson College,JC,JUCO,,,TX,name_regex,,False
+Grayson College,Grayson College,JC,JUCO,,,TX,mlb_class,,False
+Grayson County College,Grayson County College,OTHER,UNKNOWN,,,TX,unknown,,True
+Green River CC,Green River CC,JC,JUCO,,,,name_regex,,False
+Grossmont College,Grossmont College,JC,JUCO,,,CA,mlb_class,,False
+Gulf Coast CC,Gulf Coast State College,JC,JUCO,,,FL,name_regex,,False
+"Gulf Coast JC, FL",Gulf Coast State College,JC,JUCO,,,FL,name_regex,,False
+Hardin Simmons,Hardin-Simmons University,4YR,UNKNOWN,,,TX,bbref_type,,True
+Harford CC,Harford Community College,JC,JUCO,,,MD,name_regex,,False
+Hartford,University of Hartford,4YR,UNKNOWN,,,CT,bbref_type,,True
+Harvard,Harvard University,4YR,D1,Ivy League,Ivy League,MA,mlb_class,wikipedia,False
+Haverford College,Haverford College,4YR,UNKNOWN,,,PA,bbref_type,,True
+Hawaii,University of Hawaiʻi at Mānoa,4YR,D1,Big West,Big West,HI,mlb_class,wikipedia,False
+Hawaii - Hilo,University of Hawaii at Hilo,4YR,UNKNOWN,,,HI,bbref_type,,True
+Hawaii Pacific,Hawaii Pacific University,4YR,UNKNOWN,,,HI,bbref_type,,True
+Heartland CC,Heartland Community College,JC,JUCO,,,IL,name_regex,,False
+Henderson State (AR),Henderson State University,4YR,UNKNOWN,,,AR,bbref_type,,True
+Hendrix College,Hendrix College,4YR,UNKNOWN,,,AR,bbref_type,,True
+Hendry Ford CC,Henry Ford Community College,JC,JUCO,,,MI,name_regex,,False
+Herkimer County CC,Herkimer County Community College,JC,JUCO,,,NY,name_regex,,False
+High Point,High Point University,4YR,D1,Big South,Big South,NC,bbref_type,wikipedia,False
+High Point University,High Point University,4YR,D1,Big South,Big South,NC,mlb_class,wikipedia,False
+Hill College,Hill College,JC,JUCO,,,TX,bbref_type,,False
+Hillsborough CC,Hillsborough Community College,JC,JUCO,,,FL,name_regex,,False
+Hillsdale Col,Hillsdale Col,4YR,UNKNOWN,,,MI,mlb_class,,True
+Hillsdale College,Hillsdale College,4YR,UNKNOWN,,,MI,mlb_class,,True
+Hinds CC,Hinds Community College,JC,JUCO,,,MS,name_regex,,False
+Hofstra,Hofstra University,4YR,D1,Coastal Athletic,Coastal Athletic,NY,mlb_class,wikipedia,False
+Hofstra U,Hofstra University,4YR,D1,Coastal Athletic,Coastal Athletic,NY,mlb_class,wikipedia,False
+Holmes CC,Holmes Community College,JC,JUCO,,,MS,name_regex,,False
+Holy Cross,College of the Holy Cross,4YR,D1,Patriot League,Patriot League,MA,mlb_class,wikipedia,False
+Holy Names University,Holy Names University,4YR,UNKNOWN,,,CA,name_regex,,True
+Hope International (CA),Hope International University,4YR,UNKNOWN,,,CA,bbref_type,,True
+Hope International U,Hope International U,4YR,UNKNOWN,,,CA,mlb_class,,True
+Hope International University,Hope International University,4YR,UNKNOWN,,,CA,mlb_class,,True
+Houghton Col,Houghton Col,OTHER,UNKNOWN,,,NY,unknown,,True
+Houston,University of Houston,4YR,D1,Big 12,Big 12,TX,mlb_class,wikipedia,False
+Houston - Victoria,Texas A&M University-Victoria,4YR,UNKNOWN,,,TX,mlb_class,,True
+Houston Baptist,Houston Christian University,4YR,D1,Southland,Southland,TX,bbref_type,wikipedia,True
+Houston Baptist (TX),Houston Christian University,4YR,D1,Southland,Southland,TX,bbref_type,wikipedia,True
+Houston Christian U,Houston Christian University,4YR,D1,Southland,Southland,TX,mlb_class,wikipedia,False
+Houston-Victoria,Texas A&M University-Victoria,4YR,UNKNOWN,,,TX,mlb_class,,True
+Howard College,Howard College,JC,JUCO,,,TX,mlb_class,,False
+Howard College ,Howard College,JC,JUCO,,,TX,mlb_class,,False
+Huntingdon College,Huntingdon College,4YR,UNKNOWN,,,AL,bbref_type,,True
+Huntington (IN),Huntington University,4YR,UNKNOWN,,,IN,bbref_type,,True
+Huron,Huron,OTHER,UNKNOWN,,,,unknown,,True
+Hutchinson CC,Hutchinson Community College,JC,JUCO,,,KS,name_regex,,False
+"Hutchinson CC, KS",Hutchinson Community College,JC,JUCO,,,KS,name_regex,,False
+IPFW,IPFW,OTHER,UNKNOWN,,,,unknown,,True
+Illinois,University of Illinois Urbana–Champaign,4YR,D1,Big Ten,Big Ten,IL,mlb_class,wikipedia,False
+Illinois - Chicago,University of Illinois Chicago,4YR,D1,Missouri Valley,Missouri Valley,IL,bbref_type,wikipedia,False
+Illinois State,Illinois State University,4YR,D1,Missouri Valley,Missouri Valley,IL,mlb_class,wikipedia,False
+Illinois-Champaign,University of Illinois Urbana–Champaign,4YR,D1,Big Ten,Big Ten,IL,bbref_type,wikipedia,True
+Incarnate Word,University of the Incarnate Word,4YR,D1,Southland,Southland,TX,bbref_type,wikipedia,False
+Indain River CC,Indian River State College,JC,JUCO,,,FL,name_regex,,False
+Indian Hills CC,Indian Hills Community College,JC,JUCO,,,IA,name_regex,,False
+Indian River State,Indian River State,JC,JUCO,,,FL,mlb_class,,False
+Indian River State Col,Indian River State Col,JC,JUCO,,,FL,mlb_class,,False
+"Indian River State JC, FL",Indian River State College,JC,JUCO,,,FL,name_regex,,False
+Indiana,Indiana University Bloomington,4YR,D1,Big Ten,Big Ten,IN,mlb_class,wikipedia,False
+Indiana ,Indiana University Bloomington,4YR,D1,Big Ten,Big Ten,IN,mlb_class,wikipedia,False
+Indiana State,Indiana State University,4YR,D1,Missouri Valley,Missouri Valley,IN,mlb_class,wikipedia,False
+Indiana Tech,Indiana Institute of Technology,4YR,UNKNOWN,,,IN,bbref_type,,True
+Indiana U,Indiana University Bloomington,4YR,D1,Big Ten,Big Ten,IN,name_regex,wikipedia,False
+Indiana University Kokomo,Indiana University Kokomo,4YR,UNKNOWN,,,IN,name_regex,,True
+Indiana University of Pennsylvania,Indiana University of Pennsylvania,4YR,UNKNOWN,,,PA,name_regex,,True
+Interamerican University of Puerto Rico,"Universidad Interamericana (San Juan, Puerto Rico)",JC,JUCO,,,,bbref_type,,False
+Iona,Iona University,4YR,D1,MAAC,MAAC,NY,bbref_type,wikipedia,False
+Iowa,University of Iowa,4YR,D1,Big Ten,Big Ten,IA,mlb_class,wikipedia,False
+Iowa Central CC,Iowa Central Community College,JC,JUCO,,,IA,name_regex,,False
+Iowa Western CC,Iowa Western Community College,JC,JUCO,,,IA,name_regex,,False
+Itawamba CC ,Itawamba Community College,JC,JUCO,,,MS,name_regex,,False
+Itawamba JC,Itawamba JC,JC,JUCO,,,MS,name_regex,,False
+Ithaca,Ithaca College,4YR,UNKNOWN,,,NY,bbref_type,,True
+Ivy Tech,Ivy Tech,4YR,UNKNOWN,,,IN,mlb_class,,True
+JC of Central Florida,College of Central Florida,JC,JUCO,,,FL,name_regex,,False
+"Jackson CC, MI",Jackson Community College,JC,JUCO,,,MI,name_regex,,False
+Jackson College,Jackson Community College,JC,JUCO,,,MI,bbref_type,,False
+Jackson State,Jackson State University,4YR,D1,SWAC,SWAC,MS,bbref_type,wikipedia,False
+Jacksonville,Jacksonville University,4YR,D1,ASUN,ASUN,FL,bbref_type,wikipedia,False
+Jacksonville State,Jacksonville State University,4YR,D1,Conference USA,Conference USA,AL,mlb_class,wikipedia,False
+Jacksonville University,Jacksonville University,4YR,D1,ASUN,ASUN,FL,mlb_class,wikipedia,False
+James Madison,James Madison University,4YR,D1,Sun Belt,Sun Belt,VA,bbref_type,wikipedia,False
+James Madison U,James Madison University,4YR,D1,Sun Belt,Sun Belt,VA,mlb_class,wikipedia,False
+James Madison University,James Madison University,4YR,D1,Sun Belt,Sun Belt,VA,mlb_class,wikipedia,False
+"Jefferson CC, MO",Jefferson College,JC,JUCO,,,MO,name_regex,,False
+"Jefferson CC, NY",Jefferson College,JC,JUCO,,,MO,name_regex,,False
+Jefferson College,Jefferson College,JC,JUCO,,,MO,mlb_class,,False
+"Jefferson JC, MO",Jefferson College,JC,JUCO,,,MO,name_regex,,False
+John A. Logan CC,John A. Logan College,JC,JUCO,,,IL,name_regex,,False
+John A. Logan CC ,John A. Logan College,JC,JUCO,,,IL,name_regex,,False
+John A. Logan College,John A. Logan College,JC,JUCO,,,IL,mlb_class,,False
+Johnson County CC,Johnson County Community College,JC,JUCO,,,KS,name_regex,,False
+Jones County JC,Jones County JC,JC,JUCO,,,MS,name_regex,,False
+Jones County Junior College,Jones County Junior College,JC,JUCO,,,MS,name_regex,,False
+Judson,Judson University,4YR,UNKNOWN,,,IL,bbref_type,,True
+Kankakee CC,Kankakee CC,JC,JUCO,,,IL,name_regex,,False
+Kansas,University of Kansas,4YR,D1,Big 12,Big 12,KS,mlb_class,wikipedia,False
+Kansas ,University of Kansas,4YR,D1,Big 12,Big 12,KS,mlb_class,wikipedia,False
+Kansas State,Kansas State University,4YR,D1,Big 12,Big 12,KS,mlb_class,wikipedia,False
+Kaskaskia CC,Kaskaskia College,JC,JUCO,,,IL,name_regex,,False
+Kean University,Kean University,4YR,UNKNOWN,,,NJ,mlb_class,,True
+Keene State,Keene State College,4YR,UNKNOWN,,,NH,bbref_type,,True
+Kennesaw State,Kennesaw State University,4YR,D1,ASUN,Conference USA,GA,mlb_class,wikipedia,False
+Kent State,Kent State University,4YR,D1,Mid-American,Mid-American,OH,mlb_class,wikipedia,False
+Kentucky,University of Kentucky,4YR,D1,Southeastern,Southeastern,KY,mlb_class,wikipedia,False
+Kenyon College,Kenyon College,4YR,UNKNOWN,,,OH,bbref_type,,True
+Keystone College,Keystone College,JC,JUCO,,,PA,bbref_type,,False
+King (TN),King University,4YR,UNKNOWN,,,TN,bbref_type,,True
+Kirkwood CC,Kirkwood CC,JC,JUCO,,,IA,name_regex,,False
+"Kirkwood CC, IA",Kirkwood Community College,JC,JUCO,,,IA,name_regex,,False
+Kutztown,Kutztown University of Pennsylvania,4YR,UNKNOWN,,,PA,bbref_type,,True
+LIU Post (NY),"Long Island University, C W Post Campus",4YR,UNKNOWN,,,NY,bbref_type,,True
+LSU,Louisiana State University,4YR,D1,Southeastern,Southeastern,LA,mlb_class,wikipedia,False
+LSU Alexandria,LSU Alexandria,OTHER,UNKNOWN,,,LA,unknown,,True
+La Salle,La Salle University,4YR,UNKNOWN,,,PA,bbref_type,,True
+La Verne,University of La Verne,4YR,UNKNOWN,,,CA,bbref_type,,True
+Lackawanna (PA),Lackawanna College,JC,JUCO,,,PA,bbref_type,,False
+Lackawanna College,Lackawanna College,JC,JUCO,,,PA,mlb_class,,False
+Lafayette College,Lafayette College,4YR,D1,Patriot League,Patriot League,PA,bbref_type,wikipedia,False
+Lake Erie College,Lake Erie College,4YR,UNKNOWN,,,OH,bbref_type,,True
+"Lake Wales, FL","Lake Wales, FL",OTHER,UNKNOWN,,,,unknown,,True
+Lake-Sumter State,Lake-Sumter State College,JC,JUCO,,,FL,bbref_type,,False
+Lakeland CC,Lakeland Community College,JC,JUCO,,,OH,name_regex,,False
+Lamar,Lamar University,4YR,D1,Southland,Southland,TX,mlb_class,wikipedia,False
+Lamar CC,Lamar Community College,JC,JUCO,,,CO,name_regex,,False
+Lamar University,Lamar University,4YR,D1,Southland,Southland,TX,mlb_class,wikipedia,False
+Lander,Lander University,4YR,UNKNOWN,,,SC,bbref_type,,True
+Lander University,Lander University,4YR,UNKNOWN,,,SC,mlb_class,,True
+Lane CC,Lane Community College,JC,JUCO,,,OR,name_regex,,False
+"Lane CC, OR",Lane Community College,JC,JUCO,,,OR,name_regex,,False
+Lawson State CC,Lawson State CC,JC,JUCO,,,AL,name_regex,,False
+Le Moyne College,Le Moyne College,4YR,D1,Northeast,Northeast,NY,mlb_class,wikipedia,False
+Lee,Lee University,4YR,UNKNOWN,,,TN,bbref_type,,True
+Lee University,Lee University,4YR,UNKNOWN,,,TN,mlb_class,,True
+Lehigh,Lehigh University,4YR,D1,Patriot League,Patriot League,PA,mlb_class,wikipedia,False
+Lehigh U,Lehigh University,4YR,D1,Patriot League,Patriot League,PA,mlb_class,wikipedia,False
+Lenoir-Rhyne,Lenoir-Rhyne University,4YR,UNKNOWN,,,NC,bbref_type,,True
+Lenoir-Rhyne (NC),Lenoir-Rhyne University,4YR,UNKNOWN,,,NC,bbref_type,,True
+Lenoir-Rhyne U,Lenoir-Rhyne U,4YR,UNKNOWN,,,NC,mlb_class,,True
+Lenoir-Rhyne University,Lenoir-Rhyne University,4YR,UNKNOWN,,,NC,mlb_class,,True
+Lethbridge Col,Lethbridge Col,JC,JUCO,,,AB,mlb_class,,False
+"Lethbridge College, AB",Lethbridge CC,JC,JUCO,,,AB,bbref_type,,False
+Lewis Clark State College,Lewis Clark State College,4YR,UNKNOWN,,,ID,mlb_class,,True
+Lewis U,Lewis U,4YR,UNKNOWN,,,IL,mlb_class,,True
+Lewis and Clark CC,Lewis-Clark State College,JC,JUCO,,,ID,name_regex,,False
+Lewis-Clark State,Lewis-Clark State College,4YR,UNKNOWN,,,ID,mlb_class,,True
+Lewis-Clark State (ID),Lewis-Clark State College,4YR,UNKNOWN,,,ID,bbref_type,,True
+Lewis-Clark State College,Lewis-Clark State College,4YR,UNKNOWN,,,ID,mlb_class,,True
+Liberty,Liberty University,4YR,D1,Conference USA,Conference USA,VA,bbref_type,wikipedia,False
+Liberty University,Liberty University,4YR,D1,Conference USA,Conference USA,VA,mlb_class,wikipedia,False
+Limestone College,Limestone University,4YR,UNKNOWN,,,SC,bbref_type,,True
+Lincoln Land CC,Lincoln Land Community College,JC,JUCO,,,IL,name_regex,,False
+Lincoln Memorial University,Lincoln Memorial University,4YR,UNKNOWN,,,TN,bbref_type,,True
+Lindenwood,Lindenwood University,4YR,D1,Ohio Valley,Ohio Valley,MO,bbref_type,wikipedia,False
+Lindsey Wilson,Lindsey Wilson College,4YR,UNKNOWN,,,KY,bbref_type,,True
+Lindsey Wilson Col,Lindsey Wilson Col,4YR,UNKNOWN,,,KY,mlb_class,,True
+Linn Benton CC,Linn Benton CC,JC,JUCO,,,OR,name_regex,,False
+Lipscomb,Lipscomb University,4YR,D1,ASUN,ASUN,TN,bbref_type,wikipedia,False
+Lipscomb University,Lipscomb University,4YR,D1,ASUN,ASUN,TN,mlb_class,wikipedia,False
+Lock Haven (PA),Lock Haven (PA),OTHER,UNKNOWN,,,PA,unknown,,True
+Long Beach CC,Long Beach CC,JC,JUCO,,,CA,name_regex,,False
+Long Beach City College,Long Beach City College,JC,JUCO,,,CA,bbref_type,,False
+Long Beach State,"California State University, Long Beach",4YR,D1,Big West,Big West,CA,mlb_class,wikipedia,False
+Long Island,Long Island University,4YR,D1,Northeast,Northeast,NY,bbref_type,wikipedia,False
+Long Island U,Long Island University,4YR,D1,Northeast,Northeast,NY,mlb_class,wikipedia,False
+Long Island University,Long Island University,4YR,D1,Northeast,Northeast,NY,mlb_class,wikipedia,False
+Longwood,Longwood University,4YR,D1,Big South,Big South,VA,bbref_type,wikipedia,False
+Longwood University,Longwood University,4YR,D1,Big South,Big South,VA,mlb_class,wikipedia,False
+Los Medanos College,Los Medanos College,JC,JUCO,,,CA,bbref_type,,False
+Louisburg College,Louisburg College,JC,JUCO,,,NC,mlb_class,,False
+Louisiana - Lafayette,University of Louisiana at Lafayette,4YR,D1,Sun Belt,Sun Belt,LA,bbref_type,wikipedia,False
+Louisiana - Monroe,University of Louisiana at Monroe,4YR,D1,Sun Belt,Sun Belt,LA,bbref_type,wikipedia,False
+Louisiana State,Louisiana State University,4YR,D1,Southeastern,Southeastern,LA,bbref_type,wikipedia,False
+Louisiana State - Eunice,"Louisiana State University, Eunice",JC,JUCO,,,LA,bbref_type,,False
+Louisiana State - Shreveport,Louisiana State University Shreveport,4YR,UNKNOWN,,,LA,bbref_type,,True
+Louisiana Tech,Louisiana Tech University,4YR,D1,Conference USA,Conference USA,LA,mlb_class,wikipedia,False
+Louisiana Tech U,Louisiana Tech University,4YR,D1,Conference USA,Conference USA,LA,mlb_class,wikipedia,False
+Louisville,University of Louisville,4YR,D1,Atlantic Coast,Atlantic Coast,KY,mlb_class,wikipedia,False
+Lower Columbia CC,Lower Columbia College,JC,JUCO,,,WA,name_regex,,False
+Loyola  U,Loyola University New Orleans,4YR,UNKNOWN,,,LA,bbref_type,,True
+Loyola Marymount,Loyola Marymount University,4YR,D1,West Coast,West Coast,CA,bbref_type,wikipedia,False
+Loyola Marymount University,Loyola Marymount University,4YR,D1,West Coast,West Coast,CA,mlb_class,wikipedia,False
+Lubbock Christian,Lubbock Christian University,4YR,UNKNOWN,,,TX,bbref_type,,True
+Lurleen B Wallace St JC,Lurleen B Wallace St JC,JC,JUCO,,,AL,name_regex,,False
+Lynchburg College,University of Lynchburg,4YR,UNKNOWN,,,VA,bbref_type,,True
+Lynn (FL),Lynn University,4YR,UNKNOWN,,,FL,bbref_type,,True
+Lynn U,Lynn University,4YR,UNKNOWN,,,FL,mlb_class,,True
+Lynn University,Lynn University,4YR,UNKNOWN,,,FL,mlb_class,,True
+MCC-Longview,Longview Community College,JC,JUCO,,,MO,bbref_type,,False
+MIT,MIT,4YR,UNKNOWN,,,MA,mlb_class,,True
+Macalester,Macalester College,4YR,UNKNOWN,,,MN,bbref_type,,True
+Madison Area Technical College,Madison Area Technical College,JC,JUCO,,,WI,bbref_type,,False
+Madison College,Madison College,JC,JUCO,,,WI,mlb_class,,False
+"Magnolia, TX","Magnolia, TX",OTHER,UNKNOWN,,,,unknown,,True
+Maine Orono,University of Maine,4YR,D1,America East,America East,ME,bbref_type,wikipedia,True
+Malone University,Malone University,4YR,UNKNOWN,,,OH,bbref_type,,True
+Manhattan,Manhattan University,4YR,D1,MAAC,MAAC,NY,bbref_type,wikipedia,False
+Manhattan College,Manhattan University,4YR,D1,MAAC,MAAC,NY,bbref_type,wikipedia,False
+Mankato State,"Minnesota State University, Mankato",4YR,UNKNOWN,,,MN,bbref_type,,True
+Mansfield University of Pennsylvania,Mansfield University of Pennsylvania,4YR,UNKNOWN,,,PA,bbref_type,,True
+Maplewoods CC,Maplewoods CC,JC,JUCO,,,MO,name_regex,,False
+Marietta College,Marietta College,4YR,UNKNOWN,,,OH,bbref_type,,True
+Marin CC,Marin CC,JC,JUCO,,,CA,name_regex,,False
+"Marin CC, CA",College of Marin,JC,JUCO,,,CA,name_regex,,False
+Marist,Marist College,4YR,D1,MAAC,MAAC,NY,bbref_type,wikipedia,False
+Marist College,Marist College,4YR,D1,MAAC,MAAC,NY,mlb_class,wikipedia,False
+Mars Hill,Mars Hill University,4YR,UNKNOWN,,,NC,bbref_type,,True
+Marshall,Marshall University,4YR,D1,Sun Belt,Sun Belt,WV,mlb_class,wikipedia,False
+Maryland,"University of Maryland, College Park",4YR,D1,Big Ten,Big Ten,MD,mlb_class,wikipedia,False
+Maryland - Baltimore County,"University of Maryland, Baltimore County",4YR,D1,America East,America East,MD,bbref_type,wikipedia,False
+Maryland College Park,"University of Maryland, College Park",4YR,D1,Big Ten,Big Ten,MD,bbref_type,wikipedia,False
+Maryville,Maryville,4YR,UNKNOWN,,,,bbref_type,,True
+Maryville U,Maryville U,4YR,UNKNOWN,,,MO,mlb_class,,True
+Massachusetts,University of Massachusetts Amherst,4YR,D1,Atlantic 10,Atlantic 10,MA,bbref_type,wikipedia,False
+Massachusetts - Boston,University of Massachusetts Boston,4YR,UNKNOWN,,,MA,bbref_type,,True
+Massachusetts - Lowell,University of Massachusetts Lowell,4YR,D1,America East,America East,MA,bbref_type,wikipedia,False
+Massachusetts Institute of Technology,Massachusetts Institute of Technology,4YR,UNKNOWN,,,MA,bbref_type,,True
+Massachusetts-Lowell,University of Massachusetts Lowell,4YR,D1,America East,America East,MA,bbref_type,wikipedia,False
+Mayville State,Mayville State University,4YR,UNKNOWN,,,ND,bbref_type,,True
+McHenry CC,McHenry County College,JC,JUCO,,,IL,name_regex,,False
+McHenry County Col,McHenry County Col,OTHER,UNKNOWN,,,IL,unknown,,True
+McLennan CC,McLennan Community College,JC,JUCO,,,TX,name_regex,,False
+"McLennan JC, TX",McLennan Community College,JC,JUCO,,,TX,name_regex,,False
+McNeese State,McNeese State University,4YR,D1,Southland,Southland,LA,mlb_class,wikipedia,False
+Memphis,University of Memphis,4YR,D1,The American,The American,TN,bbref_type,wikipedia,False
+Menlo,Menlo College,4YR,UNKNOWN,,,CA,bbref_type,,True
+Menlo (CA),Menlo College,4YR,UNKNOWN,,,CA,bbref_type,,True
+Menlo College,Menlo College,OTHER,UNKNOWN,,,CA,unknown,,True
+"Merced CC, CA",Merced College,JC,JUCO,,,CA,name_regex,,False
+Merced College,Merced College,JC,JUCO,,,CA,bbref_type,,False
+Merced JC (CA),Merced College,JC,JUCO,,,CA,name_regex,,False
+Mercer,Mercer University,4YR,D1,Southern,Southern,GA,mlb_class,wikipedia,False
+Mercer County CC,Mercer University,JC,JUCO,,,GA,name_regex,,False
+"Mercer County CC, NJ",Mercer County Community College,JC,JUCO,,,NJ,name_regex,,False
+Mercer U,Mercer University,4YR,D1,Southern,Southern,GA,mlb_class,wikipedia,False
+Mercer University,Mercer University,4YR,D1,Southern,Southern,GA,mlb_class,wikipedia,False
+Mercyhurst,Mercyhurst University,4YR,D1,Northeast,Northeast,PA,bbref_type,wikipedia,False
+Mercyhurst (PA),Mercyhurst University,4YR,D1,Northeast,Northeast,PA,bbref_type,wikipedia,False
+Mercyhurst College,Mercyhurst College,OTHER,UNKNOWN,,,PA,unknown,,True
+Meridian CC,Meridian Community College,JC,JUCO,,,MS,name_regex,,False
+Merrimack,Merrimack College,4YR,D1,Northeast,MAAC,MA,bbref_type,wikipedia,False
+Mesa CC,Mesa Community College,JC,JUCO,,,AZ,name_regex,,False
+Mesa State,Colorado Mesa University,4YR,UNKNOWN,,,CO,bbref_type,,True
+Messiah College,Messiah University,4YR,UNKNOWN,,,PA,bbref_type,,True
+Methodist,Methodist University,4YR,UNKNOWN,,,NC,bbref_type,,True
+Metropolitan State University of Denver,Metropolitan State University of Denver,4YR,UNKNOWN,,,CO,bbref_type,,True
+Miama Dade CC,"Miami Dade College, Kendall Campus",JC,JUCO,,,FL,name_regex,,False
+Miami,University of Miami,4YR,D1,Atlantic Coast,Atlantic Coast,FL,mlb_class,wikipedia,False
+Miami ,University of Miami,4YR,D1,Atlantic Coast,Atlantic Coast,FL,mlb_class,wikipedia,False
+Miami (OH),Miami University,4YR,D1,Mid-American,Mid-American,OH,mlb_class,wikipedia,False
+Miami Dade CC,"Miami Dade College, Wolfson Campus",JC,JUCO,,,FL,name_regex,,False
+Miami Dade CC Kendall,Miami Dade CC Kendall,JC,JUCO,,,FL,name_regex,,False
+Miami Dade CC South,Miami Dade CC South,JC,JUCO,,,FL,name_regex,,False
+Miami Dade College,Miami Dade College,JC,JUCO,,,FL,mlb_class,,False
+Miami University,Miami University,4YR,D1,Mid-American,Mid-American,OH,mlb_class,wikipedia,False
+Michigan,University of Michigan,4YR,D1,Big Ten,Big Ten,MI,mlb_class,wikipedia,False
+Michigan State,Michigan State University,4YR,D1,Big Ten,Big Ten,MI,mlb_class,wikipedia,False
+Mid America Nazarene,MidAmerica Nazarene University,4YR,UNKNOWN,,,KS,bbref_type,,True
+Middle Georgia State,Middle Georgia State University,JC,JUCO,,,GA,bbref_type,,False
+Middle Tennessee State,Middle Tennessee State University,4YR,D1,Conference USA,Conference USA,TN,mlb_class,wikipedia,False
+Midland College,Midland College,JC,JUCO,,,TX,mlb_class,,False
+Midland College (TX),Midland College,JC,JUCO,,,TX,bbref_type,,False
+"Midland JC, TX",Midland College,JC,JUCO,,,TX,name_regex,,False
+"Midway, KY",Midway University,4YR,UNKNOWN,,,KY,bbref_type,,True
+Millersville (PA),Millersville University of Pennsylvania,4YR,UNKNOWN,,,PA,bbref_type,,True
+Millersville University,Millersville University,4YR,UNKNOWN,,,PA,name_regex,,True
+Millersville University of Pennsylvania,Millersville University of Pennsylvania,4YR,UNKNOWN,,,PA,bbref_type,,True
+Milwaukee,University of Wisconsin–Milwaukee,4YR,D1,Horizon League,Horizon League,WI,mlb_class,wikipedia,False
+Mineral Area JC,Mineral Area JC,JC,JUCO,,,MO,name_regex,,False
+Minnesota,University of Minnesota,4YR,D1,Big Ten,Big Ten,MN,mlb_class,wikipedia,False
+Minnesota - Duluth,University of Minnesota Duluth,4YR,UNKNOWN,,,MN,bbref_type,,True
+Minnesota State - Mankato,"Minnesota State University, Mankato",4YR,UNKNOWN,,,MN,mlb_class,,True
+Minnesota State-Mankato,"Minnesota State University, Mankato",4YR,UNKNOWN,,,MN,mlb_class,,True
+Mission Col,Mission College,JC,JUCO,,,CA,bbref_type,,False
+Mission College,Mission College,JC,JUCO,,,CA,bbref_type,,False
+Mississippi,University of Mississippi,4YR,D1,Southeastern,Southeastern,MS,bbref_type,wikipedia,False
+Mississippi Col,Mississippi Col,OTHER,UNKNOWN,,,MS,unknown,,True
+Mississippi Gulf Coast JC,Mississippi Gulf Coast JC,JC,JUCO,,,MS,name_regex,,False
+Mississippi St U,Mississippi State University,4YR,D1,Southeastern,Southeastern,MS,name_regex,wikipedia,False
+Mississippi State,Mississippi State University,4YR,D1,Southeastern,Southeastern,MS,mlb_class,wikipedia,False
+Mississippi Valley State,Mississippi Valley State University,4YR,D1,SWAC,SWAC,MS,bbref_type,wikipedia,False
+Missouri,University of Missouri,4YR,D1,Southeastern,Southeastern,MO,mlb_class,wikipedia,False
+Missouri Baptist,Missouri Baptist University,4YR,UNKNOWN,,,MO,bbref_type,,True
+Missouri Columbia,University of Missouri,4YR,D1,Southeastern,Southeastern,MO,bbref_type,wikipedia,True
+Missouri Southern St Col,Missouri Southern St Col,4YR,UNKNOWN,,,MO,mlb_class,,True
+Missouri Southern State,Missouri Southern State University,4YR,UNKNOWN,,,MO,bbref_type,,True
+Missouri State,Missouri State University,4YR,D1,Missouri Valley,Missouri Valley,MO,mlb_class,wikipedia,False
+Missouri Western State,Missouri Western State University,4YR,UNKNOWN,,,MO,bbref_type,,True
+Mobile,University of Mobile,4YR,UNKNOWN,,,AL,bbref_type,,True
+Mobile (AL),University of Mobile,4YR,UNKNOWN,,,AL,bbref_type,,True
+Modesto Junior College,Modesto Junior College,JC,JUCO,,,CA,name_regex,,False
+Monmouth,Monmouth University,4YR,D1,Coastal Athletic,Coastal Athletic,NJ,bbref_type,wikipedia,False
+Monmouth University,Monmouth University,4YR,D1,Coastal Athletic,Coastal Athletic,NJ,mlb_class,wikipedia,False
+Monroe (NY),Monroe Community College,JC,JUCO,,,NY,bbref_type,,False
+Monroe CC,Monroe Community College,JC,JUCO,,,NY,name_regex,,False
+Monroe College,Monroe College,JC,JUCO,,,NY,mlb_class,,False
+Montana State University Billings,Montana State University Billings,4YR,UNKNOWN,,,MT,name_regex,,True
+Montevallo,University of Montevallo,4YR,UNKNOWN,,,AL,bbref_type,,True
+Montreat College,Montreat College,OTHER,UNKNOWN,,,NC,unknown,,True
+Moody (TX),Moody (TX),OTHER,UNKNOWN,,,TX,unknown,,True
+Moorpark College,Moorpark College,JC,JUCO,,,CA,mlb_class,,False
+Morehead State,Morehead State University,4YR,D1,Ohio Valley,Ohio Valley,KY,mlb_class,wikipedia,False
+Morningside,Morningside University,4YR,UNKNOWN,,,IA,bbref_type,,True
+Motlow State CC,Motlow State CC,JC,JUCO,,,TN,name_regex,,False
+Mount Olive (NC),University of Mount Olive,4YR,UNKNOWN,,,NC,bbref_type,,True
+Mount Olive College,University of Mount Olive,4YR,UNKNOWN,,,NC,bbref_type,,True
+Mount St. Mary's University,Mount St. Mary's University,4YR,D1,MAAC,MAAC,MD,name_regex,wikipedia,False
+Mt Olive Col,University of Mount Olive,4YR,UNKNOWN,,,NC,bbref_type,,True
+Mt. Hood CC,Mount Hood Community College,JC,JUCO,,,OR,name_regex,,False
+Mt. San Antonio College,Mount San Antonio College,JC,JUCO,,,CA,mlb_class,,False
+Murray State (KY),Murray State University,4YR,D1,Missouri Valley,Missouri Valley,KY,bbref_type,wikipedia,False
+Murray State Col,Murray State Col,JC,JUCO,,,OK,mlb_class,,False
+Murray State College,Murray State College,JC,JUCO,,,OK,mlb_class,,False
+Murray State University,Murray State University,4YR,D1,Missouri Valley,Missouri Valley,KY,mlb_class,wikipedia,False
+NC State,North Carolina State University,4YR,D1,Atlantic Coast,Atlantic Coast,NC,mlb_class,wikipedia,False
+Navarro College,Navarro College,JC,JUCO,,,TX,mlb_class,,False
+Navy,United States Naval Academy,4YR,D1,Patriot League,Patriot League,MD,mlb_class,wikipedia,False
+Nebraska,University of Nebraska–Lincoln,4YR,D1,Big Ten,Big Ten,NE,mlb_class,wikipedia,False
+Nebraska - Omaha,University of Nebraska Omaha,4YR,D1,The Summit,The Summit,NE,mlb_class,wikipedia,False
+Nebraska Lincoln,University of Nebraska–Lincoln,4YR,D1,Big Ten,Big Ten,NE,bbref_type,wikipedia,False
+Nebraska-Omaha,University of Nebraska Omaha,4YR,D1,The Summit,The Summit,NE,mlb_class,wikipedia,False
+Neosho CC,Neosho County Community College,JC,JUCO,,,KS,name_regex,,False
+Nevada,"University of Nevada, Reno",4YR,D1,Mountain West,Mountain West,NV,mlb_class,wikipedia,False
+Nevada - Las Vegas,"University of Nevada, Las Vegas",4YR,D1,Mountain West,Mountain West,NV,bbref_type,wikipedia,False
+Nevada - Reno,"University of Nevada, Reno",4YR,D1,Mountain West,Mountain West,NV,bbref_type,wikipedia,False
+New Haven,University of New Haven,4YR,UNKNOWN,,,CT,bbref_type,,True
+New Haven (CT),University of New Haven,4YR,UNKNOWN,,,CT,bbref_type,,True
+New Jersey Inst of Tech,New Jersey Institute of Technology,4YR,D1,America East,America East,NJ,bbref_type,wikipedia,True
+New Jersey Institute of Technology,New Jersey Institute of Technology,4YR,D1,America East,America East,NJ,mlb_class,wikipedia,False
+New Mexico,University of New Mexico,4YR,D1,Mountain West,Mountain West,NM,mlb_class,wikipedia,False
+New Mexico JC,New Mexico JC,JC,JUCO,,,NM,name_regex,,False
+New Mexico Junior College,New Mexico Junior College,JC,JUCO,,,NM,name_regex,,False
+New Mexico Military Institute,New Mexico Military Institute,JC,JUCO,,,NM,mlb_class,,False
+New Mexico State,New Mexico State University,4YR,D1,Conference USA,Conference USA,NM,mlb_class,wikipedia,False
+New Orleans,University of New Orleans,4YR,D1,Southland,Southland,LA,bbref_type,wikipedia,False
+New York University,New York University,4YR,UNKNOWN,,,NY,bbref_type,,True
+Newberry,Newberry College,4YR,UNKNOWN,,,SC,bbref_type,,True
+Newman,Newman University,4YR,UNKNOWN,,,KS,bbref_type,,True
+Niagara,Niagara University,4YR,D1,MAAC,MAAC,NY,bbref_type,wikipedia,False
+Niagara County CC,Niagara County Community College,JC,JUCO,,,NY,name_regex,,False
+"Niagara County CC, NY",Niagara County Community College,JC,JUCO,,,NY,name_regex,,False
+Niagara U,Niagara University,4YR,D1,MAAC,MAAC,NY,mlb_class,wikipedia,False
+Nicholls State,Nicholls State University,4YR,D1,Southland,Southland,LA,mlb_class,wikipedia,False
+Norfolk State,Norfolk State University,4YR,D1,Northeast,Northeast,VA,bbref_type,wikipedia,False
+North Carolina,University of North Carolina at Chapel Hill,4YR,D1,Atlantic Coast,Atlantic Coast,NC,mlb_class,wikipedia,False
+North Carolina A&T,North Carolina Agricultural and Technical State University,4YR,D1,Coastal Athletic,Coastal Athletic,NC,mlb_class,wikipedia,False
+North Carolina Central,North Carolina Central University,4YR,UNKNOWN,,,NC,bbref_type,,True
+North Carolina Central University,North Carolina Central University,4YR,UNKNOWN,,,NC,mlb_class,,True
+North Carolina State,North Carolina State University,4YR,D1,Atlantic Coast,Atlantic Coast,NC,mlb_class,wikipedia,False
+North Central College,North Central College,OTHER,UNKNOWN,,,MN,unknown,,True
+North Dakota,University of North Dakota,4YR,UNKNOWN,,,ND,bbref_type,,True
+North Dakota St U,North Dakota State University,4YR,D1,The Summit,The Summit,ND,mlb_class,wikipedia,False
+North Dakota State,North Dakota State University,4YR,D1,The Summit,The Summit,ND,mlb_class,wikipedia,False
+North Florida,University of North Florida,4YR,D1,ASUN,ASUN,FL,bbref_type,wikipedia,False
+North Georgia,University of North Georgia,4YR,UNKNOWN,,,GA,bbref_type,,True
+North Greenville,North Greenville University,4YR,UNKNOWN,,,SC,bbref_type,,True
+North Greenville (NC),North Greenville University,4YR,UNKNOWN,,,NC,bbref_type,,True
+North Greenville U,North Greenville U,4YR,UNKNOWN,,,SC,mlb_class,,True
+North Greenville University,North Greenville University,4YR,UNKNOWN,,,SC,mlb_class,,True
+North Iowa Area CC,North Iowa Area Community College,JC,JUCO,,,IA,name_regex,,False
+"Northampton CC, PA",Northampton Community College,JC,JUCO,,,PA,name_regex,,False
+Northeast Texas CC,Northeast Texas Community College,JC,JUCO,,,TX,name_regex,,False
+Northeastern,Northeastern University,4YR,D1,Coastal Athletic,Coastal Athletic,MA,mlb_class,wikipedia,False
+Northeastern Junior College ,Northeastern Junior College,JC,JUCO,,,CO,name_regex,,False
+Northeastern Oklahoma A&M,Northeastern Oklahoma A&M College,JC,JUCO,,,OK,bbref_type,,False
+Northeastern St U,Northeastern St U,4YR,UNKNOWN,,,OK,mlb_class,,True
+Northeastern State,Northeastern State University,4YR,UNKNOWN,,,OK,bbref_type,,True
+Northeastern State University,Northeastern State University,4YR,UNKNOWN,,,OK,mlb_class,,True
+Northern Colorado,University of Northern Colorado,4YR,D1,The Summit,The Summit,CO,bbref_type,wikipedia,False
+Northern Essex CC,Northern Essex CC,JC,JUCO,,,MA,name_regex,,False
+Northern Illinois,Northern Illinois University,4YR,D1,Mid-American,Mid-American,IL,bbref_type,wikipedia,False
+Northern Kentucky,Northern Kentucky University,4YR,D1,Horizon League,Horizon League,KY,mlb_class,wikipedia,False
+Northern Oklahoma College,Northern Oklahoma College-Enid,JC,JUCO,,,OK,bbref_type,,False
+Northern Oklahoma College-Enid,Northern Oklahoma College-Enid,JC,JUCO,,,OK,mlb_class,,False
+Northern Oklahoma JC,Northern Oklahoma College-Enid,JC,JUCO,,,OK,name_regex,,False
+Northern St U,Northern St U,4YR,UNKNOWN,,,SD,name_regex,,True
+Northwest Florida St Col,Northwest Florida St Col,JC,JUCO,,,FL,mlb_class,,False
+Northwest Florida State,Northwest Florida State College,JC,JUCO,,,FL,mlb_class,,False
+Northwest Florida State JC,Northwest Florida State College,JC,JUCO,,,FL,name_regex,,False
+Northwest Mississippi CC,Northwest Mississippi Community College,JC,JUCO,,,MS,name_regex,,False
+Northwest Nazarene,Northwest Nazarene University,4YR,UNKNOWN,,,ID,bbref_type,,True
+Northwest Shoals CC,Northwest Shoals CC,JC,JUCO,,,AL,name_regex,,False
+Northwestern,Northwestern University,4YR,D1,Big Ten,Big Ten,IL,mlb_class,wikipedia,False
+Northwestern Ohio,University of Northwestern Ohio,4YR,UNKNOWN,,,OH,bbref_type,,True
+Northwestern State,Northwestern State University,4YR,D1,Southland,Southland,LA,mlb_class,wikipedia,False
+Northwood (MI),Northwood University,4YR,UNKNOWN,,,MI,bbref_type,,True
+Northwood University,Northwood University,4YR,UNKNOWN,,,MI,mlb_class,,True
+Notre Dame,University of Notre Dame,4YR,D1,Atlantic Coast,Atlantic Coast,IN,mlb_class,wikipedia,False
+Notre Dame Col,Notre Dame Col,4YR,UNKNOWN,,,OH,mlb_class,,True
+Nova Southeastern,Nova Southeastern University,4YR,UNKNOWN,,,FL,mlb_class,,True
+Nova Southeastern (FL),Nova Southeastern University,4YR,UNKNOWN,,,FL,bbref_type,,True
+Nova Southeastern University,Nova Southeastern University,4YR,UNKNOWN,,,FL,mlb_class,,True
+Oakland CC,Oakland University,JC,JUCO,,,MI,name_regex,,False
+Oakland University,Oakland University,4YR,D1,Horizon League,Horizon League,MI,mlb_class,wikipedia,False
+Oakton CC,Oakton CC,JC,JUCO,,,,name_regex,,False
+Odessa College,Odessa College,JC,JUCO,,,TX,mlb_class,,False
+Ohio,Ohio University,4YR,D1,Mid-American,Mid-American,OH,bbref_type,wikipedia,False
+Ohio Dominican,Ohio Dominican University,4YR,UNKNOWN,,,OH,bbref_type,,True
+Ohio Dominican University,Ohio Dominican University,4YR,UNKNOWN,,,OH,name_regex,,True
+Ohio State,Ohio State University,4YR,D1,Big Ten,Big Ten,OH,mlb_class,wikipedia,False
+Ohio University,Ohio University,4YR,D1,Mid-American,Mid-American,OH,mlb_class,wikipedia,False
+Ohito State,Ohito State,OTHER,UNKNOWN,,,,unknown,,True
+Ohlone College,Ohlone College,JC,JUCO,,,CA,mlb_class,,False
+Okanahan College,Okanahan College,OTHER,UNKNOWN,,,BC,unknown,,True
+Oklahoma,University of Oklahoma,4YR,D1,Big 12,Southeastern,OK,mlb_class,wikipedia,False
+Oklahoma Baptist,Oklahoma Baptist University,4YR,UNKNOWN,,,OK,bbref_type,,True
+Oklahoma Baptist University,Oklahoma Baptist University,4YR,UNKNOWN,,,OK,name_regex,,True
+Oklahoma Christian,Oklahoma Christian University,4YR,UNKNOWN,,,OK,bbref_type,,True
+Oklahoma Christian University,Oklahoma Christian University,4YR,UNKNOWN,,,OK,name_regex,,True
+Oklahoma City,Oklahoma City University,4YR,UNKNOWN,,,OK,bbref_type,,True
+Oklahoma City University,Oklahoma City University,4YR,UNKNOWN,,,OK,name_regex,,True
+Oklahoma State,Oklahoma State University–Stillwater,4YR,D1,Big 12,Big 12,OK,mlb_class,wikipedia,False
+Old Dominion,Old Dominion University,4YR,D1,Sun Belt,Sun Belt,VA,mlb_class,wikipedia,False
+Ole Miss,University of Mississippi,4YR,D1,Southeastern,Southeastern,MS,mlb_class,wikipedia,False
+Olivet Nazarene,Olivet Nazarene University,4YR,UNKNOWN,,,IL,bbref_type,,True
+Olney Central College,Olney Central College,JC,JUCO,,,IL,bbref_type,,False
+Oral Roberts,Oral Roberts University,4YR,D1,The Summit,The Summit,OK,mlb_class,wikipedia,False
+Oral Roberts U,Oral Roberts University,4YR,D1,The Summit,The Summit,OK,mlb_class,wikipedia,False
+Orange Coast CC,Orange Coast College,JC,JUCO,,,CA,name_regex,,False
+Orange Coast College,Orange Coast College,JC,JUCO,,,CA,mlb_class,,False
+Oregon,University of Oregon,4YR,D1,Pac-12,Big Ten,OR,mlb_class,wikipedia,False
+Oregon State,Oregon State University,4YR,D1,Pac-12,Independent,OR,mlb_class,wikipedia,False
+Otero Junior College,Otero College,JC,JUCO,,,CO,name_regex,,False
+Otterbein,Otterbein University,4YR,UNKNOWN,,,OH,bbref_type,,True
+Ouachita Baptist,Ouachita Baptist University,4YR,UNKNOWN,,,AR,bbref_type,,True
+"Oxnard CC, CA",Oxnard College,JC,JUCO,,,CA,name_regex,,False
+Oxnard College,Oxnard College,JC,JUCO,,,CA,bbref_type,,False
+Pace,Pace University,4YR,UNKNOWN,,,NY,bbref_type,,True
+Pace University,Pace University,4YR,UNKNOWN,,,NY,name_regex,,True
+Pacific,University of the Pacific,4YR,D1,West Coast,West Coast,CA,mlb_class,wikipedia,False
+Pacific Lutheran,Pacific Lutheran University,4YR,UNKNOWN,,,WA,bbref_type,,True
+Palm Beach Atlantic,Palm Beach Atlantic,OTHER,UNKNOWN,,,FL,unknown,,True
+Palm Beach CC,Palm Beach State College,JC,JUCO,,,FL,name_regex,,False
+Palm Beach State CC,Palm Beach State College,JC,JUCO,,,FL,name_regex,,False
+"Palm Beach State JC, FL",Palm Beach State College,JC,JUCO,,,FL,name_regex,,False
+Palomar CC,Palomar College,JC,JUCO,,,CA,name_regex,,False
+Palomar College,Palomar College,JC,JUCO,,,CA,mlb_class,,False
+Panola College,Panola College,JC,JUCO,,,TX,bbref_type,,False
+"Panola JC, TX",Panola College,JC,JUCO,,,TX,name_regex,,False
+Paradise Valley CC,Paradise Valley Community College,JC,JUCO,,,AZ,name_regex,,False
+Paris JC,Paris JC,JC,JUCO,,,TX,name_regex,,False
+Paris Junior College,Paris Junior College,JC,JUCO,,,TX,name_regex,,False
+"Parkland CC, IL",Parkland College,JC,JUCO,,,IL,name_regex,,False
+Parkland College,Parkland College,JC,JUCO,,,IL,mlb_class,,False
+Pasco Hernando CC,Pasco Hernando CC,JC,JUCO,,,FL,name_regex,,False
+Patrick Henry CC,Patrick & Henry Community College,JC,JUCO,,,VA,name_regex,,False
+"Patrick Henry CC, IL",Patrick & Henry Community College,JC,JUCO,,,VA,name_regex,,False
+Pearl River CC,Pearl River Community College,JC,JUCO,,,MS,name_regex,,False
+Penn St Berks,Penn St Berks,OTHER,UNKNOWN,,,PA,unknown,,True
+Penn St U,Pennsylvania State University,4YR,D1,Big Ten,Big Ten,PA,mlb_class,wikipedia,False
+Penn State,Pennsylvania State University,4YR,D1,Big Ten,Big Ten,PA,mlb_class,wikipedia,False
+Pennsylvania,University of Pennsylvania,4YR,D1,Ivy League,Ivy League,PA,mlb_class,wikipedia,False
+Pensacola State College,Pensacola State College,JC,JUCO,,,FL,mlb_class,,False
+Pepperdine,Pepperdine University,4YR,D1,West Coast,West Coast,CA,mlb_class,wikipedia,False
+Pepperdine University,Pepperdine University,4YR,D1,West Coast,West Coast,CA,name_regex,wikipedia,False
+Peru St Col,Peru St Col,OTHER,UNKNOWN,,,NE,unknown,,True
+Peru State,Peru State College,4YR,UNKNOWN,,,NE,bbref_type,,True
+Philadelphia (PA),Philadelphia (PA),OTHER,UNKNOWN,,,PA,unknown,,True
+"Pierce CC, WA",Pierce College,JC,JUCO,,,WA,name_regex,,False
+Pierce College,Pierce College,JC,JUCO,,,WA,bbref_type,,False
+Pima CC,Pima Community College,JC,JUCO,,,AZ,name_regex,,False
+Pitt CC,Pitt Community College,JC,JUCO,,,NC,name_regex,,False
+Pitt-Bradford,University of Pittsburgh at Bradford,4YR,UNKNOWN,,,PA,bbref_type,,True
+Pittsburg State,Pittsburg State University,4YR,UNKNOWN,,,KS,bbref_type,,True
+Pittsburg State University,Pittsburg State University,4YR,UNKNOWN,,,KS,mlb_class,,True
+Pittsburgh,University of Pittsburgh,4YR,D1,Atlantic Coast,Atlantic Coast,PA,mlb_class,wikipedia,False
+Point Loma Nazarene,Point Loma Nazarene University,4YR,UNKNOWN,,,CA,bbref_type,,True
+Point Loma Nazarene (CA),Point Loma Nazarene University,4YR,UNKNOWN,,,CA,bbref_type,,True
+Point Loma Nazarene University,Point Loma Nazarene University,4YR,UNKNOWN,,,CA,mlb_class,,True
+"Polk JC, FL",Polk State College,JC,JUCO,,,FL,name_regex,,False
+Polk State CC,Polk State College,JC,JUCO,,,FL,name_regex,,False
+Polk State College,Polk State College,JC,JUCO,,,FL,mlb_class,,False
+Pomona-Pitzer (CA),Pomona College/Pitzer College,4YR,UNKNOWN,,,CA,bbref_type,,True
+Pomona-Pitzer Col,Pomona-Pitzer Col,4YR,UNKNOWN,,,CA,mlb_class,,True
+Portland,University of Portland,4YR,D1,West Coast,West Coast,OR,bbref_type,wikipedia,False
+Post University,Post University,4YR,UNKNOWN,,,,name_regex,,True
+Prairie State College,Prairie State College,JC,JUCO,,,IL,bbref_type,,False
+Prairie View A&M University,Prairie View A&M University,4YR,D1,SWAC,SWAC,TX,name_regex,wikipedia,False
+Presbyterian College,Presbyterian College,4YR,D1,Big South,Big South,SC,mlb_class,wikipedia,False
+Princeton,Princeton University,4YR,D1,Ivy League,Ivy League,NJ,mlb_class,wikipedia,False
+Providence School of Jacksonville,Providence School of Jacksonville,OTHER,UNKNOWN,,,FL,unknown,,True
+Purdue,Purdue University,4YR,D1,Big Ten,Big Ten,IN,mlb_class,wikipedia,False
+Purdue University Northwest,Purdue University Northwest,4YR,UNKNOWN,,,IN,mlb_class,,True
+Queens University of Charlotte,Queens University of Charlotte,4YR,D1,ASUN,ASUN,NC,mlb_class,wikipedia,False
+Quincy (IL),Quincy University,4YR,UNKNOWN,,,IL,bbref_type,,True
+Quincy U,Quincy University,4YR,UNKNOWN,,,IL,mlb_class,,True
+Quincy University,Quincy University,4YR,UNKNOWN,,,IL,mlb_class,,True
+Quinnipiac,Quinnipiac University,4YR,D1,MAAC,MAAC,CT,bbref_type,wikipedia,False
+Quinnipiac University,Quinnipiac University,4YR,D1,MAAC,MAAC,CT,mlb_class,wikipedia,False
+Radford,Radford University,4YR,D1,Big South,Big South,VA,mlb_class,wikipedia,False
+Ramapo College,Ramapo College,OTHER,UNKNOWN,,,NJ,unknown,,True
+Ramapo College of New Jersey,Ramapo College,4YR,UNKNOWN,,,NJ,bbref_type,,True
+Randolph-Macon Col,Randolph-Macon Col,4YR,UNKNOWN,,,VA,mlb_class,,True
+Randolph-Macon College,Randolph-Macon College,4YR,UNKNOWN,,,VA,mlb_class,,True
+Ranger College,Ranger College,JC,JUCO,,,TX,bbref_type,,False
+Redlands CC,Redlands Community College,JC,JUCO,,,OK,name_regex,,False
+Reedley College,Reedley College,JC,JUCO,,,CA,mlb_class,,False
+Reedley JC,Reedley JC,JC,JUCO,,,CA,name_regex,,False
+Regis College ,Regis University,4YR,UNKNOWN,,,CO,bbref_type,,True
+Regis U,Regis U,4YR,UNKNOWN,,,CO,mlb_class,,True
+Reinhardt University,Reinhardt University,4YR,UNKNOWN,,,GA,mlb_class,,True
+Rend Lake College,Rend Lake College,JC,JUCO,,,IL,bbref_type,,False
+Rhode Island,University of Rhode Island,4YR,D1,Atlantic 10,Atlantic 10,RI,bbref_type,wikipedia,False
+Rhode Island College,University of Rhode Island,4YR,D1,Atlantic 10,Atlantic 10,RI,bbref_type,wikipedia,False
+Rhodes (TN),Rhodes College,4YR,UNKNOWN,,,TN,bbref_type,,True
+Rice,Rice University,4YR,D1,The American,The American,TX,mlb_class,wikipedia,False
+Richland College,Richland College,4YR,UNKNOWN,,,TX,bbref_type,,True
+Richmond,University of Richmond,4YR,D1,Atlantic 10,Atlantic 10,VA,bbref_type,wikipedia,False
+Rider,Rider University,4YR,D1,MAAC,MAAC,NJ,bbref_type,wikipedia,False
+Ridgewater Junior College,Ridgewater College,JC,JUCO,,,MN,name_regex,,False
+Rio Hondo College,Rio Hondo College,JC,JUCO,,,CA,bbref_type,,False
+Riverside CC,Riverside CC,JC,JUCO,,,CA,name_regex,,False
+Riverside City College,Riverside City College,JC,JUCO,,,CA,bbref_type,,False
+Roane State CC,Roane State Community College,JC,JUCO,,,TN,name_regex,,False
+Rochester,University of Rochester,4YR,UNKNOWN,,,NY,bbref_type,,True
+Rochester Institute of Technology (NY),Rochester Institute of Technology,4YR,UNKNOWN,,,NY,bbref_type,,True
+Rock Valley College,Rock Valley College,JC,JUCO,,,IL,mlb_class,,False
+Rockhurst,Rockhurst University,4YR,UNKNOWN,,,MO,bbref_type,,True
+"Rocky Mount, NC","Rocky Mount, NC",OTHER,UNKNOWN,,,,unknown,,True
+Rogers State,Rogers State University,4YR,UNKNOWN,,,OK,bbref_type,,True
+Rollins (FL),Rollins College,4YR,UNKNOWN,,,FL,bbref_type,,True
+Rollins College,Rollins College,OTHER,UNKNOWN,,,FL,unknown,,True
+Rose State College,Rose State College,OTHER,UNKNOWN,,,OK,unknown,,True
+Rowan Col at Gloucester County,Rowan College of South Jersey-Gloucester,JC,JUCO,,,NJ,mlb_class,,False
+Rowan College at Gloucester County,Rowan College of South Jersey-Gloucester,JC,JUCO,,,NJ,mlb_class,,False
+Rowan University,Rowan University,4YR,UNKNOWN,,,NJ,mlb_class,,True
+Rutgers,Rutgers University,4YR,D1,Big Ten,Big Ten,NJ,mlb_class,wikipedia,False
+SE Missouri State,Southeast Missouri State University,4YR,D1,Ohio Valley,Ohio Valley,MO,bbref_type,wikipedia,True
+SUNY - Binghampton,SUNY - Binghampton,OTHER,UNKNOWN,,,NY,unknown,,True
+SUNY - Binghamton,Binghamton University,4YR,D1,America East,America East,NY,mlb_class,wikipedia,False
+SUNY Albany,"University at Albany, The State University of New York",4YR,D1,America East,America East,NY,bbref_type,wikipedia,False
+SUNY Binghamton,Binghamton University,4YR,D1,America East,America East,NY,mlb_class,wikipedia,False
+SUNY Buffalo,"University at Buffalo, State University of New York",4YR,UNKNOWN,,,NY,bbref_type,,True
+SUNY Farmingdale,Farmingdale State College,JC,JUCO,,,NY,bbref_type,,False
+SUNY Old Westbury,State University of New York at Old Westbury,4YR,UNKNOWN,,,NY,bbref_type,,True
+SUNY Oneonta,State University of New York at Oneonta,4YR,UNKNOWN,,,NY,bbref_type,,True
+SUNY Stony Brook,Stony Brook University,4YR,D1,Coastal Athletic,Coastal Athletic,NY,bbref_type,wikipedia,False
+Sacramento CC,Sacramento City College,JC,JUCO,,,CA,name_regex,,False
+Sacramento State,"California State University, Sacramento",4YR,D1,Western Athletic,Western Athletic,CA,mlb_class,wikipedia,False
+Sacred Heart College,Sacred Heart University,4YR,D1,Northeast,MAAC,CT,bbref_type,wikipedia,False
+Sacred Heart University,Sacred Heart University,4YR,D1,Northeast,MAAC,CT,mlb_class,wikipedia,False
+Saddleback CC,Saddleback College,JC,JUCO,,,CA,name_regex,,False
+Saddleback College,Saddleback College,JC,JUCO,,,CA,mlb_class,,False
+Saginaw Valley State,Saginaw Valley State University,4YR,UNKNOWN,,,MI,mlb_class,,True
+Saint Francis University ,University of St. Francis,4YR,UNKNOWN,,,IL,bbref_type,,True
+Saint Joseph's,Saint Joseph's University,4YR,D1,Atlantic 10,Atlantic 10,PA,mlb_class,wikipedia,False
+Saint Leo,Saint Leo University,4YR,UNKNOWN,,,FL,bbref_type,,True
+Saint Leo University,Saint Leo University,4YR,UNKNOWN,,,FL,mlb_class,,True
+Saint Louis University,Saint Louis University,4YR,D1,Atlantic 10,Atlantic 10,MO,mlb_class,wikipedia,False
+Saint Mary's,Saint Mary's College of California,4YR,D1,West Coast,West Coast,CA,bbref_type,wikipedia,False
+Saint Mary's (TX),St. Mary's University,4YR,UNKNOWN,,,TX,bbref_type,,True
+Salem State ,Salem State University,4YR,UNKNOWN,,,MA,bbref_type,,True
+Salt Lake CC,Salt Lake Community College,JC,JUCO,,,UT,name_regex,,False
+Salve Regina U,Salve Regina U,4YR,UNKNOWN,,,RI,mlb_class,,True
+Sam Houston,Sam Houston State University,4YR,D1,Conference USA,Conference USA,TX,mlb_class,wikipedia,False
+Sam Houston State,Sam Houston State University,4YR,D1,Conference USA,Conference USA,TX,bbref_type,wikipedia,False
+Samford,Samford University,4YR,D1,Southern,Southern,AL,bbref_type,wikipedia,False
+Samford University,Samford University,4YR,D1,Southern,Southern,AL,mlb_class,wikipedia,False
+San Bernardino Valley College,San Bernardino Valley College,JC,JUCO,,,CA,bbref_type,,False
+San Diego,University of San Diego,4YR,D1,West Coast,West Coast,CA,bbref_type,wikipedia,False
+San Diego Christian College,San Diego Christian College,4YR,UNKNOWN,,,CA,bbref_type,,True
+San Diego Mesa College,San Diego Mesa College,JC,JUCO,,,CA,bbref_type,,False
+San Diego St U,San Diego State University,4YR,D1,Mountain West,Mountain West,CA,mlb_class,wikipedia,False
+San Diego State,San Diego State University,4YR,D1,Mountain West,Mountain West,CA,mlb_class,wikipedia,False
+San Francisco,University of San Francisco,4YR,D1,West Coast,West Coast,CA,bbref_type,wikipedia,False
+San Jacinto College,"San Jacinto College, North Campus",JC,JUCO,,,TX,bbref_type,,False
+San Jacinto College North,San Jacinto College North,JC,JUCO,,,TX,mlb_class,,False
+"San Jacinto North JC, TX","San Jacinto College, North Campus",JC,JUCO,,,TX,name_regex,,False
+San Joaquin Delta CC,San Joaquin Delta College,JC,JUCO,,,CA,name_regex,,False
+San Joaquin Delta College,San Joaquin Delta College,JC,JUCO,,,CA,mlb_class,,False
+San Jose State,San Jose State University,4YR,D1,Mountain West,Mountain West,CA,mlb_class,wikipedia,False
+Santa Ana College,Santa Ana College,JC,JUCO,,,CA,bbref_type,,False
+Santa Barbara City College,Santa Barbara City College,JC,JUCO,,,CA,bbref_type,,False
+Santa Clara,Santa Clara University,4YR,D1,West Coast,West Coast,CA,mlb_class,wikipedia,False
+Santa Clara University,Santa Clara University,4YR,D1,West Coast,West Coast,CA,name_regex,wikipedia,False
+Santa Fe CC,Santa Fe CC,JC,JUCO,,,FL,name_regex,,False
+Santa Fe CC (NM),Santa Fe College,JC,JUCO,,,NM,name_regex,,False
+Santa Fe College (FL),Santa Fe College,JC,JUCO,,,FL,bbref_type,,False
+Santa Rosa JC,Santa Rosa JC,JC,JUCO,,,CA,name_regex,,False
+Santa Rosa Junior College,Santa Rosa Junior College,JC,JUCO,,,CA,name_regex,,False
+Savannah State,Savannah State University,4YR,UNKNOWN,,,GA,bbref_type,,True
+Savannah State University,Savannah State University,4YR,UNKNOWN,,,GA,name_regex,,True
+"Science & Arts, OK",University of Science and Arts of Oklahoma,4YR,UNKNOWN,,,OK,bbref_type,,True
+Scottsdale CC,Scottsdale Community College,JC,JUCO,,,AZ,name_regex,,False
+Seattle,Seattle University,4YR,D1,Western Athletic,Western Athletic,WA,bbref_type,wikipedia,False
+Seattle University,Seattle University,4YR,D1,Western Athletic,Western Athletic,WA,mlb_class,wikipedia,False
+Seminole St Col,Seminole State College,JC,JUCO,,,OK,bbref_type,,False
+Seminole State,Seminole State College,JC,JUCO,,,OK,mlb_class,,False
+Seminole State Col,Seminole State College,JC,JUCO,,,OK,bbref_type,,False
+Seminole State College,Seminole State College,JC,JUCO,,,OK,bbref_type,,False
+Seminole State College (FL),Seminole State College of Florida,JC,JUCO,,,FL,bbref_type,,False
+Seminole State College (OK),Seminole State College,JC,JUCO,,,OK,bbref_type,,False
+Seton Hall,Seton Hall University,4YR,D1,Big East,Big East,NJ,mlb_class,wikipedia,False
+Seton Hill,Seton Hill University,4YR,UNKNOWN,,,PA,bbref_type,,True
+Seton Hill U,Seton Hill U,4YR,UNKNOWN,,,PA,mlb_class,,True
+Seton Hill University,Seton Hill University,4YR,UNKNOWN,,,PA,mlb_class,,True
+Seward County CC,Seward County Community College,JC,JUCO,,,KS,name_regex,,False
+Shelton State CC,Shelton State Community College,JC,JUCO,,,AL,name_regex,,False
+Shelton State CC ,Shelton State Community College,JC,JUCO,,,AL,name_regex,,False
+Shenandoah,Shenandoah University,4YR,UNKNOWN,,,VA,bbref_type,,True
+Shenandoah University,Shenandoah University,4YR,UNKNOWN,,,VA,name_regex,,True
+Shepherd College,Shepherd University,4YR,UNKNOWN,,,WV,bbref_type,,True
+Shepherd University,Shepherd University,4YR,UNKNOWN,,,WV,mlb_class,,True
+Shippensburg University,Shippensburg University,4YR,UNKNOWN,,,PA,mlb_class,,True
+Shoreline CC,Shoreline CC,JC,JUCO,,,WA,name_regex,,False
+Shorter College,Shorter University,4YR,UNKNOWN,,,GA,bbref_type,,True
+Siena,Siena College,4YR,D1,MAAC,MAAC,NY,bbref_type,wikipedia,False
+Siena ,Siena College,4YR,D1,MAAC,MAAC,NY,bbref_type,wikipedia,False
+Siena College,Siena College,OTHER,UNKNOWN,,,NY,unknown,,True
+Sierra College,Sierra College,JC,JUCO,,,CA,bbref_type,,False
+Sierra JC,Sierra JC,JC,JUCO,,,CA,name_regex,,False
+Sinclair CC,Sinclair CC,JC,JUCO,,,OH,name_regex,,False
+Sioux Falls,University of Sioux Falls,4YR,UNKNOWN,,,SD,bbref_type,,True
+Skagit Valley College,Skagit Valley College,JC,JUCO,,,WA,bbref_type,,False
+Skidmore Col,Skidmore Col,4YR,UNKNOWN,,,NY,mlb_class,,True
+Skyline CC (CA),Skyline College,JC,JUCO,,,CA,name_regex,,False
+Slippery Rock,Slippery Rock University of Pennsylvania,4YR,UNKNOWN,,,PA,bbref_type,,True
+Slippery Rock University,Slippery Rock University,4YR,UNKNOWN,,,PA,name_regex,,True
+Solano JC,Solano JC,JC,JUCO,,,CA,name_regex,,False
+Sonoma State,Sonoma State University,4YR,UNKNOWN,,,CA,bbref_type,,True
+Sonoma State (CA),Sonoma State University,4YR,UNKNOWN,,,CA,bbref_type,,True
+South Alabama,University of South Alabama,4YR,D1,Sun Belt,Sun Belt,AL,bbref_type,wikipedia,False
+South Carolina,University of South Carolina,4YR,D1,Southeastern,Southeastern,SC,mlb_class,wikipedia,False
+South Carolina - Aiken,University of South Carolina Aiken,4YR,UNKNOWN,,,SC,bbref_type,,True
+South Carolina - Beaufort,University of South Carolina Beaufort,4YR,UNKNOWN,,,SC,bbref_type,,True
+South Carolina - Sumter,University of South Carolina Sumter,JC,JUCO,,,SC,bbref_type,,False
+South Carolina - Upstate,University of South Carolina Upstate,4YR,D1,Big South,Big South,SC,bbref_type,wikipedia,False
+South Carolina Columbia,University of South Carolina,4YR,D1,Southeastern,Southeastern,SC,bbref_type,wikipedia,True
+South Carolina-Sumter,University of South Carolina Sumter,JC,JUCO,,,SC,bbref_type,,False
+South Carolina-Upstate,University of South Carolina Upstate,4YR,D1,Big South,Big South,SC,bbref_type,wikipedia,False
+South Carolinapstate,South Carolinapstate,OTHER,UNKNOWN,,,,unknown,,True
+South Dakota State,South Dakota State University,4YR,D1,The Summit,The Summit,SD,mlb_class,wikipedia,False
+South Florida,University of South Florida,4YR,D1,The American,The American,FL,mlb_class,wikipedia,False
+South Georgia State,South Georgia College,JC,JUCO,,,GA,bbref_type,,False
+South Mountain CC,South Mountain Community College,JC,JUCO,,,AZ,name_regex,,False
+South Suburban College,South Suburban College,JC,JUCO,,,IL,bbref_type,,False
+Southeast Missouri St U,Southeast Missouri State University,4YR,D1,Ohio Valley,Ohio Valley,MO,mlb_class,wikipedia,False
+Southeast Missouri State,Southeast Missouri State University,4YR,D1,Ohio Valley,Ohio Valley,MO,mlb_class,wikipedia,False
+Southeastern,Southeastern University,4YR,UNKNOWN,,,FL,bbref_type,,True
+Southeastern Louisiana,Southeastern Louisiana University,4YR,D1,Southland,Southland,LA,bbref_type,wikipedia,False
+Southeastern Louisiana U,Southeastern Louisiana University,4YR,D1,Southland,Southland,LA,mlb_class,wikipedia,False
+Southeastern Louisiana University,Southeastern Louisiana University,4YR,D1,Southland,Southland,LA,mlb_class,wikipedia,False
+Southeastern Oklahoma State University,Southeastern Oklahoma State University,JC,JUCO,,,TN,mlb_class,,False
+Southeastern University,Southeastern University,4YR,UNKNOWN,,,FL,mlb_class,,True
+Southern,Southern University,4YR,D1,SWAC,SWAC,LA,mlb_class,wikipedia,False
+Southern A&M,Southern A&M,OTHER,UNKNOWN,,,,unknown,,True
+Southern Arkansas,Southern Arkansas University,4YR,UNKNOWN,,,AR,bbref_type,,True
+Southern Arkansas University,Southern Arkansas University,4YR,UNKNOWN,,,AR,name_regex,,True
+Southern California,University of Southern California,4YR,D1,Pac-12,Big Ten,CA,bbref_type,wikipedia,False
+Southern Illinois,Southern Illinois University Carbondale,4YR,D1,Missouri Valley,Missouri Valley,IL,bbref_type,wikipedia,False
+Southern Illinois Carbondale,Southern Illinois University Carbondale,4YR,D1,Missouri Valley,Missouri Valley,IL,bbref_type,wikipedia,True
+Southern Illinois U Carbondale,Southern Illinois University Carbondale,4YR,D1,Missouri Valley,Missouri Valley,IL,mlb_class,wikipedia,False
+Southern Illinois University Carbondale,Southern Illinois University Carbondale,4YR,D1,Missouri Valley,Missouri Valley,IL,mlb_class,wikipedia,False
+Southern Illinois University Edwardsville,Southern Illinois University Edwardsville,4YR,D1,Ohio Valley,Ohio Valley,IL,mlb_class,wikipedia,False
+Southern Illinous,Southern Illinous,OTHER,UNKNOWN,,,,unknown,,True
+Southern Indiana,University of Southern Indiana,4YR,D1,Ohio Valley,Ohio Valley,IN,bbref_type,wikipedia,False
+Southern Maine,University of Southern Maine,4YR,UNKNOWN,,,ME,bbref_type,,True
+Southern Mississippi,University of Southern Mississippi,4YR,D1,Sun Belt,Sun Belt,MS,mlb_class,wikipedia,False
+Southern New Hampshire,Southern New Hampshire University,4YR,UNKNOWN,,,NH,bbref_type,,True
+Southern Polytechnic State,Southern Polytechnic State University,JC,JUCO,,,GA,bbref_type,,False
+Southern U A&M,Southern U A&M,4YR,UNKNOWN,,,LA,name_regex,,True
+Southern Union St JC,Southern Union St JC,JC,JUCO,,,AL,name_regex,,False
+Southern Utah,Southern Utah University,4YR,UNKNOWN,,,UT,bbref_type,,True
+Southwest Mississippi CC,Southwest Mississippi Community College,JC,JUCO,,,MS,name_regex,,False
+Southwest Tennessee CC,Southwest Tennessee Community College,JC,JUCO,,,TN,name_regex,,False
+Southwestern College (CA),Southwestern College,JC,JUCO,,,CA,bbref_type,,False
+Southwestern Illinois College,Southwestern Illinois College,JC,JUCO,,,IL,mlb_class,,False
+Southwestern Oklahoma State,Southwestern Oklahoma State University,4YR,UNKNOWN,,,OK,bbref_type,,True
+Spartanburg Methodist College,Spartanburg Methodist College,JC,JUCO,,,SC,bbref_type,,False
+Spokane Falls CC,Spokane Falls Community College,JC,JUCO,,,WA,name_regex,,False
+St John Fisher College,St. John Fisher College,4YR,UNKNOWN,,,NY,mlb_class,,True
+St Johns U,St. John's University,4YR,D1,Big East,Big East,NY,mlb_class,wikipedia,False
+St Josephs,Saint Joseph's University,4YR,D1,Atlantic 10,Atlantic 10,PA,mlb_class,wikipedia,False
+St Leo U,St Leo U,4YR,UNKNOWN,,,FL,mlb_class,,True
+St Marys Col,Saint Mary's College of California,4YR,D1,West Coast,West Coast,CA,mlb_class,wikipedia,False
+St. Bonaventure,St. Bonaventure University,4YR,D1,Atlantic 10,Atlantic 10,NY,mlb_class,wikipedia,False
+St. Catharine College,St. Catharine College,4YR,UNKNOWN,,,KY,bbref_type,,True
+St. Clair County CC,St. Clair County Community College,JC,JUCO,,,MI,name_regex,,False
+St. Cloud State,St. Cloud State University,4YR,UNKNOWN,,,MN,mlb_class,,True
+St. Edward's,St. Edward's University,4YR,UNKNOWN,,,TX,bbref_type,,True
+St. Edward's (TX),St. Edward's University,4YR,UNKNOWN,,,TX,bbref_type,,True
+St. Edwards University,St. Edwards University,4YR,UNKNOWN,,,TX,mlb_class,,True
+St. John's,St. John's University,4YR,D1,Big East,Big East,NY,mlb_class,wikipedia,False
+St. John's (NY),St. John's University,4YR,D1,Big East,Big East,NY,bbref_type,wikipedia,False
+"St. John's River JC, FL",St. Johns River State College,JC,JUCO,,,FL,name_regex,,False
+St. John's River State,St. Johns River State College,JC,JUCO,,,FL,bbref_type,,False
+St. Johns River State College,St. Johns River State College,JC,JUCO,,,FL,bbref_type,,False
+"St. Johns River State JC, FL",St. Johns River State College,JC,JUCO,,,FL,name_regex,,False
+St. Joseph's (IN),St. Joseph's College,4YR,UNKNOWN,,,IN,bbref_type,,True
+St. Joseph's (PA),Saint Joseph's University,4YR,D1,Atlantic 10,Atlantic 10,PA,bbref_type,wikipedia,False
+St. Katherine (CA),University of St. Katherine,4YR,UNKNOWN,,,CA,bbref_type,,True
+St. Katherine College,St. Katherine College,OTHER,UNKNOWN,,,CA,unknown,,True
+St. Louis,Saint Louis University,4YR,D1,Atlantic 10,Atlantic 10,MO,bbref_type,wikipedia,False
+St. Louis University,Saint Louis University,4YR,D1,Atlantic 10,Atlantic 10,MO,mlb_class,wikipedia,False
+St. Mary's,Saint Mary's College of California,4YR,D1,West Coast,West Coast,CA,bbref_type,wikipedia,False
+St. Mary's College,Saint Mary's College of California,4YR,D1,West Coast,West Coast,CA,mlb_class,wikipedia,False
+St. Mary's University,St. Mary's University,4YR,UNKNOWN,,,TX,bbref_type,,True
+St. Marys,Saint Mary's College of California,4YR,D1,West Coast,West Coast,CA,bbref_type,wikipedia,False
+St. Petersburg College,St. Petersburg College,JC,JUCO,,,FL,mlb_class,,False
+St. Thomas Aquinas College,St. Thomas Aquinas College,OTHER,UNKNOWN,,,NY,unknown,,True
+St. Thomas University,St. Thomas University,4YR,UNKNOWN,,,FL,name_regex,,True
+St. Thomas University (FL),St. Thomas University,4YR,UNKNOWN,,,FL,bbref_type,,True
+Stamford Collegiate,Stamford Collegiate,OTHER,UNKNOWN,,,ON,unknown,,True
+Stanford,Stanford University,4YR,D1,Pac-12,Atlantic Coast,CA,mlb_class,wikipedia,False
+State College of Florida Manatee - Sarasota,"State College of Florida, Manatee-Sarasota",JC,JUCO,,,FL,mlb_class,,False
+"State College of Florida, Manatee-Sarasota","State College of Florida, Manatee-Sarasota",JC,JUCO,,,FL,mlb_class,,False
+State Fair CC,State Fair CC,JC,JUCO,,,MO,name_regex,,False
+State JC of Florida,"State College of Florida, Manatee-Sarasota",JC,JUCO,,,FL,name_regex,,False
+Stephen F. Austin,Stephen F. Austin,OTHER,UNKNOWN,,,TX,unknown,,True
+Stephen F. Austin State,Stephen F. Austin State University,4YR,D1,Western Athletic,Southland,TX,bbref_type,wikipedia,False
+Stetson,Stetson University,4YR,D1,ASUN,ASUN,FL,mlb_class,wikipedia,False
+Stetson University,Stetson University,4YR,D1,ASUN,ASUN,FL,name_regex,wikipedia,False
+Stevens Inst of Tech,Stevens Inst of Tech,OTHER,UNKNOWN,,,NJ,unknown,,True
+Stonehill College,Stonehill College,4YR,D1,Northeast,Northeast,MA,bbref_type,wikipedia,False
+Stoneman Douglas (FL),Stoneman Douglas (FL),OTHER,UNKNOWN,,,FL,unknown,,True
+Sul Ross State,Sul Ross State University,4YR,UNKNOWN,,,TX,bbref_type,,True
+TCU,Texas Christian University,4YR,D1,Big 12,Big 12,TX,mlb_class,wikipedia,False
+Tabor College,Tabor College,4YR,UNKNOWN,,,KS,bbref_type,,True
+Tacoma CC,Tacoma CC,JC,JUCO,,,WA,name_regex,,False
+Tallahassee CC,Tallahassee State College,JC,JUCO,,,FL,name_regex,,False
+Tampa,University of Tampa,4YR,UNKNOWN,,,FL,bbref_type,,True
+Tarleton St U,Tarleton State University,4YR,D1,Western Athletic,Western Athletic,TX,mlb_class,wikipedia,False
+Tarleton State,Tarleton State University,4YR,D1,Western Athletic,Western Athletic,TX,mlb_class,wikipedia,False
+Taylor University,Taylor University,4YR,UNKNOWN,,,IN,mlb_class,,True
+Temple Col,Temple University,JC,JUCO,,,TX,mlb_class,,False
+Temple College ,Temple University,JC,JUCO,,,TX,mlb_class,,False
+Tennessee,University of Tennessee,4YR,D1,Southeastern,Southeastern,TN,mlb_class,wikipedia,False
+Tennessee - Martin,University of Tennessee at Martin,4YR,D1,Ohio Valley,Ohio Valley,TN,bbref_type,wikipedia,False
+Tennessee Tech,Tennessee Technological University,4YR,D1,Ohio Valley,Ohio Valley,TN,mlb_class,wikipedia,False
+Tennessee Wesleyan,Tennessee Wesleyan University,4YR,UNKNOWN,,,TN,bbref_type,,True
+Texarkana College,Texarkana College,OTHER,UNKNOWN,,,,unknown,,True
+Texas,University of Texas at Austin,4YR,D1,Big 12,Southeastern,TX,mlb_class,wikipedia,False
+Texas - Pan American,University of Texas Pan American,4YR,UNKNOWN,,,TX,bbref_type,,True
+Texas - San Antonio,University of Texas at San Antonio,4YR,D1,The American,The American,TX,bbref_type,wikipedia,False
+Texas A&M,Texas A&M University,4YR,D1,Southeastern,Southeastern,TX,mlb_class,wikipedia,False
+Texas A&M - Corpus Christi,Texas A&M University–Corpus Christi,4YR,D1,Southland,Southland,TX,mlb_class,wikipedia,True
+Texas A&M - International,Texas A&M International University,4YR,UNKNOWN,,,TX,bbref_type,,True
+Texas A&M - Kingsville,Texas A&M University-Kingsville,4YR,UNKNOWN,,,TX,bbref_type,,True
+Texas Christian,Texas Christian University,4YR,D1,Big 12,Big 12,TX,bbref_type,wikipedia,False
+Texas Lutheran,Texas Lutheran University,4YR,UNKNOWN,,,TX,bbref_type,,True
+Texas Southern,Texas Southern University,4YR,D1,SWAC,SWAC,TX,mlb_class,wikipedia,False
+Texas Southern U,Texas Southern University,4YR,D1,SWAC,SWAC,TX,mlb_class,wikipedia,False
+Texas State,Texas State University,4YR,D1,Sun Belt,Sun Belt,TX,mlb_class,wikipedia,False
+Texas Tech,Texas Tech University,4YR,D1,Big 12,Big 12,TX,mlb_class,wikipedia,False
+Texas Wesleyan,Texas Wesleyan University,4YR,UNKNOWN,,,TX,bbref_type,,True
+Texas-Arlington,University of Texas at Arlington,4YR,D1,Western Athletic,Western Athletic,TX,bbref_type,wikipedia,False
+Texas-Rio Grande Valley,University of Texas Rio Grande Valley,4YR,D1,Western Athletic,Southland,TX,bbref_type,wikipedia,False
+The Citadel,"The Citadel, The Military College of South Carolina",4YR,D1,Southern,Southern,SC,bbref_type,wikipedia,False
+The Master's College,The Master's University,4YR,UNKNOWN,,,CA,bbref_type,,True
+The Master's University,The Master's University,4YR,UNKNOWN,,,CA,mlb_class,,True
+The Masters (CA),The Master's University,4YR,UNKNOWN,,,CA,bbref_type,,True
+The Masters College,The Master's University,4YR,UNKNOWN,,,CA,bbref_type,,True
+The Masters University,The Masters University,4YR,UNKNOWN,,,CA,mlb_class,,True
+Tiffin University,Tiffin University,4YR,UNKNOWN,,,OH,bbref_type,,True
+Toledo,University of Toledo,4YR,D1,Mid-American,Mid-American,OH,mlb_class,wikipedia,False
+Towson,Towson University,4YR,D1,Coastal Athletic,Coastal Athletic,MD,mlb_class,wikipedia,False
+Towson University,Towson University,4YR,D1,Coastal Athletic,Coastal Athletic,MD,name_regex,wikipedia,False
+Transylvania University,Transylvania University,4YR,UNKNOWN,,,KY,mlb_class,,True
+Trevecca Nazarene,Trevecca Nazarene University,4YR,UNKNOWN,,,TN,bbref_type,,True
+Trinity University,Trinity University,4YR,UNKNOWN,,,TX,bbref_type,,True
+Triton College,Triton College,JC,JUCO,,,IL,bbref_type,,False
+Troy,Troy University,4YR,D1,Sun Belt,Sun Belt,AL,bbref_type,wikipedia,False
+Troy University,Troy University,4YR,D1,Sun Belt,Sun Belt,AL,mlb_class,wikipedia,False
+Truett-McConnell,Truett McConnell University,JC,JUCO,,,GA,bbref_type,,False
+Tulane,Tulane University,4YR,D1,The American,The American,LA,mlb_class,wikipedia,False
+Tulsa,University of Tulsa,4YR,UNKNOWN,,,OK,bbref_type,,True
+"Turabo, PR","Turabo University (Gurabo, Puerto Rico)",4YR,UNKNOWN,,,,bbref_type,,True
+Tusculum (TN),Tusculum University,4YR,UNKNOWN,,,TN,bbref_type,,True
+Tusculum College,Tusculum University,4YR,UNKNOWN,,,TN,bbref_type,,True
+Tyler JC,Tyler JC,JC,JUCO,,,TX,name_regex,,False
+Tyler Junior College,Tyler Junior College,JC,JUCO,,,,name_regex,,False
+U Alabama,U Alabama,4YR,UNKNOWN,,,AL,mlb_class,,True
+U Alabama Birmingham,U Alabama Birmingham,4YR,UNKNOWN,,,AL,mlb_class,,True
+U Arizona,U Arizona,4YR,UNKNOWN,,,AZ,mlb_class,,True
+U Arkansas Fayetteville,University of Arkansas,4YR,D1,Southeastern,Southeastern,AR,bbref_type,wikipedia,True
+U Arkansas Ft Smith,U Arkansas Ft Smith,4YR,UNKNOWN,,,AR,name_regex,,True
+U British Columbia,U British Columbia,4YR,UNKNOWN,,,BC,mlb_class,,True
+U Buffalo,"University at Buffalo, State University of New York",4YR,UNKNOWN,,,NY,bbref_type,,True
+U Central Arkansas,U Central Arkansas,4YR,UNKNOWN,,,AR,mlb_class,,True
+U Central Missouri,U Central Missouri,4YR,UNKNOWN,,,MO,mlb_class,,True
+U Dayton,U Dayton,4YR,UNKNOWN,,,OH,mlb_class,,True
+U Georgia,U Georgia,4YR,UNKNOWN,,,GA,mlb_class,,True
+U Hawaii,U Hawaii,4YR,UNKNOWN,,,HI,mlb_class,,True
+U Houston,U Houston,4YR,UNKNOWN,,,TX,mlb_class,,True
+U Louisiana Lafayette,U Louisiana Lafayette,4YR,UNKNOWN,,,LA,mlb_class,,True
+U Massachusetts Amherst,U Massachusetts Amherst,4YR,UNKNOWN,,,MA,name_regex,,True
+U Michigan,U Michigan,4YR,UNKNOWN,,,MI,name_regex,,True
+U Mississippi,U Mississippi,4YR,UNKNOWN,,,MS,mlb_class,,True
+U Missouri,U Missouri,4YR,UNKNOWN,,,MO,mlb_class,,True
+U Missouri Columbia,University of Missouri,4YR,D1,Southeastern,Southeastern,MO,bbref_type,wikipedia,True
+U Montana,U Montana,4YR,UNKNOWN,,,MT,name_regex,,True
+U Nebraska Omaha,U Nebraska Omaha,4YR,UNKNOWN,,,NE,mlb_class,,True
+U Richmond,U Richmond,4YR,UNKNOWN,,,VA,mlb_class,,True
+U South Carolina,U South Carolina,4YR,UNKNOWN,,,SC,mlb_class,,True
+U Tampa,U Tampa,4YR,UNKNOWN,,,FL,name_regex,,True
+U Tennessee Martin,U Tennessee Martin,4YR,UNKNOWN,,,TN,mlb_class,,True
+U Washington,U Washington,4YR,UNKNOWN,,,WA,mlb_class,,True
+U West Georgia,U West Georgia,4YR,UNKNOWN,,,GA,name_regex,,True
+U.S. Military Academy,United States Military Academy,4YR,D1,Patriot League,Patriot League,NY,bbref_type,wikipedia,True
+U.S. Naval Academy,United States Naval Academy,4YR,D1,Patriot League,Patriot League,MD,bbref_type,wikipedia,True
+UAB,University of Alabama at Birmingham,4YR,D1,The American,The American,AL,mlb_class,wikipedia,False
+UC Berkeley,"University of California, Berkeley",4YR,D1,Pac-12,Atlantic Coast,CA,bbref_type,wikipedia,True
+UC Colorado Springs,UC Colorado Springs,OTHER,UNKNOWN,,,CO,unknown,,True
+UC Davis,"University of California, Davis",4YR,D1,Big West,Big West,CA,bbref_type,wikipedia,False
+UC Irvine,"University of California, Irvine",4YR,D1,Big West,Big West,CA,mlb_class,wikipedia,False
+UC Riverside,"University of California, Riverside",4YR,D1,Big West,Big West,CA,mlb_class,wikipedia,False
+UC San Diego,"University of California, San Diego",4YR,D1,Big West,Big West,CA,mlb_class,wikipedia,False
+UC Santa Barbara,"University of California, Santa Barbara",4YR,D1,Big West,Big West,CA,mlb_class,wikipedia,False
+UCLA,"University of California, Los Angeles",4YR,D1,Pac-12,Big Ten,CA,mlb_class,wikipedia,False
+UMass Lowell,University of Massachusetts Lowell,4YR,D1,America East,America East,MA,bbref_type,wikipedia,False
+UNC Asheville,University of North Carolina at Asheville,4YR,D1,Big South,Big South,NC,mlb_class,wikipedia,False
+UNC Chapel Hill,University of North Carolina at Chapel Hill,4YR,D1,Atlantic Coast,Atlantic Coast,NC,bbref_type,wikipedia,False
+UNC Charlotte,University of North Carolina at Charlotte,4YR,D1,The American,The American,NC,mlb_class,wikipedia,False
+UNC Greensboro,University of North Carolina at Greensboro,4YR,D1,Southern,Southern,NC,mlb_class,wikipedia,False
+UNC Pembroke,University of North Carolina at Pembroke,4YR,UNKNOWN,,,NC,mlb_class,,True
+UNC Wilmington,University of North Carolina Wilmington,4YR,D1,Coastal Athletic,Coastal Athletic,NC,mlb_class,wikipedia,False
+UNLV,"University of Nevada, Las Vegas",4YR,D1,Mountain West,Mountain West,NV,mlb_class,wikipedia,False
+USC,University of Southern California,4YR,D1,Pac-12,Big Ten,CA,mlb_class,wikipedia,False
+USC Aiken,USC Aiken,OTHER,UNKNOWN,,,SC,unknown,,True
+Umpqua CC,Umpqua CC,JC,JUCO,,,OR,name_regex,,False
+Union College (NY),Union College (NY),4YR,UNKNOWN,,,NY,bbref_type,,True
+University at Albany,"University at Albany, The State University of New York",4YR,D1,America East,America East,NY,bbref_type,wikipedia,False
+University of Arkansas - Little Rock,University of Arkansas at Little Rock,4YR,D1,Ohio Valley,Ohio Valley,AR,name_regex,wikipedia,False
+University of British Columbia,University of British Columbia,4YR,UNKNOWN,,,BC,mlb_class,,True
+University of Buffalo,"University at Buffalo, State University of New York",4YR,UNKNOWN,,,NY,bbref_type,,True
+University of California - Davis,"University of California, Davis",4YR,D1,Big West,Big West,CA,mlb_class,wikipedia,False
+University of California - Irvine,"University of California, Irvine",4YR,D1,Big West,Big West,CA,mlb_class,wikipedia,False
+University of California - Riverside,"University of California, Riverside",4YR,D1,Big West,Big West,CA,mlb_class,wikipedia,False
+University of Central Missouri,University of Central Missouri,4YR,UNKNOWN,,,MO,mlb_class,,True
+University of Central Oklahoma,University of Central Oklahoma,4YR,UNKNOWN,,,OK,mlb_class,,True
+University of Delaware,University of Delaware,4YR,D1,Coastal Athletic,Coastal Athletic,DE,name_regex,wikipedia,False
+University of Hartford,University of Hartford,4YR,UNKNOWN,,,CT,name_regex,,True
+University of Illinois,University of Illinois Urbana–Champaign,4YR,D1,Big Ten,Big Ten,IL,name_regex,wikipedia,False
+University of Illinois - Springfield,University of Illinois - Springfield,4YR,UNKNOWN,,,IL,mlb_class,,True
+University of Illinois Springfield,University of Illinois Springfield,4YR,UNKNOWN,,,IL,mlb_class,,True
+University of Illinois at Chicago,University of Illinois Chicago,4YR,D1,Missouri Valley,Missouri Valley,IL,mlb_class,wikipedia,False
+University of Louisiana - Lafayette,University of Louisiana at Lafayette,4YR,D1,Sun Belt,Sun Belt,LA,mlb_class,wikipedia,False
+University of Louisiana - Monroe,University of Louisiana at Monroe,4YR,D1,Sun Belt,Sun Belt,LA,mlb_class,wikipedia,False
+University of Louisiana at Lafayette,University of Louisiana at Lafayette,4YR,D1,Sun Belt,Sun Belt,LA,mlb_class,wikipedia,False
+University of Maine,University of Maine,4YR,D1,America East,America East,ME,mlb_class,wikipedia,False
+University of Maine - Orono,University of Maine,4YR,D1,America East,America East,ME,bbref_type,wikipedia,True
+University of Maryland-Baltimore County,"University of Maryland, Baltimore County",4YR,D1,America East,America East,MD,mlb_class,wikipedia,False
+University of Memphis,University of Memphis,4YR,D1,The American,The American,TN,mlb_class,wikipedia,False
+University of Minnesota Crookston,University of Minnesota Crookston,4YR,UNKNOWN,,,MN,name_regex,,True
+University of Mobile,University of Mobile,4YR,UNKNOWN,,,AL,mlb_class,,True
+University of Montevallo,University of Montevallo,4YR,UNKNOWN,,,AL,mlb_class,,True
+University of Mount Olive,University of Mount Olive,4YR,UNKNOWN,,,NC,bbref_type,,True
+University of New Haven,University of New Haven,4YR,UNKNOWN,,,CT,mlb_class,,True
+University of New Orleans,University of New Orleans,4YR,D1,Southland,Southland,LA,mlb_class,wikipedia,False
+University of North Alabama,University of North Alabama,4YR,D1,ASUN,ASUN,AL,name_regex,wikipedia,False
+University of North Florida,University of North Florida,4YR,D1,ASUN,ASUN,FL,name_regex,wikipedia,False
+University of Northern Colorado,University of Northern Colorado,4YR,D1,The Summit,The Summit,CO,name_regex,wikipedia,False
+University of Pittsburgh - Johnstown,University of Pittsburgh - Johnstown,4YR,UNKNOWN,,,PA,mlb_class,,True
+University of Portland,University of Portland,4YR,D1,West Coast,West Coast,OR,mlb_class,wikipedia,False
+University of Redlands,University of Redlands,4YR,UNKNOWN,,,CA,name_regex,,True
+University of Rhode Island,University of Rhode Island,4YR,D1,Atlantic 10,Atlantic 10,RI,mlb_class,wikipedia,False
+University of Rio Grande,University of Rio Grande,4YR,UNKNOWN,,,OH,name_regex,,True
+University of Rochester,University of Rochester,4YR,UNKNOWN,,,NY,mlb_class,,True
+University of San Diego,University of San Diego,4YR,D1,West Coast,West Coast,CA,mlb_class,wikipedia,False
+University of San Francisco,University of San Francisco,4YR,D1,West Coast,West Coast,CA,mlb_class,wikipedia,False
+University of Science and Arts of Oklahoma,University of Science and Arts of Oklahoma,4YR,UNKNOWN,,,OK,name_regex,,True
+University of South Alabama,University of South Alabama,4YR,D1,Sun Belt,Sun Belt,AL,mlb_class,wikipedia,False
+University of South Carolina - Upstate,University of South Carolina Upstate,4YR,D1,Big South,Big South,SC,mlb_class,wikipedia,False
+University of South Carolina Upstate,University of South Carolina Upstate,4YR,D1,Big South,Big South,SC,mlb_class,wikipedia,False
+University of Southern Indiana,University of Southern Indiana,4YR,D1,Ohio Valley,Ohio Valley,IN,name_regex,wikipedia,False
+University of St.Thomas (MN),University of St.Thomas (MN),4YR,UNKNOWN,,,MN,name_regex,,True
+University of Tampa,University of Tampa,4YR,UNKNOWN,,,FL,mlb_class,,True
+University of Texas - Arlington,University of Texas at Arlington,4YR,D1,Western Athletic,Western Athletic,TX,mlb_class,wikipedia,False
+University of Texas - San Antonio,University of Texas at San Antonio,4YR,D1,The American,The American,TX,mlb_class,wikipedia,False
+University of Texas Rio Grande Valley,University of Texas Rio Grande Valley,4YR,D1,Western Athletic,Southland,TX,name_regex,wikipedia,False
+University of West Alabama,University of West Alabama,4YR,UNKNOWN,,,AL,name_regex,,True
+University of West Florida,University of West Florida,4YR,UNKNOWN,,,FL,mlb_class,,True
+University of Wisconsin - Milwaukee,University of Wisconsin–Milwaukee,4YR,D1,Horizon League,Horizon League,WI,name_regex,wikipedia,False
+University of Wisconsin - Whitewater,University of Wisconsin - Whitewater,4YR,UNKNOWN,,,WI,name_regex,,True
+University of the Cumberlands,University of the Cumberlands,4YR,UNKNOWN,,,KY,mlb_class,,True
+University of the Pacific,University of the Pacific,4YR,D1,West Coast,West Coast,CA,name_regex,wikipedia,False
+Utah,University of Utah,4YR,D1,Pac-12,Big 12,UT,mlb_class,wikipedia,False
+Utah Valley,Utah Valley University,4YR,D1,Western Athletic,Western Athletic,UT,mlb_class,wikipedia,False
+VCU,Virginia Commonwealth University,4YR,D1,Atlantic 10,Atlantic 10,VA,mlb_class,wikipedia,False
+Valdosta State,Valdosta State University,4YR,UNKNOWN,,,GA,bbref_type,,True
+Valdosta State University,Valdosta State University,4YR,UNKNOWN,,,GA,name_regex,,True
+Valparaiso,Valparaiso University,4YR,D1,Missouri Valley,Missouri Valley,IN,mlb_class,wikipedia,False
+Vancouver Island,Vancouver Island,OTHER,UNKNOWN,,,,unknown,,True
+Vanderbilt,Vanderbilt University,4YR,D1,Southeastern,Southeastern,TN,mlb_class,wikipedia,False
+Vanguard (CA),Vanguard University of Southern California,4YR,UNKNOWN,,,CA,bbref_type,,True
+Vanguard University,Vanguard University of Southern California,4YR,UNKNOWN,,,CA,bbref_type,,True
+Ventura College,Ventura College,JC,JUCO,,,CA,bbref_type,,False
+Villanova,Villanova University,4YR,D1,Big East,Big East,PA,mlb_class,wikipedia,False
+Villanova U,Villanova University,4YR,D1,Big East,Big East,PA,mlb_class,wikipedia,False
+Virginia,University of Virginia,4YR,D1,Atlantic Coast,Atlantic Coast,VA,mlb_class,wikipedia,False
+Virginia ,University of Virginia,4YR,D1,Atlantic Coast,Atlantic Coast,VA,mlb_class,wikipedia,False
+Virginia Commonwealth,Virginia Commonwealth University,4YR,D1,Atlantic 10,Atlantic 10,VA,bbref_type,wikipedia,False
+Virginia Commonwealth U,Virginia Commonwealth University,4YR,D1,Atlantic 10,Atlantic 10,VA,mlb_class,wikipedia,False
+Virginia Military Institute,Virginia Military Institute,4YR,D1,Southern,Southern,VA,mlb_class,wikipedia,False
+Virginia Tech,Virginia Polytechnic Institute and State University,4YR,D1,Atlantic Coast,Atlantic Coast,VA,mlb_class,wikipedia,False
+Volunteer State CC,Volunteer State Community College,JC,JUCO,,,TN,name_regex,,False
+Wabash Valley College,Wabash Valley College,JC,JUCO,,,IL,mlb_class,,False
+Wagner,Wagner College,4YR,D1,Northeast,Northeast,NY,bbref_type,wikipedia,False
+Wagner College,Wagner College,OTHER,UNKNOWN,,,NY,unknown,,True
+Wake Forest,Wake Forest University,4YR,D1,Atlantic Coast,Atlantic Coast,NC,mlb_class,wikipedia,False
+Waldorf Col,Waldorf Col,OTHER,UNKNOWN,,,IA,unknown,,True
+Wallace CC,George C. Wallace State Community College,JC,JUCO,,,AL,name_regex,,False
+Wallace State CC,Wallace State Community College,JC,JUCO,,,AL,name_regex,,False
+Walters State CC,Walters State Community College,JC,JUCO,,,TN,name_regex,,False
+Washburn,Washburn University,4YR,UNKNOWN,,,KS,bbref_type,,True
+Washburn University,Washburn University,4YR,UNKNOWN,,,KS,mlb_class,,True
+Washington,University of Washington,4YR,D1,Pac-12,Big Ten,WA,mlb_class,wikipedia,False
+Washington State,Washington State University,4YR,D1,Pac-12,Mountain West,WA,mlb_class,wikipedia,False
+Washington U,University of Washington,4YR,D1,Pac-12,Big Ten,WA,mlb_class,wikipedia,False
+Waubonsee CC,Waubonsee CC,JC,JUCO,,,IL,name_regex,,False
+Wayne St U,Wayne St U,4YR,UNKNOWN,,,MI,mlb_class,,True
+Wayne State,Wayne State,OTHER,UNKNOWN,,,MI,unknown,,True
+Weatherford College,Weatherford College,JC,JUCO,,,TX,mlb_class,,False
+Webber International U,Webber International U,4YR,UNKNOWN,,,FL,mlb_class,,True
+Webber International University,Webber International University,4YR,UNKNOWN,,,FL,mlb_class,,True
+Webster (MO),Webster University,4YR,UNKNOWN,,,MO,bbref_type,,True
+Wesleyan University ,Wesleyan University,4YR,UNKNOWN,,,CT,bbref_type,,True
+West Alabama,University of West Alabama,4YR,UNKNOWN,,,AL,bbref_type,,True
+West Chester,West Chester University of Pennsylvania,4YR,UNKNOWN,,,PA,bbref_type,,True
+West Chester University,West Chester University,4YR,UNKNOWN,,,PA,name_regex,,True
+West Florida,University of West Florida,4YR,UNKNOWN,,,FL,bbref_type,,True
+West Georgia,University of West Georgia,4YR,D1,ASUN,ASUN,GA,bbref_type,wikipedia,False
+West Georgia Technical College,West Georgia Technical College,4YR,UNKNOWN,,,GA,bbref_type,,True
+West Hills College,West Hills College,OTHER,UNKNOWN,,,,unknown,,True
+West Los Angeles College,West Los Angeles College,JC,JUCO,,,CA,bbref_type,,False
+West Texas A&M,West Texas A&M University,4YR,UNKNOWN,,,TX,bbref_type,,True
+West Valley College,West Valley College,JC,JUCO,,,CA,mlb_class,,False
+West Virginia,West Virginia University,4YR,D1,Big 12,Big 12,WV,mlb_class,wikipedia,False
+West Virginia State,West Virginia State University,4YR,UNKNOWN,,,WV,bbref_type,,True
+Western Carolina,Western Carolina University,4YR,D1,Southern,Southern,NC,mlb_class,wikipedia,False
+Western Carolina U,Western Carolina University,4YR,D1,Southern,Southern,NC,mlb_class,wikipedia,False
+Western Connecticut State,Western Connecticut State University,4YR,UNKNOWN,,,CT,bbref_type,,True
+Western Illinois,Western Illinois University,4YR,D1,Ohio Valley,Ohio Valley,IL,bbref_type,wikipedia,False
+Western Kentucky,Western Kentucky University,4YR,D1,Conference USA,Conference USA,KY,mlb_class,wikipedia,False
+Western Michigan,Western Michigan University,4YR,D1,Mid-American,Mid-American,MI,mlb_class,wikipedia,False
+Western Nevada CC,Western Nevada College,JC,JUCO,,,NV,name_regex,,False
+Western Oklahoma State,Western Oklahoma State,JC,JUCO,,,OK,mlb_class,,False
+Western Oklahoma State College,Western Oklahoma State College,JC,JUCO,,,OK,bbref_type,,False
+Western Oregon,Western Oregon University,4YR,UNKNOWN,,,OR,bbref_type,,True
+Western Oregon University,Western Oregon University,4YR,UNKNOWN,,,OR,name_regex,,True
+Western Texas College,Western Texas College,JC,JUCO,,,TX,bbref_type,,False
+Westmont College,Westmont College,4YR,UNKNOWN,,,CA,mlb_class,,True
+"Westside, Houston, TX","Westside, Houston, TX",OTHER,UNKNOWN,,,,unknown,,True
+Wharton County Junior College,Wharton County Junior College,JC,JUCO,,,TX,name_regex,,False
+Whittier College,Whittier College,4YR,UNKNOWN,,,CA,bbref_type,,True
+Whitworth University,Whitworth University,4YR,UNKNOWN,,,WA,mlb_class,,True
+Wichita State,Wichita State University,4YR,D1,The American,The American,KS,mlb_class,wikipedia,False
+William & Mary,College of William & Mary,4YR,D1,Coastal Athletic,Coastal Athletic,VA,mlb_class,wikipedia,False
+William Carey (MS),William Carey University,4YR,UNKNOWN,,,MS,bbref_type,,True
+William Carey University,William Carey University,4YR,UNKNOWN,,,MS,mlb_class,,True
+William Jessup University,William Jessup University,4YR,UNKNOWN,,,CA,name_regex,,True
+Williams Valley,Williams Valley,OTHER,UNKNOWN,,,,unknown,,True
+Wingate,Wingate,4YR,UNKNOWN,,,NC,mlb_class,,True
+Wingate (NC),Wingate University,4YR,UNKNOWN,,,NC,bbref_type,,True
+Wingate U,Wingate University,4YR,UNKNOWN,,,NC,mlb_class,,True
+Wingate University,Wingate University,4YR,UNKNOWN,,,NC,mlb_class,,True
+Winona State (MN),Winona State University,4YR,UNKNOWN,,,MN,bbref_type,,True
+Winston-Salem State University,Winston-Salem State University,4YR,UNKNOWN,,,NC,name_regex,,True
+Winthrop,Winthrop University,4YR,D1,Big South,Big South,SC,mlb_class,wikipedia,False
+Wisconsin - La Crosse,University of Wisconsin-La Crosse,4YR,UNKNOWN,,,WI,bbref_type,,True
+Wisconsin - Milwaukee,University of Wisconsin–Milwaukee,4YR,D1,Horizon League,Horizon League,WI,bbref_type,wikipedia,False
+Wisconsin - Stevens Point,University of Wisconsin-Stevens Point,4YR,UNKNOWN,,,WI,bbref_type,,True
+Wisconsin - Whitewater,University of Wisconsin-Whitewater,4YR,UNKNOWN,,,WI,bbref_type,,True
+Wisconsin-Milwaukee,University of Wisconsin–Milwaukee,4YR,D1,Horizon League,Horizon League,WI,bbref_type,wikipedia,False
+Wofford,Wofford College,4YR,D1,Southern,Southern,SC,mlb_class,wikipedia,False
+Wofford College,Wofford College,4YR,D1,Southern,Southern,SC,bbref_type,wikipedia,False
+Worcester State,Worcester State University,4YR,UNKNOWN,,,MA,bbref_type,,True
+Wright State,Wright State University,4YR,D1,Horizon League,Horizon League,OH,mlb_class,wikipedia,False
+Wright State University,Wright State University,4YR,D1,Horizon League,Horizon League,OH,mlb_class,wikipedia,False
+Xavier,Xavier University,4YR,D1,Big East,Big East,OH,mlb_class,wikipedia,False
+Xavier U,Xavier University,4YR,D1,Big East,Big East,OH,mlb_class,wikipedia,False
+Yale,Yale University,4YR,D1,Ivy League,Ivy League,CT,mlb_class,wikipedia,False
+Yavapai College,Yavapai College,JC,JUCO,,,AZ,bbref_type,,False
+Youngstown State,Youngstown State University,4YR,D1,Horizon League,Horizon League,OH,mlb_class,wikipedia,False
+look up correct state,look up correct state,OTHER,UNKNOWN,,,,unknown,,True

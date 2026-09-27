@@ -57,7 +57,7 @@ def round_band(label: pd.Series) -> pd.Series:
     return band
 
 
-def build_profile(interim: Path) -> str:
+def build_profile(interim: Path, reference: Path | None = None) -> str:
     picks = pd.read_parquet(interim / "draft_picks.parquet")
     people = pd.read_parquet(interim / "people.parquet")
     war_bat = pd.read_parquet(interim / "war_bat.parquet")
@@ -200,8 +200,166 @@ def build_profile(interim: Path) -> str:
         ]
         out += ["", md_table(ex[cols], index=False)]
 
+    out += bonus_backfill_section(interim, picks)
+    out += school_reference_section(reference or paths.ROOT / "reference", picks)
+
     out += ["", "## Notes for Task 2", ""] + notes_for_task2(picks, people, per_year, repeats)
     return "\n".join(out) + "\n"
+
+
+def bonus_backfill_section(interim: Path, picks: pd.DataFrame) -> list[str]:
+    """Baseball-Reference bonus backfill: row counts, join quality, coverage, 2017 check."""
+    from ingest.build_bonus_backfill import NAME_MATCH_MIN, crosscheck
+
+    bf_path, bb_path = interim / "bonus_backfill.parquet", interim / "bbref_draft.parquet"
+    out = ["", "## Bonus backfill (Baseball-Reference)", ""]
+    if not (bf_path.exists() and bb_path.exists()):
+        return out + ["Not built yet (`make pull-bbref backfill`)."]
+    bf = pd.read_parquet(bf_path)
+    bbref = pd.read_parquet(bb_path)
+    years = sorted(bbref["draft_year"].unique())
+    mlb = picks[picks["draft_year"].isin(years)]
+
+    rows = pd.DataFrame(
+        {
+            "mlb_picks": mlb.groupby("draft_year").size(),
+            "bbref_rows": bbref.groupby("draft_year").size(),
+            "joined": bf.groupby("draft_year")["bbref_matched"].sum(),
+            "name_mismatch": bf.groupby("draft_year")["name_mismatch"].sum(),
+        }
+    ).astype("Int64")
+    matched = bf["bbref_matched"]
+    out += [
+        "Joined on `(draft_year, overall_pick)` = `(draft_year, pick_number)`. Supplemental and "
+        "competitive-balance picks are listed on the numbered-round page they follow, so they "
+        "join by overall pick like any other.",
+        "",
+        md_table(rows),
+        "",
+        f"Join match rate: **{matched.sum():,} of {len(bf):,} MLB picks ({pct(matched)}%)**. "
+        f"Name check (token-sort ratio < {NAME_MATCH_MIN}) flags "
+        f"**{int(bf['name_mismatch'].sum())}** joined rows as mismatches; their bonus is withheld.",
+    ]
+    mm = bf[bf["name_mismatch"]]
+    if len(mm):
+        cols = ["draft_year", "pick_number", "mlb_name", "bbref_name", "name_match_score"]
+        ex = mm[cols].head(10).assign(name_match_score=mm["name_match_score"].round(1))
+        out += [
+            "",
+            f"{int(bf.loc[bf['name_mismatch'], 'same_last_name_initial'].sum())} of the "
+            f"{len(mm)} share last name and first initial (nicknames: Mike/Michael, "
+            "Jake/Jacob); `same_last_name_initial` marks them for Task 3. First 10:",
+            "",
+            md_table(ex, index=False),
+        ]
+    orphans = bbref.merge(
+        mlb[["draft_year", "pick_number"]],
+        left_on=["draft_year", "overall_pick"],
+        right_on=["draft_year", "pick_number"],
+        how="left",
+        indicator=True,
+    )
+    orphans = orphans[orphans["_merge"] == "left_only"]
+    if len(orphans):
+        out += [
+            "",
+            f"{len(orphans)} Baseball-Reference rows have no MLB pick at that overall pick "
+            "(the MLB API skips the number):",
+            "",
+            md_table(orphans[["draft_year", "overall_pick", "name", "team"]], index=False),
+        ]
+
+    m = mlb.merge(
+        bf[["draft_year", "pick_number", "bbref_bonus_usd", "bbref_signed"]],
+        on=["draft_year", "pick_number"],
+        how="left",
+    )
+    band = round_band(m["pick_round"])
+    after = m["signing_bonus_usd"].fillna(m["bbref_bonus_usd"]).notna()
+    band_order = [b for _, _, b in ROUND_BANDS] + ["supplemental"]
+
+    def table(flag: pd.Series) -> pd.DataFrame:
+        t = flag.groupby([m["draft_year"], band]).mean().mul(100).round(1).unstack()
+        return t.reindex(columns=[b for b in band_order if b in t.columns])
+
+    signed = m["bbref_signed"].fillna(False).astype(bool)
+    signed_cov = (
+        after[signed]
+        .groupby([m.loc[signed, "draft_year"], band[signed]])
+        .mean()
+        .mul(100)
+        .round(1)
+        .unstack()
+    )
+    signed_cov = signed_cov.reindex(columns=[b for b in band_order if b in signed_cov.columns])
+    out += [
+        "",
+        "Bonus coverage, % of all picks with a bonus, **before** (MLB only):",
+        "",
+        md_table(table(m["signing_bonus_usd"].notna())),
+        "",
+        "**After** (MLB, else Baseball-Reference):",
+        "",
+        md_table(table(after)),
+        "",
+        "Baseball-Reference leaves the bonus blank for unsigned picks, and also lacks it for many "
+        "signed picks after round 10. Among picks it marks as signed, % with a bonus after "
+        "backfill:",
+        "",
+        md_table(signed_cov),
+    ]
+
+    if 2017 in years:
+        cc = crosscheck(bf, picks, 2017)
+        out += [
+            "",
+            "### 2017 cross-check (both sources have a bonus)",
+            "",
+            f"{cc['n']:,} picks: **{cc['exact_pct']}%** identical, **{cc['within_1pct_pct']}%** "
+            f"within 1%. Disagreements ({len(cc['top'])}, up to the 10 largest):",
+            "",
+            md_table(cc["top"], index=False),
+        ]
+    return out
+
+
+def school_reference_section(reference: Path, picks: pd.DataFrame) -> list[str]:
+    """reference/schools.csv: counts by type/division and D1 conference coverage of picks."""
+    path = reference / "schools.csv"
+    out = ["", "## School reference", ""]
+    if not path.exists():
+        return out + ["Not built yet (`make schools`)."]
+    from ingest.build_school_ref import read_schools
+
+    schools = read_schools(path)
+    counts = schools.groupby(["school_type", "division"]).size().rename("schools").reset_index()
+    by_source = schools["type_source"].value_counts().rename("schools").rename_axis("type_source")
+    m = picks.merge(schools, left_on="school_name", right_on="school_name_raw", how="left")
+    college = m["school_type"].isin(["4YR", "JC"])
+    four = m["school_type"] == "4YR"
+    has_conf = m["conference_2024"].fillna("") != ""
+    groups = schools.groupby("school_canonical")["school_name_raw"].nunique()
+    out += [
+        f"`reference/schools.csv`: **{len(schools):,}** non-high-school raw names, "
+        f"**{schools['school_canonical'].nunique():,}** canonical schools, "
+        f"**{int((groups > 1).sum())}** alias groups, "
+        f"**{int(schools['needs_review'].sum()):,}** rows flagged `needs_review`.",
+        "",
+        md_table(counts, index=False),
+        "",
+        md_table(by_source.to_frame()),
+        "",
+        f"Picks from a listed college (4YR or JC): {college.sum():,}. With a D1 conference: "
+        f"**{pct(has_conf[college])}%** of those, **{pct(has_conf[four])}%** of 4YR picks. "
+        f"Picks whose school is not in the table (high schools, missing names): "
+        f"{m['school_type'].isna().sum():,}.",
+    ]
+    multi = schools.groupby("school_canonical")["school_name_raw"].agg(sorted)
+    multi = multi[multi.str.len() > 1]
+    out += ["", "<details><summary>All alias groups (canonical: raw names)</summary>", ""]
+    out += [f"- {c}: " + ", ".join(f"`{r}`" for r in raws) for c, raws in multi.items()]
+    out += ["", "</details>"]
+    return out
 
 
 def notes_for_task2(
@@ -252,8 +410,9 @@ def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--interim", type=Path, default=paths.INTERIM)
     ap.add_argument("--out", type=Path, default=paths.DOCS / "DATA_PROFILE.md")
+    ap.add_argument("--reference", type=Path, default=paths.ROOT / "reference")
     args = ap.parse_args(argv)
-    args.out.write_text(build_profile(args.interim))
+    args.out.write_text(build_profile(args.interim, args.reference))
     log.info("wrote %s", args.out)
 
 
