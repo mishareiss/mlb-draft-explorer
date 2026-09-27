@@ -1,0 +1,5 @@
+school_name_raw,school_canonical,school_type,division,conference_pre2024,conference_2024,state,type_source,conf_source,needs_review
+Cypress CC,Cypress College,JC,JUCO,,,CA,name_regex,,False
+Oregon,University of Oregon,4YR,D1,Pac-12,Big Ten,OR,bbref_type,wikipedia,False
+Rice,Rice University,4YR,D1,The American,The American,TX,bbref_type,wikipedia,False
+Rollins College,Rollins College,4YR,UNKNOWN,,,FL,name_regex,,True

@@ -4,3 +4,5 @@ ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 INTERIM = ROOT / "data" / "interim"
 DOCS = ROOT / "docs"
+PROCESSED = ROOT / "data" / "processed"
+REFERENCE = ROOT / "reference"

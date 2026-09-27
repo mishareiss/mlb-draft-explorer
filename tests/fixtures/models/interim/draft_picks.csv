@@ -1,0 +1,16 @@
+draft_year,pick_round,pick_number,team_name,person_id,person_full_name,school_name,school_school_class,person_primary_position_abbreviation,person_pitch_hand_code,signing_bonus_usd,pick_value
+2014,13,400,Team A,1001,Redo Guy,Central (FL) HS,,P,R,,
+2017,5,150,Team B,1001,Redo Guy,Oregon,,P,R,300000,310000
+2018,37,1100,Team C,1002,Zero Bonus,Cypress CC,JC J2,P,R,0,0
+2017,23,700,Team D,1003,Fallback Guy,Rice,,SS,R,,
+2013,23,738,Team E,1004,Michael Mason,Rice,,C,R,,
+2013,30,900,Team F,1005,John Smith,Rice,,1B,R,,
+2019,11,330,Team G,1006,Cap Signer,Rollins College,,DH,R,125000,
+2024,1,20,Team H,1007,Duck Early,Oregon,4YR JR,P,L,3000000,3100000
+2025,1,11,Team I,1008,Duck Late,Oregon,4YR JR,2B,R,2900000,5000000
+2025,1,10,Team J,1009,Prep Star,Lakewood (CA) HS,HS SR,CF,L,5000000,5100000
+2018,2,50,Team K,1010,Class Kid,St. Somebody,HS SR,3B,R,1500000,1400000
+2015,2,60,Team L,1011,Bbref Kid,Westfield,,RF,R,,
+2016,15,500,Team M,1012,Juco Lefty,Cypress CC,,P,L,,
+2021,10,400,Team N,1013,Nobody,No School,,OF,R,,
+2012,CB-A,40,Team O,1014,Supp Pick,Mystery Place,,IF,R,,

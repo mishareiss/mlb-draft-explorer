@@ -1,4 +1,4 @@
-.PHONY: setup pull pull-bbref backfill schools all-data profile test lint
+.PHONY: setup pull pull-bbref backfill schools draft-dates all-data profile transform quality build test lint
 
 setup:
 	uv sync
@@ -19,10 +19,24 @@ backfill:
 schools:
 	uv run python -m ingest.build_school_ref
 
-all-data: pull pull-bbref backfill schools profile
+# First day of each draft, from cached Wikipedia pages -> reference/draft_dates.csv
+draft-dates:
+	uv run python -m ingest.build_draft_dates
+
+all-data: pull pull-bbref backfill schools draft-dates profile
 
 profile:
 	uv run python -m ingest.profile
+
+# models/*.sql in DuckDB -> data/processed/draft_outcomes.parquet
+transform:
+	uv run python -m transform.run
+
+# checks -> data/processed/quality_report.json; fails the build on any "fail"
+quality:
+	uv run python -m quality.checks
+
+build: transform quality
 
 test:
 	uv run pytest

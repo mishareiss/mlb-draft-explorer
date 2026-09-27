@@ -1,0 +1,1003 @@
+{
+  "rows": 12974,
+  "summary": {
+    "pass": 14,
+    "warn": 1,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "name": "row_count",
+      "category": "completeness",
+      "status": "pass",
+      "value": 12974,
+      "threshold": 12974,
+      "detail": "draft_outcomes rows vs. draft_picks rows (no rows gained or lost in joins)",
+      "examples": []
+    },
+    {
+      "name": "unique_pick",
+      "category": "uniqueness",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0,
+      "detail": "0 rows share a (draft_year, pick_number)",
+      "examples": []
+    },
+    {
+      "name": "one_final_draft_per_person",
+      "category": "uniqueness",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0,
+      "detail": "0 people without exactly one is_final_draft row",
+      "examples": []
+    },
+    {
+      "name": "years_present",
+      "category": "completeness",
+      "status": "pass",
+      "value": 14,
+      "threshold": 14,
+      "detail": "draft years 2012-2025 present; missing: none",
+      "examples": []
+    },
+    {
+      "name": "max_round_by_year",
+      "category": "completeness",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0,
+      "detail": "years whose max numeric round is not 40 (2012-2019) / 5 (2020) / 20 (2021+)",
+      "examples": []
+    },
+    {
+      "name": "people_join",
+      "category": "joins",
+      "status": "pass",
+      "value": 100.0,
+      "threshold": 99.0,
+      "detail": "% of rows with birth_date (fail below 99%, warn below 100%)",
+      "examples": []
+    },
+    {
+      "name": "war_join",
+      "category": "joins",
+      "status": "pass",
+      "value": 100.0,
+      "threshold": 99.0,
+      "detail": "% of 1,953 debuted players (final-draft rows) with a WAR match",
+      "examples": []
+    },
+    {
+      "name": "age_at_draft_range",
+      "category": "validity",
+      "status": "warn",
+      "value": 2,
+      "threshold": 0,
+      "detail": "2 rows outside ages 16-26",
+      "examples": [
+        {
+          "draft_year": 2012,
+          "pick_number": 986,
+          "player_name": "Alfredo Unzue",
+          "age_at_draft": 26.8
+        },
+        {
+          "draft_year": 2021,
+          "pick_number": 597,
+          "player_name": "Samuel Mendez",
+          "age_at_draft": 28.3
+        }
+      ]
+    },
+    {
+      "name": "bonus_range",
+      "category": "validity",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0,
+      "detail": "0 bonuses outside $0-$15M",
+      "examples": []
+    },
+    {
+      "name": "debut_after_draft",
+      "category": "validity",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0,
+      "detail": "0 rows whose MLB debut is on or before the draft date",
+      "examples": []
+    },
+    {
+      "name": "bonus_coverage_rounds_1_10",
+      "category": "coverage",
+      "status": "pass",
+      "value": 97.01,
+      "threshold": 90.0,
+      "detail": "lowest yearly % of round 1-10 picks with a bonus; years below 90%: none",
+      "examples": []
+    },
+    {
+      "name": "college_d1_conference_share",
+      "category": "coverage",
+      "status": "pass",
+      "value": 75.93,
+      "threshold": null,
+      "detail": "% of 9,413 college picks (4-year + JC) with a D1 conference; 86.84% of 4-year picks (informational)",
+      "examples": []
+    },
+    {
+      "name": "unknown_school_type_share",
+      "category": "coverage",
+      "status": "pass",
+      "value": 1.09,
+      "threshold": 5.0,
+      "detail": "% of all picks with school_type Unknown (warn above 5%); examples are the most common",
+      "examples": [
+        {
+          "school_name_raw": "No School",
+          "picks": 26
+        },
+        {
+          "school_name_raw": "Rollins College",
+          "picks": 5
+        },
+        {
+          "school_name_raw": "Dixie State",
+          "picks": 4
+        },
+        {
+          "school_name_raw": "Cal State LA",
+          "picks": 4
+        },
+        {
+          "school_name_raw": "Mercyhurst College",
+          "picks": 4
+        },
+        {
+          "school_name_raw": "Eckerd College",
+          "picks": 4
+        },
+        {
+          "school_name_raw": "Carson-Newman College",
+          "picks": 3
+        },
+        {
+          "school_name_raw": "Florida Southern College",
+          "picks": 3
+        },
+        {
+          "school_name_raw": "Georgia College",
+          "picks": 3
+        },
+        {
+          "school_name_raw": "Stephen F. Austin",
+          "picks": 3
+        },
+        {
+          "school_name_raw": "Georgia Gwinnett College",
+          "picks": 3
+        },
+        {
+          "school_name_raw": "USC Aiken",
+          "picks": 3
+        },
+        {
+          "school_name_raw": "East Central College (MO)",
+          "picks": 2
+        },
+        {
+          "school_name_raw": "Army",
+          "picks": 2
+        },
+        {
+          "school_name_raw": "(null)",
+          "picks": 2
+        },
+        {
+          "school_name_raw": "Southern Illinous",
+          "picks": 2
+        },
+        {
+          "school_name_raw": "St. Katherine College",
+          "picks": 2
+        },
+        {
+          "school_name_raw": "Siena College",
+          "picks": 2
+        },
+        {
+          "school_name_raw": "Wayne State",
+          "picks": 2
+        },
+        {
+          "school_name_raw": "St. Thomas Aquinas College",
+          "picks": 2
+        }
+      ]
+    },
+    {
+      "name": "no_signed_non_final",
+      "category": "business_logic",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0,
+      "detail": "0 non-final rows marked signed",
+      "examples": []
+    },
+    {
+      "name": "debuted_players_signed",
+      "category": "business_logic",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0,
+      "detail": "0 debuted players (final-draft rows) not marked signed",
+      "examples": []
+    }
+  ],
+  "tables": {
+    "bonus_coverage_by_year_round_band": [
+      {
+        "draft_year": 2012,
+        "round_band": "11\u201320",
+        "picks": 299,
+        "with_bonus": 105,
+        "pct_with_bonus": 35.1
+      },
+      {
+        "draft_year": 2012,
+        "round_band": "1\u20135",
+        "picks": 156,
+        "with_bonus": 150,
+        "pct_with_bonus": 96.2
+      },
+      {
+        "draft_year": 2012,
+        "round_band": "21+",
+        "picks": 600,
+        "with_bonus": 15,
+        "pct_with_bonus": 2.5
+      },
+      {
+        "draft_year": 2012,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 147,
+        "pct_with_bonus": 98.0
+      },
+      {
+        "draft_year": 2012,
+        "round_band": "Supplemental",
+        "picks": 32,
+        "with_bonus": 32,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2013,
+        "round_band": "11\u201320",
+        "picks": 300,
+        "with_bonus": 97,
+        "pct_with_bonus": 32.3
+      },
+      {
+        "draft_year": 2013,
+        "round_band": "1\u20135",
+        "picks": 154,
+        "with_bonus": 150,
+        "pct_with_bonus": 97.4
+      },
+      {
+        "draft_year": 2013,
+        "round_band": "21+",
+        "picks": 599,
+        "with_bonus": 29,
+        "pct_with_bonus": 4.8
+      },
+      {
+        "draft_year": 2013,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 145,
+        "pct_with_bonus": 96.7
+      },
+      {
+        "draft_year": 2013,
+        "round_band": "Supplemental",
+        "picks": 12,
+        "with_bonus": 11,
+        "pct_with_bonus": 91.7
+      },
+      {
+        "draft_year": 2014,
+        "round_band": "11\u201320",
+        "picks": 300,
+        "with_bonus": 33,
+        "pct_with_bonus": 11.0
+      },
+      {
+        "draft_year": 2014,
+        "round_band": "1\u20135",
+        "picks": 151,
+        "with_bonus": 146,
+        "pct_with_bonus": 96.7
+      },
+      {
+        "draft_year": 2014,
+        "round_band": "21+",
+        "picks": 599,
+        "with_bonus": 8,
+        "pct_with_bonus": 1.3
+      },
+      {
+        "draft_year": 2014,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 146,
+        "pct_with_bonus": 97.3
+      },
+      {
+        "draft_year": 2014,
+        "round_band": "Supplemental",
+        "picks": 14,
+        "with_bonus": 14,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2015,
+        "round_band": "11\u201320",
+        "picks": 299,
+        "with_bonus": 143,
+        "pct_with_bonus": 47.8
+      },
+      {
+        "draft_year": 2015,
+        "round_band": "1\u20135",
+        "picks": 153,
+        "with_bonus": 150,
+        "pct_with_bonus": 98.0
+      },
+      {
+        "draft_year": 2015,
+        "round_band": "21+",
+        "picks": 600,
+        "with_bonus": 36,
+        "pct_with_bonus": 6.0
+      },
+      {
+        "draft_year": 2015,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 147,
+        "pct_with_bonus": 98.0
+      },
+      {
+        "draft_year": 2015,
+        "round_band": "Supplemental",
+        "picks": 12,
+        "with_bonus": 11,
+        "pct_with_bonus": 91.7
+      },
+      {
+        "draft_year": 2016,
+        "round_band": "11\u201320",
+        "picks": 300,
+        "with_bonus": 202,
+        "pct_with_bonus": 67.3
+      },
+      {
+        "draft_year": 2016,
+        "round_band": "1\u20135",
+        "picks": 152,
+        "with_bonus": 151,
+        "pct_with_bonus": 99.3
+      },
+      {
+        "draft_year": 2016,
+        "round_band": "21+",
+        "picks": 600,
+        "with_bonus": 92,
+        "pct_with_bonus": 15.3
+      },
+      {
+        "draft_year": 2016,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 147,
+        "pct_with_bonus": 98.0
+      },
+      {
+        "draft_year": 2016,
+        "round_band": "Supplemental",
+        "picks": 14,
+        "with_bonus": 13,
+        "pct_with_bonus": 92.9
+      },
+      {
+        "draft_year": 2017,
+        "round_band": "11\u201320",
+        "picks": 300,
+        "with_bonus": 258,
+        "pct_with_bonus": 86.0
+      },
+      {
+        "draft_year": 2017,
+        "round_band": "1\u20135",
+        "picks": 151,
+        "with_bonus": 149,
+        "pct_with_bonus": 98.7
+      },
+      {
+        "draft_year": 2017,
+        "round_band": "21+",
+        "picks": 600,
+        "with_bonus": 367,
+        "pct_with_bonus": 61.2
+      },
+      {
+        "draft_year": 2017,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 150,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2017,
+        "round_band": "Supplemental",
+        "picks": 14,
+        "with_bonus": 13,
+        "pct_with_bonus": 92.9
+      },
+      {
+        "draft_year": 2018,
+        "round_band": "11\u201320",
+        "picks": 300,
+        "with_bonus": 251,
+        "pct_with_bonus": 83.7
+      },
+      {
+        "draft_year": 2018,
+        "round_band": "1\u20135",
+        "picks": 141,
+        "with_bonus": 136,
+        "pct_with_bonus": 96.5
+      },
+      {
+        "draft_year": 2018,
+        "round_band": "21+",
+        "picks": 600,
+        "with_bonus": 304,
+        "pct_with_bonus": 50.7
+      },
+      {
+        "draft_year": 2018,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 150,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2018,
+        "round_band": "Supplemental",
+        "picks": 23,
+        "with_bonus": 22,
+        "pct_with_bonus": 95.7
+      },
+      {
+        "draft_year": 2019,
+        "round_band": "11\u201320",
+        "picks": 300,
+        "with_bonus": 251,
+        "pct_with_bonus": 83.7
+      },
+      {
+        "draft_year": 2019,
+        "round_band": "1\u20135",
+        "picks": 149,
+        "with_bonus": 149,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2019,
+        "round_band": "21+",
+        "picks": 600,
+        "with_bonus": 340,
+        "pct_with_bonus": 56.7
+      },
+      {
+        "draft_year": 2019,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 148,
+        "pct_with_bonus": 98.7
+      },
+      {
+        "draft_year": 2019,
+        "round_band": "Supplemental",
+        "picks": 18,
+        "with_bonus": 18,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2020,
+        "round_band": "1\u20135",
+        "picks": 140,
+        "with_bonus": 140,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2020,
+        "round_band": "Supplemental",
+        "picks": 20,
+        "with_bonus": 20,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2021,
+        "round_band": "11\u201320",
+        "picks": 300,
+        "with_bonus": 257,
+        "pct_with_bonus": 85.7
+      },
+      {
+        "draft_year": 2021,
+        "round_band": "1\u20135",
+        "picks": 146,
+        "with_bonus": 143,
+        "pct_with_bonus": 97.9
+      },
+      {
+        "draft_year": 2021,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 150,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2021,
+        "round_band": "Supplemental",
+        "picks": 16,
+        "with_bonus": 16,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2022,
+        "round_band": "11\u201320",
+        "picks": 300,
+        "with_bonus": 250,
+        "pct_with_bonus": 83.3
+      },
+      {
+        "draft_year": 2022,
+        "round_band": "1\u20135",
+        "picks": 143,
+        "with_bonus": 141,
+        "pct_with_bonus": 98.6
+      },
+      {
+        "draft_year": 2022,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 149,
+        "pct_with_bonus": 99.3
+      },
+      {
+        "draft_year": 2022,
+        "round_band": "Supplemental",
+        "picks": 23,
+        "with_bonus": 23,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2023,
+        "round_band": "11\u201320",
+        "picks": 300,
+        "with_bonus": 251,
+        "pct_with_bonus": 83.7
+      },
+      {
+        "draft_year": 2023,
+        "round_band": "1\u20135",
+        "picks": 140,
+        "with_bonus": 140,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2023,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 149,
+        "pct_with_bonus": 99.3
+      },
+      {
+        "draft_year": 2023,
+        "round_band": "Supplemental",
+        "picks": 24,
+        "with_bonus": 24,
+        "pct_with_bonus": 100.0
+      },
+      {
+        "draft_year": 2024,
+        "round_band": "11\u201320",
+        "picks": 300,
+        "with_bonus": 259,
+        "pct_with_bonus": 86.3
+      },
+      {
+        "draft_year": 2024,
+        "round_band": "1\u20135",
+        "picks": 144,
+        "with_bonus": 143,
+        "pct_with_bonus": 99.3
+      },
+      {
+        "draft_year": 2024,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 149,
+        "pct_with_bonus": 99.3
+      },
+      {
+        "draft_year": 2024,
+        "round_band": "Supplemental",
+        "picks": 21,
+        "with_bonus": 19,
+        "pct_with_bonus": 90.5
+      },
+      {
+        "draft_year": 2025,
+        "round_band": "11\u201320",
+        "picks": 300,
+        "with_bonus": 263,
+        "pct_with_bonus": 87.7
+      },
+      {
+        "draft_year": 2025,
+        "round_band": "1\u20135",
+        "picks": 140,
+        "with_bonus": 139,
+        "pct_with_bonus": 99.3
+      },
+      {
+        "draft_year": 2025,
+        "round_band": "6\u201310",
+        "picks": 150,
+        "with_bonus": 149,
+        "pct_with_bonus": 99.3
+      },
+      {
+        "draft_year": 2025,
+        "round_band": "Supplemental",
+        "picks": 25,
+        "with_bonus": 25,
+        "pct_with_bonus": 100.0
+      }
+    ],
+    "school_type_mix_by_year": [
+      {
+        "draft_year": 2012,
+        "school_type": "4-year college",
+        "picks": 681,
+        "pct": 55.1
+      },
+      {
+        "draft_year": 2012,
+        "school_type": "High school",
+        "picks": 417,
+        "pct": 33.7
+      },
+      {
+        "draft_year": 2012,
+        "school_type": "Junior college",
+        "picks": 132,
+        "pct": 10.7
+      },
+      {
+        "draft_year": 2012,
+        "school_type": "Unknown",
+        "picks": 7,
+        "pct": 0.6
+      },
+      {
+        "draft_year": 2013,
+        "school_type": "4-year college",
+        "picks": 673,
+        "pct": 55.4
+      },
+      {
+        "draft_year": 2013,
+        "school_type": "High school",
+        "picks": 383,
+        "pct": 31.5
+      },
+      {
+        "draft_year": 2013,
+        "school_type": "Junior college",
+        "picks": 152,
+        "pct": 12.5
+      },
+      {
+        "draft_year": 2013,
+        "school_type": "Unknown",
+        "picks": 7,
+        "pct": 0.6
+      },
+      {
+        "draft_year": 2014,
+        "school_type": "4-year college",
+        "picks": 649,
+        "pct": 53.5
+      },
+      {
+        "draft_year": 2014,
+        "school_type": "High school",
+        "picks": 424,
+        "pct": 34.9
+      },
+      {
+        "draft_year": 2014,
+        "school_type": "Junior college",
+        "picks": 129,
+        "pct": 10.6
+      },
+      {
+        "draft_year": 2014,
+        "school_type": "Unknown",
+        "picks": 12,
+        "pct": 1.0
+      },
+      {
+        "draft_year": 2015,
+        "school_type": "4-year college",
+        "picks": 778,
+        "pct": 64.1
+      },
+      {
+        "draft_year": 2015,
+        "school_type": "High school",
+        "picks": 329,
+        "pct": 27.1
+      },
+      {
+        "draft_year": 2015,
+        "school_type": "Junior college",
+        "picks": 99,
+        "pct": 8.2
+      },
+      {
+        "draft_year": 2015,
+        "school_type": "Unknown",
+        "picks": 8,
+        "pct": 0.7
+      },
+      {
+        "draft_year": 2016,
+        "school_type": "4-year college",
+        "picks": 767,
+        "pct": 63.1
+      },
+      {
+        "draft_year": 2016,
+        "school_type": "High school",
+        "picks": 315,
+        "pct": 25.9
+      },
+      {
+        "draft_year": 2016,
+        "school_type": "Junior college",
+        "picks": 129,
+        "pct": 10.6
+      },
+      {
+        "draft_year": 2016,
+        "school_type": "Unknown",
+        "picks": 5,
+        "pct": 0.4
+      },
+      {
+        "draft_year": 2017,
+        "school_type": "4-year college",
+        "picks": 754,
+        "pct": 62.1
+      },
+      {
+        "draft_year": 2017,
+        "school_type": "High school",
+        "picks": 314,
+        "pct": 25.8
+      },
+      {
+        "draft_year": 2017,
+        "school_type": "Junior college",
+        "picks": 136,
+        "pct": 11.2
+      },
+      {
+        "draft_year": 2017,
+        "school_type": "Unknown",
+        "picks": 11,
+        "pct": 0.9
+      },
+      {
+        "draft_year": 2018,
+        "school_type": "4-year college",
+        "picks": 767,
+        "pct": 63.2
+      },
+      {
+        "draft_year": 2018,
+        "school_type": "High school",
+        "picks": 302,
+        "pct": 24.9
+      },
+      {
+        "draft_year": 2018,
+        "school_type": "Junior college",
+        "picks": 102,
+        "pct": 8.4
+      },
+      {
+        "draft_year": 2018,
+        "school_type": "Unknown",
+        "picks": 43,
+        "pct": 3.5
+      },
+      {
+        "draft_year": 2019,
+        "school_type": "4-year college",
+        "picks": 775,
+        "pct": 63.7
+      },
+      {
+        "draft_year": 2019,
+        "school_type": "High school",
+        "picks": 290,
+        "pct": 23.8
+      },
+      {
+        "draft_year": 2019,
+        "school_type": "Junior college",
+        "picks": 112,
+        "pct": 9.2
+      },
+      {
+        "draft_year": 2019,
+        "school_type": "Unknown",
+        "picks": 40,
+        "pct": 3.3
+      },
+      {
+        "draft_year": 2020,
+        "school_type": "4-year college",
+        "picks": 108,
+        "pct": 67.5
+      },
+      {
+        "draft_year": 2020,
+        "school_type": "High school",
+        "picks": 47,
+        "pct": 29.4
+      },
+      {
+        "draft_year": 2020,
+        "school_type": "Junior college",
+        "picks": 5,
+        "pct": 3.1
+      },
+      {
+        "draft_year": 2021,
+        "school_type": "4-year college",
+        "picks": 449,
+        "pct": 73.4
+      },
+      {
+        "draft_year": 2021,
+        "school_type": "High school",
+        "picks": 115,
+        "pct": 18.8
+      },
+      {
+        "draft_year": 2021,
+        "school_type": "Junior college",
+        "picks": 47,
+        "pct": 7.7
+      },
+      {
+        "draft_year": 2021,
+        "school_type": "Unknown",
+        "picks": 1,
+        "pct": 0.2
+      },
+      {
+        "draft_year": 2022,
+        "school_type": "4-year college",
+        "picks": 455,
+        "pct": 73.9
+      },
+      {
+        "draft_year": 2022,
+        "school_type": "High school",
+        "picks": 118,
+        "pct": 19.2
+      },
+      {
+        "draft_year": 2022,
+        "school_type": "Junior college",
+        "picks": 40,
+        "pct": 6.5
+      },
+      {
+        "draft_year": 2022,
+        "school_type": "Unknown",
+        "picks": 3,
+        "pct": 0.5
+      },
+      {
+        "draft_year": 2023,
+        "school_type": "4-year college",
+        "picks": 446,
+        "pct": 72.6
+      },
+      {
+        "draft_year": 2023,
+        "school_type": "High school",
+        "picks": 124,
+        "pct": 20.2
+      },
+      {
+        "draft_year": 2023,
+        "school_type": "Junior college",
+        "picks": 44,
+        "pct": 7.2
+      },
+      {
+        "draft_year": 2024,
+        "school_type": "4-year college",
+        "picks": 470,
+        "pct": 76.4
+      },
+      {
+        "draft_year": 2024,
+        "school_type": "High school",
+        "picks": 117,
+        "pct": 19.0
+      },
+      {
+        "draft_year": 2024,
+        "school_type": "Junior college",
+        "picks": 26,
+        "pct": 4.2
+      },
+      {
+        "draft_year": 2024,
+        "school_type": "Unknown",
+        "picks": 2,
+        "pct": 0.3
+      },
+      {
+        "draft_year": 2025,
+        "school_type": "4-year college",
+        "picks": 458,
+        "pct": 74.5
+      },
+      {
+        "draft_year": 2025,
+        "school_type": "High school",
+        "picks": 124,
+        "pct": 20.2
+      },
+      {
+        "draft_year": 2025,
+        "school_type": "Junior college",
+        "picks": 30,
+        "pct": 4.9
+      },
+      {
+        "draft_year": 2025,
+        "school_type": "Unknown",
+        "picks": 3,
+        "pct": 0.5
+      }
+    ]
+  }
+}

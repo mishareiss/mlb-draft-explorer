@@ -1,0 +1,9 @@
+draft_year,pick_number,mlb_name,bbref_name,bbref_matched,name_mismatch,same_last_name_initial
+2014,400,Redo Guy,Redo Guy,true,false,true
+2017,150,Redo Guy,Redo Guy,true,false,true
+2017,700,Fallback Guy,Fallback Guy,true,false,true
+2013,738,Michael Mason,Mike Mason,true,true,true
+2013,900,John Smith,Pedro Alvarez,true,true,false
+2015,60,Bbref Kid,Bbref Kid,true,false,true
+2016,500,Juco Lefty,Juco Lefty,true,false,true
+2012,40,Supp Pick,Supp Pick,true,false,true
