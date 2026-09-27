@@ -122,26 +122,22 @@
       "name": "college_d1_conference_share",
       "category": "coverage",
       "status": "pass",
-      "value": 75.93,
+      "value": 75.78,
       "threshold": null,
-      "detail": "% of 9,413 college picks (4-year + JC) with a D1 conference; 86.84% of 4-year picks (informational)",
+      "detail": "% of 9,435 college picks (4-year + JC) with a D1 conference; 86.65% of 4-year picks (informational)",
       "examples": []
     },
     {
       "name": "unknown_school_type_share",
       "category": "coverage",
       "status": "pass",
-      "value": 1.09,
+      "value": 0.92,
       "threshold": 5.0,
       "detail": "% of all picks with school_type Unknown (warn above 5%); examples are the most common",
       "examples": [
         {
           "school_name_raw": "No School",
           "picks": 26
-        },
-        {
-          "school_name_raw": "Rollins College",
-          "picks": 5
         },
         {
           "school_name_raw": "Dixie State",
@@ -156,15 +152,7 @@
           "picks": 4
         },
         {
-          "school_name_raw": "Eckerd College",
-          "picks": 4
-        },
-        {
           "school_name_raw": "Carson-Newman College",
-          "picks": 3
-        },
-        {
-          "school_name_raw": "Florida Southern College",
           "picks": 3
         },
         {
@@ -173,10 +161,6 @@
         },
         {
           "school_name_raw": "Stephen F. Austin",
-          "picks": 3
-        },
-        {
-          "school_name_raw": "Georgia Gwinnett College",
           "picks": 3
         },
         {
@@ -204,16 +188,32 @@
           "picks": 2
         },
         {
-          "school_name_raw": "Siena College",
-          "picks": 2
-        },
-        {
           "school_name_raw": "Wayne State",
           "picks": 2
         },
         {
           "school_name_raw": "St. Thomas Aquinas College",
           "picks": 2
+        },
+        {
+          "school_name_raw": "Cumberland County College",
+          "picks": 2
+        },
+        {
+          "school_name_raw": "look up correct state",
+          "picks": 1
+        },
+        {
+          "school_name_raw": "East Central College (MS)",
+          "picks": 1
+        },
+        {
+          "school_name_raw": "South Carolinapstate",
+          "picks": 1
+        },
+        {
+          "school_name_raw": "Southern A&M",
+          "picks": 1
         }
       ]
     },
@@ -821,8 +821,8 @@
       {
         "draft_year": 2018,
         "school_type": "4-year college",
-        "picks": 767,
-        "pct": 63.2
+        "picks": 776,
+        "pct": 63.9
       },
       {
         "draft_year": 2018,
@@ -839,14 +839,14 @@
       {
         "draft_year": 2018,
         "school_type": "Unknown",
-        "picks": 43,
-        "pct": 3.5
+        "picks": 34,
+        "pct": 2.8
       },
       {
         "draft_year": 2019,
         "school_type": "4-year college",
-        "picks": 775,
-        "pct": 63.7
+        "picks": 788,
+        "pct": 64.7
       },
       {
         "draft_year": 2019,
@@ -863,8 +863,8 @@
       {
         "draft_year": 2019,
         "school_type": "Unknown",
-        "picks": 40,
-        "pct": 3.3
+        "picks": 27,
+        "pct": 2.2
       },
       {
         "draft_year": 2020,

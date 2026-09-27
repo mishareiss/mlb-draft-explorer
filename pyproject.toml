@@ -12,6 +12,8 @@ dependencies = [
     "pybaseball",
     "lxml>=6.1.3",
     "rapidfuzz>=3.14.6",
+    "streamlit>=1.64.0",
+    "plotly>=7.1.0",
 ]
 
 [dependency-groups]
@@ -22,7 +24,7 @@ dev = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = [".", "tests"]
+pythonpath = [".", "tests", "app"]
 addopts = "-m 'not live'"
 markers = ["live: hits the real network; deselected by default"]
 
@@ -32,3 +34,7 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.isort]
+# app/ is on sys.path when Streamlit runs app/Explorer.py
+known-first-party = ["lib"]

@@ -1,4 +1,4 @@
-.PHONY: setup pull pull-bbref backfill schools draft-dates all-data profile transform quality build test lint
+.PHONY: setup pull pull-bbref backfill schools draft-dates all-data profile transform quality build app test lint
 
 setup:
 	uv sync
@@ -37,6 +37,10 @@ quality:
 	uv run python -m quality.checks
 
 build: transform quality
+
+# Explorer, Data Quality and About pages on http://localhost:8501
+app:
+	uv run streamlit run app/Explorer.py
 
 test:
 	uv run pytest

@@ -82,8 +82,8 @@ Bellevue CC,Bellevue College,JC,JUCO,,,WA,name_regex,,False
 Bellevue University,Bellevue University,4YR,UNKNOWN,,,NE,bbref_type,,True
 "Bellevue, NE",Bellevue University,4YR,UNKNOWN,,,NE,bbref_type,,True
 Belmont,Belmont University,4YR,D1,Missouri Valley,Missouri Valley,TN,bbref_type,wikipedia,False
-Belmont Abbey,Belmont Abbey College,4YR,UNKNOWN,,,NC,bbref_type,,True
-Belmont Abbey College,Belmont Abbey College,OTHER,UNKNOWN,,,NC,unknown,,True
+Belmont Abbey,Belmont Abbey College,4YR,UNKNOWN,,,NC,manual,,True
+Belmont Abbey College,Belmont Abbey College,4YR,UNKNOWN,,,NC,manual,,True
 Belmont College,Belmont University,4YR,D1,Missouri Valley,Missouri Valley,TN,bbref_type,wikipedia,False
 Belmont University,Belmont University,4YR,D1,Missouri Valley,Missouri Valley,TN,mlb_class,wikipedia,False
 Belmont University ,Belmont University,4YR,D1,Missouri Valley,Missouri Valley,TN,mlb_class,wikipedia,False
@@ -173,9 +173,9 @@ Canisius College,Canisius University,4YR,D1,MAAC,MAAC,NY,mlb_class,wikipedia,Fal
 Carroll College,Carroll College,4YR,UNKNOWN,,,MT,bbref_type,,True
 Carson-Newman College,Carson-Newman College,OTHER,UNKNOWN,,,TN,unknown,,True
 Case Western Reserve,Case Western Reserve University,4YR,UNKNOWN,,,OH,bbref_type,,True
-Catawba,Catawba College,4YR,UNKNOWN,,,NC,bbref_type,,True
-Catawba (NC),Catawba College,4YR,UNKNOWN,,,NC,bbref_type,,True
-Catawba College,Catawba College,OTHER,UNKNOWN,,,NC,unknown,,True
+Catawba,Catawba College,4YR,UNKNOWN,,,NC,manual,,True
+Catawba (NC),Catawba College,4YR,UNKNOWN,,,NC,manual,,True
+Catawba College,Catawba College,4YR,UNKNOWN,,,NC,manual,,True
 Catawba Valley CC,Catawba Valley CC,JC,JUCO,,,NC,name_regex,,False
 Cedar Valley College,Cedar Valley College,JC,JUCO,,,TX,bbref_type,,False
 Cedarville,Cedarville University,4YR,UNKNOWN,,,OH,bbref_type,,True
@@ -331,8 +331,8 @@ Eastern New Mexico,Eastern New Mexico University,4YR,UNKNOWN,,,NM,bbref_type,,Tr
 Eastern Oklahoma St JC,Eastern Oklahoma St JC,JC,JUCO,,,OK,name_regex,,False
 Eastern Oklahoma State College,Eastern Oklahoma State College,JC,JUCO,,,OK,bbref_type,,False
 Eastern Oklahoma State JC,Eastern Oklahoma State JC,JC,JUCO,,,OK,name_regex,,False
-Eckerd,Eckerd College,4YR,UNKNOWN,,,FL,bbref_type,,True
-Eckerd College,Eckerd College,OTHER,UNKNOWN,,,FL,unknown,,True
+Eckerd,Eckerd College,4YR,UNKNOWN,,,FL,manual,,True
+Eckerd College,Eckerd College,4YR,UNKNOWN,,,FL,manual,,True
 Edmonds CC,Edmonds College,JC,JUCO,,,WA,name_regex,,False
 El Camino CC,El Camino College,JC,JUCO,,,CA,name_regex,,False
 El Paso CC,El Paso Community College,JC,JUCO,,,TX,name_regex,,False
@@ -372,8 +372,8 @@ Florida Gulf Coast University,Florida Gulf Coast University,4YR,D1,ASUN,ASUN,FL,
 Florida Institute of Technology,Florida Institute of Technology,4YR,UNKNOWN,,,FL,bbref_type,,True
 Florida International,Florida International University,4YR,D1,Conference USA,Conference USA,FL,mlb_class,wikipedia,False
 Florida SouthWestern State College,Florida SouthWestern State College,JC,JUCO,,,FL,mlb_class,,False
-Florida Southern,Florida Southern College,4YR,UNKNOWN,,,FL,mlb_class,,True
-Florida Southern College,Florida Southern College,OTHER,UNKNOWN,,,FL,unknown,,True
+Florida Southern,Florida Southern College,4YR,UNKNOWN,,,FL,manual,,True
+Florida Southern College,Florida Southern College,4YR,UNKNOWN,,,FL,manual,,True
 Florida Southwestern State Col,Florida SouthWestern State College,JC,JUCO,,,FL,mlb_class,,False
 Florida Southwestern State JC,Florida SouthWestern State College,JC,JUCO,,,FL,name_regex,,False
 Florida State,Florida State University,4YR,D1,Atlantic Coast,Atlantic Coast,FL,mlb_class,wikipedia,False
@@ -408,8 +408,8 @@ Georgia,University of Georgia,4YR,D1,Southeastern,Southeastern,GA,mlb_class,wiki
 Georgia ,University of Georgia,4YR,D1,Southeastern,Southeastern,GA,mlb_class,wikipedia,False
 Georgia College,Georgia College,OTHER,UNKNOWN,,,GA,unknown,,True
 Georgia College and State,Georgia College & State University,4YR,UNKNOWN,,,GA,bbref_type,,True
-Georgia Gwinnett,Georgia Gwinnett College,4YR,UNKNOWN,,,GA,bbref_type,,True
-Georgia Gwinnett College,Georgia Gwinnett College,OTHER,UNKNOWN,,,GA,unknown,,True
+Georgia Gwinnett,Georgia Gwinnett College,4YR,UNKNOWN,,,GA,manual,,True
+Georgia Gwinnett College,Georgia Gwinnett College,4YR,UNKNOWN,,,GA,manual,,True
 Georgia Highlands College,Georgia Highlands College,JC,JUCO,,,GA,mlb_class,,False
 Georgia Perimeter College,Georgia Perimeter College,JC,JUCO,,,GA,bbref_type,,False
 Georgia Southern,Georgia Southern University,4YR,D1,Sun Belt,Sun Belt,GA,mlb_class,wikipedia,False
@@ -571,7 +571,7 @@ Lethbridge Col,Lethbridge Col,JC,JUCO,,,AB,mlb_class,,False
 "Lethbridge College, AB",Lethbridge CC,JC,JUCO,,,AB,bbref_type,,False
 Lewis Clark State College,Lewis Clark State College,4YR,UNKNOWN,,,ID,mlb_class,,True
 Lewis U,Lewis U,4YR,UNKNOWN,,,IL,mlb_class,,True
-Lewis and Clark CC,Lewis-Clark State College,JC,JUCO,,,ID,name_regex,,False
+Lewis and Clark CC,Lewis and Clark Community College,JC,JUCO,,,IL,manual,,False
 Lewis-Clark State,Lewis-Clark State College,4YR,UNKNOWN,,,ID,mlb_class,,True
 Lewis-Clark State (ID),Lewis-Clark State College,4YR,UNKNOWN,,,ID,bbref_type,,True
 Lewis-Clark State College,Lewis-Clark State College,4YR,UNKNOWN,,,ID,mlb_class,,True
@@ -652,14 +652,14 @@ McLennan CC,McLennan Community College,JC,JUCO,,,TX,name_regex,,False
 "McLennan JC, TX",McLennan Community College,JC,JUCO,,,TX,name_regex,,False
 McNeese State,McNeese State University,4YR,D1,Southland,Southland,LA,mlb_class,wikipedia,False
 Memphis,University of Memphis,4YR,D1,The American,The American,TN,bbref_type,wikipedia,False
-Menlo,Menlo College,4YR,UNKNOWN,,,CA,bbref_type,,True
-Menlo (CA),Menlo College,4YR,UNKNOWN,,,CA,bbref_type,,True
-Menlo College,Menlo College,OTHER,UNKNOWN,,,CA,unknown,,True
+Menlo,Menlo College,4YR,UNKNOWN,,,CA,manual,,True
+Menlo (CA),Menlo College,4YR,UNKNOWN,,,CA,manual,,True
+Menlo College,Menlo College,4YR,UNKNOWN,,,CA,manual,,True
 "Merced CC, CA",Merced College,JC,JUCO,,,CA,name_regex,,False
 Merced College,Merced College,JC,JUCO,,,CA,bbref_type,,False
 Merced JC (CA),Merced College,JC,JUCO,,,CA,name_regex,,False
 Mercer,Mercer University,4YR,D1,Southern,Southern,GA,mlb_class,wikipedia,False
-Mercer County CC,Mercer University,JC,JUCO,,,GA,name_regex,,False
+Mercer County CC,Mercer County Community College,JC,JUCO,,,NJ,manual,,False
 "Mercer County CC, NJ",Mercer County Community College,JC,JUCO,,,NJ,name_regex,,False
 Mercer U,Mercer University,4YR,D1,Southern,Southern,GA,mlb_class,wikipedia,False
 Mercer University,Mercer University,4YR,D1,Southern,Southern,GA,mlb_class,wikipedia,False
@@ -819,7 +819,7 @@ Notre Dame Col,Notre Dame Col,4YR,UNKNOWN,,,OH,mlb_class,,True
 Nova Southeastern,Nova Southeastern University,4YR,UNKNOWN,,,FL,mlb_class,,True
 Nova Southeastern (FL),Nova Southeastern University,4YR,UNKNOWN,,,FL,bbref_type,,True
 Nova Southeastern University,Nova Southeastern University,4YR,UNKNOWN,,,FL,mlb_class,,True
-Oakland CC,Oakland University,JC,JUCO,,,MI,name_regex,,False
+Oakland CC,Oakland Community College,JC,JUCO,,,MI,manual,,False
 Oakland University,Oakland University,4YR,D1,Horizon League,Horizon League,MI,mlb_class,wikipedia,False
 Oakton CC,Oakton CC,JC,JUCO,,,,name_regex,,False
 Odessa College,Odessa College,JC,JUCO,,,TX,mlb_class,,False
@@ -917,8 +917,8 @@ Quincy University,Quincy University,4YR,UNKNOWN,,,IL,mlb_class,,True
 Quinnipiac,Quinnipiac University,4YR,D1,MAAC,MAAC,CT,bbref_type,wikipedia,False
 Quinnipiac University,Quinnipiac University,4YR,D1,MAAC,MAAC,CT,mlb_class,wikipedia,False
 Radford,Radford University,4YR,D1,Big South,Big South,VA,mlb_class,wikipedia,False
-Ramapo College,Ramapo College,OTHER,UNKNOWN,,,NJ,unknown,,True
-Ramapo College of New Jersey,Ramapo College,4YR,UNKNOWN,,,NJ,bbref_type,,True
+Ramapo College,Ramapo College,4YR,UNKNOWN,,,NJ,manual,,True
+Ramapo College of New Jersey,Ramapo College,4YR,UNKNOWN,,,NJ,manual,,True
 Randolph-Macon Col,Randolph-Macon Col,4YR,UNKNOWN,,,VA,mlb_class,,True
 Randolph-Macon College,Randolph-Macon College,4YR,UNKNOWN,,,VA,mlb_class,,True
 Ranger College,Ranger College,JC,JUCO,,,TX,bbref_type,,False
@@ -947,8 +947,8 @@ Rock Valley College,Rock Valley College,JC,JUCO,,,IL,mlb_class,,False
 Rockhurst,Rockhurst University,4YR,UNKNOWN,,,MO,bbref_type,,True
 "Rocky Mount, NC","Rocky Mount, NC",OTHER,UNKNOWN,,,,unknown,,True
 Rogers State,Rogers State University,4YR,UNKNOWN,,,OK,bbref_type,,True
-Rollins (FL),Rollins College,4YR,UNKNOWN,,,FL,bbref_type,,True
-Rollins College,Rollins College,OTHER,UNKNOWN,,,FL,unknown,,True
+Rollins (FL),Rollins College,4YR,UNKNOWN,,,FL,manual,,True
+Rollins College,Rollins College,4YR,UNKNOWN,,,FL,manual,,True
 Rose State College,Rose State College,OTHER,UNKNOWN,,,OK,unknown,,True
 Rowan Col at Gloucester County,Rowan College of South Jersey-Gloucester,JC,JUCO,,,NJ,mlb_class,,False
 Rowan College at Gloucester County,Rowan College of South Jersey-Gloucester,JC,JUCO,,,NJ,mlb_class,,False
@@ -1035,7 +1035,7 @@ Shoreline CC,Shoreline CC,JC,JUCO,,,WA,name_regex,,False
 Shorter College,Shorter University,4YR,UNKNOWN,,,GA,bbref_type,,True
 Siena,Siena College,4YR,D1,MAAC,MAAC,NY,bbref_type,wikipedia,False
 Siena ,Siena College,4YR,D1,MAAC,MAAC,NY,bbref_type,wikipedia,False
-Siena College,Siena College,OTHER,UNKNOWN,,,NY,unknown,,True
+Siena College,Siena College,4YR,D1,MAAC,MAAC,NY,manual,wikipedia,False
 Sierra College,Sierra College,JC,JUCO,,,CA,bbref_type,,False
 Sierra JC,Sierra JC,JC,JUCO,,,CA,name_regex,,False
 Sinclair CC,Sinclair CC,JC,JUCO,,,OH,name_regex,,False
@@ -1325,7 +1325,7 @@ Virginia Tech,Virginia Polytechnic Institute and State University,4YR,D1,Atlanti
 Volunteer State CC,Volunteer State Community College,JC,JUCO,,,TN,name_regex,,False
 Wabash Valley College,Wabash Valley College,JC,JUCO,,,IL,mlb_class,,False
 Wagner,Wagner College,4YR,D1,Northeast,Northeast,NY,bbref_type,wikipedia,False
-Wagner College,Wagner College,OTHER,UNKNOWN,,,NY,unknown,,True
+Wagner College,Wagner College,4YR,D1,Northeast,Northeast,NY,manual,wikipedia,False
 Wake Forest,Wake Forest University,4YR,D1,Atlantic Coast,Atlantic Coast,NC,mlb_class,wikipedia,False
 Waldorf Col,Waldorf Col,OTHER,UNKNOWN,,,IA,unknown,,True
 Wallace CC,George C. Wallace State Community College,JC,JUCO,,,AL,name_regex,,False

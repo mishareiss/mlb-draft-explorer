@@ -112,7 +112,7 @@ def test_high_school_detection(out):
 def test_conference_groups(out):
     assert row(out, 2016, 500)["conference_group"] == "Junior college"
     assert row(out, 2016, 500)["school"] == "Cypress College"
-    assert row(out, 2019, 330)["conference_group"] == "Non-D1 4-year"
+    assert row(out, 2019, 330)["conference_group"] == "Other 4-year"
     assert row(out, 2013, 738)["conference_group"] == "The American"
     for year, pick in [(2021, 400), (2012, 40)]:  # 'No School', a name not in schools.csv
         r = row(out, year, pick)

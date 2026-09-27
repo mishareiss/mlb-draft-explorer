@@ -74,7 +74,7 @@ select
     case
         when school_type = '4-year college' and division = 'D1' and d1_conference is not null
             then d1_conference
-        when school_type = '4-year college' then 'Non-D1 4-year'
+        when school_type = '4-year college' then 'Other 4-year'
         when school_type = 'Junior college' then 'Junior college'
         when school_type = 'High school' then 'High school'
         else 'Unknown'
