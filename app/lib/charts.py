@@ -7,11 +7,13 @@ Every builder returns a figure with no traces and a short message when given no 
 
 from __future__ import annotations
 
+import math
+
 import pandas as pd
 import plotly.graph_objects as go
 
 from lib import fmt
-from lib.metrics import METRICS, format_value
+from lib.metrics import EXTREME_BARS, MAX_BARS, METRICS, format_value, shown_groups
 from lib.schema import ROUND_BANDS, SCHOOL_TYPES, SLOT_BANDS
 
 ACCENT = "#1f5fbf"
@@ -64,15 +66,27 @@ def empty_figure(message: str, height: int = 220) -> go.Figure:
 
 
 def compare_bars(
-    table: pd.DataFrame, metric: str, baseline: float, max_bars: int = 25
+    table: pd.DataFrame,
+    metric: str,
+    baseline: float,
+    max_bars: int = MAX_BARS,
+    keep: int = EXTREME_BARS,
 ) -> go.Figure:
-    """Horizontal bars, highest value on top; n in each label; dashed baseline."""
+    """Horizontal bars, highest value on top; n in each label; dashed baseline.
+
+    With more than max_bars groups, only the `keep` highest and `keep` lowest are drawn,
+    with a gap between them.
+    """
     if table.empty:
         return empty_figure("No groups meet the minimum sample size.")
     m = METRICS[metric]
     mult, axis = _AXIS[m.unit]
-    t = table.head(max_bars).iloc[::-1]
+    split = len(table) > max_bars
+    t = shown_groups(table, max_bars, keep).iloc[::-1]
     labels = [f"{g} (n={n:,})" for g, n in zip(t["group"], t["n"], strict=True)]
+    # numeric rows (bottom = 0) so the split can leave a gap a categorical axis can't
+    gap = 0.8 if split else 0.0
+    rows = [i + (gap if split and i >= keep else 0.0) for i in range(len(t))]
     has_interval = m.kind != "median" and t["lo"].notna().any()
     interval = [
         f"{format_value(metric, lo)} to {format_value(metric, hi)}"
@@ -83,13 +97,14 @@ def compare_bars(
             [format_value(metric, v) for v in t["value"]],
             interval,
             [f"{n:,}" for n in t["n"]],
+            labels,
             strict=True,
         )
     )
     fig = go.Figure(
         go.Bar(
             x=t["value"] * mult,
-            y=labels,
+            y=rows,
             orientation="h",
             marker={"color": ACCENT, "cornerradius": 4},
             error_x=(
@@ -107,7 +122,7 @@ def compare_bars(
             ),
             customdata=custom,
             hovertemplate=(
-                "<b>%{y}</b><br>"
+                "<b>%{customdata[3]}</b><br>"
                 + m.label
                 + ": %{customdata[0]}"
                 + ("<br>90% interval: %{customdata[1]}" if has_interval else "")
@@ -125,8 +140,18 @@ def compare_bars(
             annotation_font_color=MUTED,
         )
     fig.update_xaxes(title=m.label, **axis)
-    fig.update_yaxes(title=None, automargin=True)
-    return _layout(fig, height=90 + 28 * len(t), showlegend=False, bargap=0.25)
+    if split:
+        fig.add_hline(y=keep - 0.5 + gap / 2, line={"dash": "dot", "color": GREY, "width": 1})
+    fig.update_yaxes(
+        title=None,
+        automargin=True,
+        tickvals=rows,
+        ticktext=labels,
+        showgrid=False,
+        range=[-0.6, rows[-1] + 0.6],
+    )
+    height = 90 + 28 * (len(t) + gap)
+    return _layout(fig, height=round(height), showlegend=False, bargap=0.25)
 
 
 def slot_chart(
@@ -173,8 +198,14 @@ def slot_chart(
     return _layout(fig)
 
 
+BONUS_AXIS_MIN = 1_000  # the scatter's log axis starts here
+
+
 def bonus_scatter(points: pd.DataFrame) -> go.Figure:
-    """Signing bonus (log) vs career WAR, one trace per school type."""
+    """Signing bonus (log) vs career WAR, one trace per school type.
+
+    Bonuses under BONUS_AXIS_MIN are drawn at the axis edge; hover shows the real amount.
+    """
     if points.empty:
         return empty_figure("No signed 2012–2019 players with a known bonus match these filters.")
     fig = go.Figure()
@@ -193,7 +224,7 @@ def bonus_scatter(points: pd.DataFrame) -> go.Figure:
             }
         )
         fig.add_scatter(
-            x=rows["bonus_usd"],
+            x=rows["bonus_usd"].clip(lower=BONUS_AXIS_MIN),
             y=rows["career_war"],
             mode="markers",
             name=school_type,
@@ -210,7 +241,14 @@ def bonus_scatter(points: pd.DataFrame) -> go.Figure:
                 "Bonus %{customdata[4]} · Career WAR %{customdata[5]}<extra></extra>"
             ),
         )
-    fig.update_xaxes(title="Signing bonus (log scale)", type="log", tickprefix="$", tickformat="~s")
+    top = max(points["bonus_usd"].max(), BONUS_AXIS_MIN * 10)
+    fig.update_xaxes(
+        title="Signing bonus (log scale)",
+        type="log",
+        tickprefix="$",
+        tickformat="~s",
+        range=[math.log10(BONUS_AXIS_MIN) - 0.05, math.log10(top) + 0.05],
+    )
     fig.update_yaxes(title="Career WAR")
     return _layout(fig, height=420, showlegend=True)
 

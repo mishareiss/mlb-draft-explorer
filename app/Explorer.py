@@ -113,7 +113,7 @@ with st.sidebar:
 
 # --- header --------------------------------------------------------------------------------
 
-st.title("College Draft Explorer")
+st.title("MLB Draft Explorer")
 st.markdown(
     "What's the track record of MLB draftees like these? Pick a group in the sidebar and "
     "every panel updates. The grey baseline is all draftees from the same draft years."
@@ -206,12 +206,16 @@ else:
         notes.append("Whiskers show 90% Wilson intervals.")
     elif METRICS[metric_key].kind == "mean":
         notes.append("Whiskers show the mean ± 1.645 standard errors (90%).")
-    if len(stats.table) > 25:
-        notes.append(f"Showing the top 25 of {len(stats.table)} groups.")
+    shown = metrics.shown_groups(stats.table)
+    if len(shown) < len(stats.table):
+        notes.append(
+            f"Showing the {metrics.EXTREME_BARS} highest and {metrics.EXTREME_BARS} lowest "
+            f"of {len(stats.table)} groups."
+        )
     groups = "group" if stats.hidden == 1 else "groups"
     notes.append(f"{stats.hidden} {groups} hidden (fewer than {min_n} players).")
     st.caption(ui.md(" ".join(notes)))
-    ui.takeaway(metrics.takeaway_compare(stats.table, metric_key, baseline_value))
+    ui.takeaway(metrics.takeaway_compare(shown, metric_key, baseline_value))
 
     # --- 3. draft slot curve -----------------------------------------------------------------
     st.subheader("Draft slot curve")
@@ -226,7 +230,12 @@ else:
     st.subheader("Bonus vs. outcome")
     points = metrics.bonus_points(cohort)
     ui.chart(charts.bonus_scatter(points), key="bonus")
-    st.caption("Bonus data is thin after round 10 for 2012–2016 and 2018–2019.")
+    st.caption(
+        ui.md(
+            "Bonus data is thin after round 10 for 2012–2016 and 2018–2019. "
+            "Bonuses under $1k are shown at $1k."
+        )
+    )
     ui.takeaway(metrics.takeaway_bonus(points))
 
 # --- 5. trend by draft class -------------------------------------------------------------------

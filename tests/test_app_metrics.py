@@ -1,5 +1,7 @@
 import math
+import re
 
+import pandas as pd
 import pytest
 from app_fixture import make_outcomes
 
@@ -126,6 +128,25 @@ def test_takeaway_compare(df):
     text = metrics.takeaway_compare(gs.table, "mlb_pct", 7 / 26)
     assert text.startswith("MLB % ranges from 20.0% (Beta State) to 50.0% (Alpha U)")
     assert "all draftees: 26.9%" in text and "overlap" in text
+
+
+def test_shown_groups_keeps_extremes_and_takeaway_names_only_them():
+    table = pd.DataFrame(
+        {
+            "group": [f"G{i:02d}" for i in range(30)],
+            "value": [0.9 - 0.02 * i for i in range(30)],
+            "lo": [0.8 - 0.02 * i for i in range(30)],
+            "hi": [1.0 - 0.02 * i for i in range(30)],
+            "n": [50] * 30,
+        }
+    )
+    shown = metrics.shown_groups(table)
+    assert len(shown) == 24
+    assert shown["group"].tolist() == [f"G{i:02d}" for i in [*range(12), *range(18, 30)]]
+    text = metrics.takeaway_compare(shown, "mlb_pct", 0.5)
+    named = set(re.findall(r"\((G\d\d)\)", text))
+    assert named == {"G00", "G29"} and named <= set(shown["group"])
+    assert metrics.shown_groups(table.head(25)).equals(table.head(25))
 
 
 def test_takeaway_empty_states(df):

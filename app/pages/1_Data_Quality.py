@@ -73,6 +73,8 @@ st.markdown(
 - **"Unsigned"** in the late rounds of 2018–2019 really means unsigned or unknown.
 - **Position** is the player's current listed position, which may differ from his position at
   the draft.
+- **Team** shows the franchise's current name (a 2012 Indians pick is listed under the
+  Cleveland Guardians).
 - **"Other 4-year"** mixes D2, D3 and NAIA schools with a few D1 schools the lookup didn't
   match.
 """

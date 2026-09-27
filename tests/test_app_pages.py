@@ -43,6 +43,7 @@ def test_page_runs(page):
 def test_explorer_default_panels():
     at = run("Explorer.py")
     assert at.sidebar.markdown[-1].value == "**40 picks match**"
+    assert at.title[0].value == "MLB Draft Explorer"
     assert [m.label for m in at.metric][:3] == ["Picks", "Signed", "Reached MLB"]
     takeaways = [m.value for m in at.markdown if m.value.startswith("**Takeaway")]
     assert len(takeaways) == 6

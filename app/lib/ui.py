@@ -16,7 +16,7 @@ _CSS = """
 
 
 def page_setup(title: str) -> None:
-    st.set_page_config(page_title=f"{title} · College Draft Explorer", layout="wide")
+    st.set_page_config(page_title=f"{title} · MLB Draft Explorer", layout="wide")
     st.markdown(_CSS, unsafe_allow_html=True)
 
 

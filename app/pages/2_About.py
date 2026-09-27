@@ -39,7 +39,7 @@ by school, conference, school type, position, age at draft, draft slot and signi
 
 ### How it's built
 Python ingest → DuckDB SQL models → quality checks → Streamlit.
-Code: [github.com/mishareiss/college-draft-explorer](https://github.com/mishareiss/college-draft-explorer)
+Code: [github.com/mishareiss/mlb-draft-explorer](https://github.com/mishareiss/mlb-draft-explorer)
 
 Built by Misha Reiss.
 """

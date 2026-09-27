@@ -29,7 +29,7 @@ TABLE_COLUMNS = {
     "pick_number": "Pick",
     "round_label": "Round",
     "player_name": "Player",
-    "team_name": "Team",
+    "team_name": "Team (current name)",
     "school": "School",
     "school_type": "School type",
     "conference_group": "Conference group",

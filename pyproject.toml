@@ -1,5 +1,5 @@
 [project]
-name = "college-draft-explorer"
+name = "mlb-draft-explorer"
 version = "0.1.0"
 description = "How MLB draftees' outcomes vary by school, position, age, slot and bonus (draft classes 2012-2025)."
 readme = "README.md"

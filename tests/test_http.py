@@ -49,14 +49,14 @@ def test_cache_miss_writes_response_verbatim(tmp_path):
 
 def test_shared_session_config():
     s = http.get_session()
-    assert "college-draft-explorer" in s.headers["User-Agent"]
+    assert "mlb-draft-explorer" in s.headers["User-Agent"]
     retry = s.get_adapter("https://statsapi.mlb.com").max_retries
     assert retry.total == 5
     assert {429, 500, 502, 503, 504} <= set(retry.status_forcelist)
 
 
 def test_user_agent_has_contact_url():
-    assert "https://github.com/mishareiss/college-draft-explorer" in http.USER_AGENT
+    assert "https://github.com/mishareiss/mlb-draft-explorer" in http.USER_AGENT
 
 
 # --- fetch_text_cached (Baseball-Reference / Wikipedia) ----------------------------------

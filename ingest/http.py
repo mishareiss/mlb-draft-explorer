@@ -24,8 +24,8 @@ from urllib3.util.retry import Retry
 log = logging.getLogger(__name__)
 
 USER_AGENT = (
-    "college-draft-explorer/0.1 (personal portfolio data project; low-volume, cached; "
-    "+https://github.com/mishareiss/college-draft-explorer)"
+    "mlb-draft-explorer/0.1 (personal portfolio data project; low-volume, cached; "
+    "+https://github.com/mishareiss/mlb-draft-explorer)"
 )
 TIMEOUT_S = 30
 MIN_INTERVAL_S = 0.5

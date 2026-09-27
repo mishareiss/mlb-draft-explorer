@@ -170,6 +170,19 @@ def group_stats(
     return GroupStats(visible.reset_index(drop=True), int(all_groups - len(visible)))
 
 
+MAX_BARS = 25  # above this, the compare chart shows only the extremes
+EXTREME_BARS = 12  # how many of the highest and of the lowest groups it shows
+
+
+def shown_groups(
+    table: pd.DataFrame, max_bars: int = MAX_BARS, keep: int = EXTREME_BARS
+) -> pd.DataFrame:
+    """Every group when there are at most max_bars, else the `keep` highest and `keep` lowest."""
+    if len(table) <= max_bars:
+        return table
+    return pd.concat([table.head(keep), table.tail(keep)], ignore_index=True)
+
+
 # --- panels ------------------------------------------------------------------------------
 
 
