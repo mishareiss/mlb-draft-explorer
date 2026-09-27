@@ -7,68 +7,90 @@ from __future__ import annotations
 
 import streamlit as st
 
-from lib import charts, fmt, metrics, ui
+from lib import fmt, metrics, tabs, ui
 from lib.data import (
+    PRESETS,
     Filters,
     apply_filters,
     conference_group_options,
+    from_query_params,
+    load_curve,
     load_outcomes,
+    matching_preset,
     school_options,
+    to_query_params,
 )
-from lib.metrics import METRICS, TREND_METRICS, OutcomeRules
+from lib.metrics import OutcomeRules
 from lib.schema import (
     AGE_BANDS,
     BONUS_BANDS,
-    GROUP_BY,
-    OUTCOME_YEAR_MAX,
+    DRAFT_CLASS,
+    PICK_MAX,
+    PICK_MIN,
+    PICKED_AT,
     POSITION_GROUPS,
     SCHOOL_TYPES,
-    SLOT_BANDS,
-    TABLE_COLUMNS,
-    YEAR_MAX,
-    YEAR_MIN,
 )
 
 ui.page_setup("Explorer")
 df = load_outcomes()
 
-# --- sidebar filters -----------------------------------------------------------------------
+# --- filter state: session state <-> Filters <-> URL ---------------------------------------
 
-DEFAULTS = {
-    "f_years": (YEAR_MIN, YEAR_MAX),
-    "f_school_types": [],
-    "f_conferences": [],
-    "f_schools": [],
-    "f_positions": [],
-    "f_ages": [],
-    "f_slots": [],
-    "f_bonus": [],
-    "f_unsigned": False,
-    "f_hit": 5,
+# Filters field -> widget key
+KEYS = {
+    "years": "f_years",
+    "school_types": "f_school_types",
+    "conference_groups": "f_conferences",
+    "schools": "f_schools",
+    "position_groups": "f_positions",
+    "age_bands": "f_ages",
+    "picks": "f_picks",
+    "bonus_bands": "f_bonus",
 }
 
 
+def write_filters(f: Filters) -> None:
+    for field, key in KEYS.items():
+        value = getattr(f, field)
+        st.session_state[key] = list(value)
+        if field in ("years", "picks"):
+            st.session_state[key] = tuple(value)
+
+
 def reset_filters() -> None:
-    for key, value in DEFAULTS.items():
-        st.session_state[key] = list(value) if isinstance(value, list) else value
+    write_filters(Filters())
+    st.session_state["f_unsigned"] = False
 
 
-for key, value in DEFAULTS.items():
-    st.session_state.setdefault(key, list(value) if isinstance(value, list) else value)
+def apply_preset() -> None:
+    name = st.session_state.get("preset")
+    if name:
+        write_filters(PRESETS[name])
+
+
+if "f_years" not in st.session_state:  # first run of this session: read the URL
+    params = {k: st.query_params.get_all(k) for k in st.query_params}
+    url_filters, url_unsigned = from_query_params(params)
+    write_filters(url_filters)
+    st.session_state["f_unsigned"] = url_unsigned
+    if st.query_params.get("tab") in tabs.TABS:
+        st.session_state["tab"] = st.query_params["tab"]
+
+# --- sidebar -------------------------------------------------------------------------------
 
 with st.sidebar:
-    st.header("Filters")
-    years = st.slider("Draft years", YEAR_MIN, YEAR_MAX, key="f_years")
+    st.header("Player")
     school_types = st.multiselect(
         "School type", SCHOOL_TYPES, key="f_school_types", placeholder="All"
     )
     conferences = st.multiselect(
-        "Conference group",
+        "Conference",
         conference_group_options(df),
         key="f_conferences",
         placeholder="All",
-        help="The D1 conference for 4-year D1 schools; otherwise Other 4-year, Junior college, "
-        "High school or Unknown.",
+        help="The D1 conference for 4-year D1 schools; otherwise Other 4-year, Junior "
+        "college, High school or No school / unclassified.",
     )
     options = school_options(df, tuple(conferences), tuple(school_types))
     # Drop schools that the narrowed option list no longer offers
@@ -78,18 +100,19 @@ with st.sidebar:
         "Position group", POSITION_GROUPS, key="f_positions", placeholder="All"
     )
     ages = st.multiselect("Age at draft", AGE_BANDS, key="f_ages", placeholder="All")
-    slots = st.multiselect(
-        "Draft slot (overall pick)", SLOT_BANDS, key="f_slots", placeholder="All"
-    )
+
+    st.header("Draft")
+    years = st.slider(DRAFT_CLASS, 2012, 2025, key="f_years")
+    picks = st.slider(PICKED_AT, PICK_MIN, PICK_MAX, key="f_picks", help="Overall pick number.")
     bonuses = st.multiselect("Signing bonus", BONUS_BANDS, key="f_bonus", placeholder="All")
-    st.divider()
-    count_unsigned = st.toggle(
-        "Count unsigned picks",
-        key="f_unsigned",
-        help="Off: outcome metrics use signed players only. On: players who never signed "
-        "count too (as not reaching MLB).",
-    )
-    hit_war = st.slider("Hit = career WAR of at least", 1, 20, key="f_hit")
+
+    with st.expander("Settings"):
+        count_unsigned = st.toggle(
+            "Count unsigned picks",
+            key="f_unsigned",
+            help="Off: outcomes use signed players only. On: picks who never signed count "
+            "too, as not reaching the majors, and compare with the model's all-picks curve.",
+        )
 
 filters = Filters(
     years=(int(years[0]), int(years[1])),
@@ -98,14 +121,11 @@ filters = Filters(
     schools=tuple(schools),
     position_groups=tuple(positions),
     age_bands=tuple(ages),
-    slot_bands=tuple(slots),
+    picks=(int(picks[0]), int(picks[1])),
     bonus_bands=tuple(bonuses),
 )
-rules = OutcomeRules(hit_war=float(hit_war), count_unsigned=count_unsigned)
+rules = OutcomeRules(count_unsigned=count_unsigned)
 cohort = apply_filters(df, filters)
-base = apply_filters(df, filters.years_only())
-is_baseline = filters == filters.years_only()
-label = metrics.describe_cohort(filters)
 
 with st.sidebar:
     st.markdown(f"**{fmt.count(len(cohort))} picks match**")
@@ -114,179 +134,52 @@ with st.sidebar:
 # --- header --------------------------------------------------------------------------------
 
 st.title("MLB Draft Explorer")
-st.markdown(
-    "What's the track record of MLB draftees like these? Pick a group in the sidebar and "
-    "every panel updates. The grey baseline is all draftees from the same draft years."
+with st.expander("How to read this"):
+    st.markdown(
+        """
+1. **Pick a group** in the sidebar, or start from a preset below.
+2. **Read the headline** on each panel: it's the takeaway, computed from the data you picked.
+3. **Compare with the grey baseline**, all draftees from the same draft classes. *vs. draft
+   slot* compares a group with players taken at the same picks, so it removes the advantage
+   of simply being picked early.
+4. **Blue is above, orange is below, grey is about the same**: when a 90% interval includes
+   zero, the difference could be noise.
+"""
+    )
+st.session_state["preset"] = matching_preset(filters)
+st.pills(
+    "Presets", list(PRESETS), key="preset", on_change=apply_preset, label_visibility="collapsed"
 )
-if filters.years[1] > OUTCOME_YEAR_MAX:
-    st.caption("Outcomes use 2012–2019 classes; newer players haven't had time to develop.")
+ui.cohort_line(metrics.cohort_sentence(filters, cohort, rules))
+
+st.query_params.from_dict(
+    to_query_params(filters, count_unsigned)
+    | (
+        {"tab": st.session_state["tab"]}
+        if st.session_state.get("tab", "Overview") != "Overview"
+        else {}
+    )
+)
 
 if cohort.empty:
     st.warning(
-        "No picks match these filters. Try removing a filter or widening the draft years, "
+        "No picks match these filters. Try removing a filter or widening the draft classes, "
         "or press **Reset filters** in the sidebar."
     )
     st.stop()
 
-# --- 1. summary tiles ------------------------------------------------------------------------
-
-summary = metrics.cohort_summary(cohort, rules)
-base_summary = metrics.cohort_summary(base, rules)
-enough = summary.outcome_n >= metrics.MIN_OUTCOME_ROWS
-who = "players" if count_unsigned else "signed players"
-
-
-def outcome(value: str) -> str:
-    return value if enough else fmt.DASH
-
-
-tiles = [
-    ("Picks", fmt.count(summary.picks), fmt.count(base_summary.picks), "Draft picks matching."),
-    (
-        "Signed",
-        fmt.pct(summary.signed_pct),
-        fmt.pct(base_summary.signed_pct),
-        "Share of picks who signed with the drafting team.",
-    ),
-    (
-        "Reached MLB",
-        outcome(fmt.pct(summary.mlb_pct)),
-        fmt.pct(base_summary.mlb_pct),
-        f"Share of 2012–2019 {who} who played in the majors.",
-    ),
-    (
-        "Years to debut",
-        outcome(fmt.years(summary.years_to_debut)),
-        fmt.years(base_summary.years_to_debut),
-        "Median years from draft day to MLB debut, for players who debuted.",
-    ),
-    (
-        "WAR per player",
-        outcome(fmt.war(summary.war_per_player)),
-        fmt.war(base_summary.war_per_player),
-        f"Average career WAR per 2012–2019 {who.removesuffix('s')}, counting 0 for "
-        "players who never debuted.",
-    ),
-    (
-        f"Hit % ({hit_war}+ WAR)",
-        outcome(fmt.pct(summary.hit_pct)),
-        fmt.pct(base_summary.hit_pct),
-        f"Share of 2012–2019 {who} with at least {hit_war} career WAR.",
-    ),
-]
-for col, (name, value, baseline, help_text) in zip(st.columns(6), tiles, strict=True):
-    with col:
-        st.metric(name, value, help=help_text, border=True)
-        st.caption(f"All draftees: {baseline}")
-ui.takeaway(metrics.takeaway_summary(label, summary, base_summary, rules, is_baseline))
-
-if not enough:
-    st.info(
-        f"Fewer than {metrics.MIN_OUTCOME_ROWS} {who} from the 2012–2019 classes match these "
-        "filters, so the outcome panels are hidden. Widen the filters to see them."
-    )
-else:
-    # --- 2. compare groups -------------------------------------------------------------------
-    st.subheader("Compare groups")
-    c1, c2, c3 = st.columns(3)
-    group_label = c1.selectbox("Group by", list(GROUP_BY), key="cmp_by")
-    metric_key = c2.selectbox(
-        "Metric", list(METRICS), format_func=lambda k: METRICS[k].label, key="cmp_metric"
-    )
-    min_n = c3.slider("Minimum players per group", 5, 200, 20, step=5, key="cmp_min_n")
-    stats = metrics.group_stats(cohort, GROUP_BY[group_label], metric_key, min_n, rules)
-    baseline_value = metrics.metric_stat(base, metric_key, rules).value
-    ui.chart(charts.compare_bars(stats.table, metric_key, baseline_value), key="compare")
-    n_means = {
-        "median_bonus": "picks with a known bonus",
-        "years_to_debut": "players who reached MLB",
-    }.get(metric_key, f"2012–2019 {who}")
-    notes = [f"n = {n_means}."]
-    if METRICS[metric_key].kind == "rate":
-        notes.append("Whiskers show 90% Wilson intervals.")
-    elif METRICS[metric_key].kind == "mean":
-        notes.append("Whiskers show the mean ± 1.645 standard errors (90%).")
-    shown = metrics.shown_groups(stats.table)
-    if len(shown) < len(stats.table):
-        notes.append(
-            f"Showing the {metrics.EXTREME_BARS} highest and {metrics.EXTREME_BARS} lowest "
-            f"of {len(stats.table)} groups."
-        )
-    groups = "group" if stats.hidden == 1 else "groups"
-    notes.append(f"{stats.hidden} {groups} hidden (fewer than {min_n} players).")
-    st.caption(ui.md(" ".join(notes)))
-    ui.takeaway(metrics.takeaway_compare(shown, metric_key, baseline_value))
-
-    # --- 3. draft slot curve -----------------------------------------------------------------
-    st.subheader("Draft slot curve")
-    cohort_curve = metrics.slot_curve(cohort, rules)
-    # with no filters the cohort is the baseline; draw it once
-    base_curve = cohort_curve.iloc[0:0] if is_baseline else metrics.slot_curve(base, rules)
-    ui.chart(charts.slot_chart(cohort_curve, base_curve, label), key="slot")
-    st.caption(f"Share of 2012–2019 {who} who reached MLB, by overall pick (90% intervals).")
-    ui.takeaway(metrics.takeaway_slot(cohort_curve, base_curve, label, is_baseline))
-
-    # --- 4. bonus vs outcome -----------------------------------------------------------------
-    st.subheader("Bonus vs. outcome")
-    points = metrics.bonus_points(cohort)
-    ui.chart(charts.bonus_scatter(points), key="bonus")
-    st.caption(
-        ui.md(
-            "Bonus data is thin after round 10 for 2012–2016 and 2018–2019. "
-            "Bonuses under $1k are shown at $1k."
-        )
-    )
-    ui.takeaway(metrics.takeaway_bonus(points))
-
-# --- 5. trend by draft class -------------------------------------------------------------------
-
-st.subheader("Trend by draft class")
-t1, t2, t3 = st.columns([1, 1, 2])
-trend_label = t1.selectbox("Metric", list(TREND_METRICS), key="trend_metric")
-line_dim = t2.radio("Lines for", ["Conference group", "School"], horizontal=True, key="trend_dim")
-line_col = "conference_group" if line_dim == "Conference group" else "school"
-line_options = cohort[line_col].value_counts().index.tolist()
-picked = schools if line_col == "school" else conferences
-default_lines = [x for x in picked if x in line_options][:4] or line_options[:4]
-chosen = t3.multiselect(
-    f"{line_dim}s to compare (up to 4)", line_options, default=default_lines, max_selections=4
+view = tabs.View(
+    df=df,
+    cohort=cohort,
+    base=apply_filters(df, filters.years_only()),
+    curve=load_curve(),
+    filters=filters,
+    rules=rules,
+    label=metrics.describe_cohort(filters),
 )
-lines = {name: cohort[cohort[line_col] == name] for name in chosen}
-trend = metrics.trend_table(
-    base, cohort, lines, TREND_METRICS[trend_label], rules, cohort_label=label
-)
-ui.chart(charts.trend_chart(trend, trend_label), key="trend")
-trend_notes = {
-    "Share of picks": "Share of each draft class made up of these picks.",
-    "Median bonus": "Median signing bonus among picks with a known bonus.",
-    "MLB %": f"Share of {who} who reached MLB; 2012–2019 classes only.",
-}
-st.caption(trend_notes[trend_label])
-ui.takeaway(metrics.takeaway_trend(trend, trend_label))
-
-# --- 6. player table ---------------------------------------------------------------------------
-
-st.subheader("Players")
-table = cohort[list(TABLE_COLUMNS)].rename(columns=TABLE_COLUMNS)
-number = st.column_config.NumberColumn
-st.dataframe(
-    table,
-    hide_index=True,
-    height=420,
-    column_config={
-        "Year": number(format="%d"),
-        "Pick": number(format="%d"),
-        "Age at draft": number(format="%.1f"),
-        "Bonus": number(format="$%,d"),
-        "Slot value": number(format="$%,d"),
-        "Years to debut": number(format="%.1f"),
-        "Career WAR": number(format="%.1f"),
-    },
-)
-st.download_button(
-    "Download CSV",
-    table.to_csv(index=False).encode(),
-    file_name="draft_picks.csv",
-    mime="text/csv",
-)
-ui.takeaway(metrics.takeaway_table(cohort))
+for name, container in zip(
+    tabs.TABS, st.tabs(tabs.TABS, key="tab", on_change="rerun"), strict=True
+):
+    if container.open:
+        with container:
+            tabs.RENDER[name](view)

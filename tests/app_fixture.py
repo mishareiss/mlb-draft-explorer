@@ -12,13 +12,19 @@
 
 Eligible signed players: 8 + 10 + 4 + 4 = 26, of whom 7 reached MLB and 3 have 5+ WAR.
 Counting unsigned picks: 28 players, still 7 reached MLB.
+
+Outcome tiers and the slot model's columns come from the real models/08 SQL and
+transform/slot_model.py, run on these rows.
 """
 
 from __future__ import annotations
 
 import datetime as dt
 
+import duckdb
 import pandas as pd
+
+from transform import run, slot_model
 
 GROUPS = {
     "Alpha U": ("4-year college", "D1", "Southeastern", "Southeastern"),
@@ -107,4 +113,19 @@ def make_outcomes() -> pd.DataFrame:
                 "outcome_eligible": final and year <= 2019,
             }
         )
-    return pd.DataFrame(rows)
+    return with_model_columns(pd.DataFrame(rows))
+
+
+def with_model_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """Append outcome tiers (models/08) and the slot model's per-row columns."""
+    con = duckdb.connect()
+    con.register("fixture", df)
+    con.execute("create table draft_outcomes as select * from fixture")
+    con.execute((run.MODELS / "08_outcome_tiers.sql").read_text())
+    tiers = con.execute(
+        "select draft_year, pick_number, outcome_tier, outcome_tier_order, became_regular "
+        "from draft_outcomes"
+    ).df()
+    df = df.merge(tiers, on=["draft_year", "pick_number"], how="left")
+    curve, _ = slot_model.fit_all(df)
+    return df.merge(slot_model.row_columns(df, curve), on=["draft_year", "pick_number"])

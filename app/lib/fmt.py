@@ -37,3 +37,22 @@ def years(x: float | None) -> str:
 
 def count(n: int) -> str:
     return f"{n:,}"
+
+
+def pct_short(x: float | None) -> str:
+    """Fraction -> '12%' at 10% and above, '2.4%' below (headings)."""
+    if _missing(x):
+        return DASH
+    return f"{100 * x:.0f}%" if abs(x) >= 0.095 else f"{100 * x:.1f}%"
+
+
+def pts(x: float | None) -> str:
+    """Percentage points -> '+2.8 pts' / '−3.9 pts'."""
+    if _missing(x):
+        return DASH
+    return f"{x:+.1f} pts".replace("-", "−")
+
+
+def signed_num(x: float | None, digits: int = 1) -> str:
+    """'+0.1' / '−2.1' (interval ends)."""
+    return DASH if _missing(x) else f"{x:+.{digits}f}".replace("-", "−")

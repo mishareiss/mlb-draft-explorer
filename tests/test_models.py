@@ -1,5 +1,6 @@
 """Run the real models/*.sql on the handcrafted fixtures in tests/fixtures/models/."""
 
+import duckdb
 import pandas as pd
 import pytest
 from conftest import FIXTURES
@@ -165,3 +166,67 @@ def test_career_war_excludes_seasons_after_2026(out):
 def test_non_debuted_player_gets_zero_war(out):
     r = row(out, 2025, 11)
     assert not r["reached_mlb"] and r["career_war"] == 0.0 and pd.isna(r["years_to_debut"])
+
+
+# --- outcome tiers (models/08 on a synthetic draft_outcomes) --------------------------------
+
+
+@pytest.fixture(scope="module")
+def tiers() -> pd.DataFrame:
+    rows = [  # draft_year, pick, is_final_draft, signed, reached_mlb, career_war
+        (2015, 1, True, True, True, 0.99),
+        (2015, 2, True, True, True, 1.0),
+        (2015, 3, True, True, True, 4.99),
+        (2015, 4, True, True, True, 5.0),
+        (2015, 5, True, True, True, 15.0),
+        (2015, 6, False, False, None, None),  # drafted again later
+        (2016, 7, True, True, False, 0.0),
+        (2017, 8, True, False, False, 0.0),
+        (2021, 9, True, True, True, 20.0),
+    ]
+    con = duckdb.connect()
+    con.execute(
+        "create table draft_outcomes (draft_year int, pick_number int, is_final_draft bool, "
+        "signed bool, reached_mlb bool, career_war double, outcome_eligible bool)"
+    )
+    for r in rows:
+        eligible = r[2] and 2012 <= r[0] <= 2019
+        con.execute("insert into draft_outcomes values (?, ?, ?, ?, ?, ?, ?)", [*r, eligible])
+    con.execute((run.MODELS / "08_outcome_tiers.sql").read_text())
+    return con.execute("select * from draft_outcomes").df().set_index("pick_number")
+
+
+@pytest.mark.parametrize(
+    ("pick", "tier", "order"),
+    [
+        (1, "Cup of coffee", 2),
+        (2, "Role player", 3),
+        (3, "Role player", 3),
+        (4, "Regular", 4),
+        (5, "Star", 5),
+        (6, "Didn't sign", 0),
+        (7, "Never reached MLB", 1),
+        (8, "Didn't sign", 0),
+    ],
+)
+def test_outcome_tier_boundaries(tiers, pick, tier, order):
+    assert tiers.loc[pick, "outcome_tier"] == tier
+    assert tiers.loc[pick, "outcome_tier_order"] == order
+
+
+def test_2020_plus_has_no_tier(tiers):
+    assert pd.isna(tiers.loc[9, "outcome_tier"]) and pd.isna(tiers.loc[9, "outcome_tier_order"])
+    assert pd.isna(tiers.loc[9, "became_regular"])
+
+
+def test_became_regular_only_on_eligible_rows(tiers):
+    assert tiers.loc[4, "became_regular"] and not tiers.loc[3, "became_regular"]
+    assert not tiers.loc[8, "became_regular"]  # eligible but unsigned: False, not null
+    assert pd.isna(tiers.loc[6, "became_regular"])  # non-final
+
+
+def test_fixture_has_slot_columns(out):
+    for col in ["exp_mlb_signed", "exp_mlb_all", "exp_regular_signed", "exp_regular_all"]:
+        assert out[col].between(0, 1).all()
+    assert pd.isna(row(out, 2014, 400)["mlb_minus_exp"])  # non-final
+    assert pd.isna(row(out, 2024, 20)["mlb_minus_exp"])  # 2020+

@@ -18,14 +18,19 @@ from typing import Any
 import pandas as pd
 
 from ingest import paths
+from transform import slot_model
 
 log = logging.getLogger(__name__)
 
 OUTCOMES = paths.PROCESSED / "draft_outcomes.parquet"
 REPORT = paths.PROCESSED / "quality_report.json"
+CURVE = paths.PROCESSED / "slot_expectation.parquet"
 YEARS = range(2012, 2026)
 MAX_EXAMPLES = 20
 EXAMPLE_COLS = ["draft_year", "pick_number", "player_name"]
+EXP_COLS = list(slot_model.CURVES)
+TIERS = ["Didn't sign", "Never reached MLB", "Cup of coffee", "Role player", "Regular", "Star"]
+TIER_YEARS = (2012, 2019)
 
 
 def expected_max_round(year: int) -> int:
@@ -263,6 +268,68 @@ def check_debuted_signed(df: pd.DataFrame) -> dict:
     )
 
 
+def check_slot_expectation_complete(df: pd.DataFrame) -> dict:
+    exp = df[EXP_COLS]
+    bad = df[(exp.isna() | (exp < 0) | (exp > 1)).any(axis=1)]
+    return _fail_if_any(
+        "slot_expectation_complete",
+        "model",
+        bad[[*EXAMPLE_COLS, *EXP_COLS]],
+        "rows missing an exp_* value or with one outside [0, 1]",
+    )
+
+
+def check_slot_curve_monotone(curve: pd.DataFrame) -> dict:
+    curve = curve.sort_values("pick_number")
+    rises = [  # rise above the lowest value at any earlier pick
+        {"curve": col, "pick_number": int(pick), "rise_pts": round(100 * float(rise), 2)}
+        for col in EXP_COLS
+        for pick, rise in zip(curve["pick_number"], curve[col] - curve[col].cummin(), strict=True)
+        if rise > slot_model.MAX_RISE
+    ]
+    return _fail_if_any(
+        "slot_curve_monotone",
+        "model",
+        pd.DataFrame(rises, columns=["curve", "pick_number", "rise_pts"]),
+        f"picks where an expected-by-pick curve is more than {100 * slot_model.MAX_RISE}"
+        " points above its value at an earlier pick",
+    )
+
+
+def check_slot_model_calibrated(deciles: list[dict]) -> dict:
+    """Leave-one-class-out deciles of exp_mlb_signed whose observed rate is outside the 90%
+    Wilson interval around the expected rate."""
+    bad = []
+    for d in deciles:
+        lo, hi = slot_model.wilson_interval(d["expected"], d["n"])
+        if not lo <= d["observed"] <= hi:
+            bad.append({**d, "interval_low": round(lo, 4), "interval_high": round(hi, 4)})
+    return _result(
+        "slot_model_calibrated",
+        "model",
+        "warn" if bad else "pass",
+        len(bad),
+        0,
+        f"of {len(deciles)} leave-one-class-out deciles of exp_mlb_signed, those whose observed"
+        " MLB rate is outside the 90% Wilson interval around the expected rate",
+        pd.DataFrame(bad),
+    )
+
+
+def check_outcome_tiers_complete(df: pd.DataFrame) -> dict:
+    in_years = df["draft_year"].between(*TIER_YEARS)
+    tier = df["outcome_tier"]
+    bad = df[(in_years & ~tier.isin(TIERS)) | (~in_years & tier.notna())]
+    counts = tier[in_years].value_counts()
+    return _fail_if_any(
+        "outcome_tiers_complete",
+        "business_logic",
+        bad[[*EXAMPLE_COLS, "outcome_tier"]],
+        f"rows with a missing 2012-2019 tier or a 2020+ tier; tier counts sum to "
+        f"{int(counts.sum()):,} of {int(in_years.sum()):,} 2012-2019 rows",
+    )
+
+
 CHECKS: list[Callable[[pd.DataFrame], dict]] = [
     check_unique_picks,
     check_one_final_draft,
@@ -278,11 +345,30 @@ CHECKS: list[Callable[[pd.DataFrame], dict]] = [
     check_unknown_school_type,
     check_signed_non_final,
     check_debuted_signed,
+    check_slot_expectation_complete,
+    check_outcome_tiers_complete,
 ]
 
 
-def run_checks(df: pd.DataFrame, expected_rows: int) -> list[dict]:
-    return [check_row_count(df, expected_rows)] + [check(df) for check in CHECKS]
+def run_checks(
+    df: pd.DataFrame,
+    expected_rows: int,
+    curve: pd.DataFrame | None = None,
+    slot_eval: dict | None = None,
+) -> list[dict]:
+    """All checks. `curve` defaults to the exp_* values on the rows themselves and
+    `slot_eval` to a fresh slot_model.evaluate(df)."""
+    if curve is None:
+        curve = df.drop_duplicates("pick_number")[["pick_number", *EXP_COLS]]
+    if slot_eval is None:
+        slot_eval = slot_model.evaluate(df)
+    deciles = slot_eval["curves"]["exp_mlb_signed"]["loco_deciles"]
+    return [
+        check_row_count(df, expected_rows),
+        *(check(df) for check in CHECKS),
+        check_slot_curve_monotone(curve),
+        check_slot_model_calibrated(deciles),
+    ]
 
 
 # --- tables for the Data Quality page ------------------------------------------------------
@@ -304,8 +390,21 @@ def school_type_mix_table(df: pd.DataFrame) -> list[dict]:
     return t.to_dict("records")
 
 
-def build_report(df: pd.DataFrame, expected_rows: int) -> dict:
-    checks = run_checks(df, expected_rows)
+def tier_mix_table(df: pd.DataFrame) -> list[dict]:
+    rows = df[df["draft_year"].between(*TIER_YEARS)]
+    t = (
+        rows.groupby(["draft_year", "outcome_tier_order", "outcome_tier"])
+        .size()
+        .rename("picks")
+        .reset_index()
+    )
+    t["pct"] = (100 * t["picks"] / t.groupby("draft_year")["picks"].transform("sum")).round(1)
+    return t.to_dict("records")
+
+
+def build_report(df: pd.DataFrame, expected_rows: int, curve: pd.DataFrame | None = None) -> dict:
+    slot_eval = slot_model.evaluate(df)
+    checks = run_checks(df, expected_rows, curve, slot_eval)
     return {
         "rows": len(df),
         "summary": {s: sum(c["status"] == s for c in checks) for s in ("pass", "warn", "fail")},
@@ -313,6 +412,8 @@ def build_report(df: pd.DataFrame, expected_rows: int) -> dict:
         "tables": {
             "bonus_coverage_by_year_round_band": bonus_coverage_table(df),
             "school_type_mix_by_year": school_type_mix_table(df),
+            "outcome_tier_mix_by_year": tier_mix_table(df),
+            "slot_model": slot_eval,
         },
     }
 
@@ -329,7 +430,7 @@ def _jsonable(obj: Any) -> Any:
 def main() -> int:
     df = pd.read_parquet(OUTCOMES)
     expected = len(pd.read_parquet(paths.INTERIM / "draft_picks.parquet", columns=["draft_year"]))
-    report = build_report(df, expected)
+    report = build_report(df, expected, pd.read_parquet(CURVE))
     REPORT.write_text(json.dumps(report, indent=2, default=_jsonable) + "\n")
     for c in report["checks"]:
         log.info(

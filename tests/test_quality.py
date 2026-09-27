@@ -87,6 +87,45 @@ def test_out_of_range_age_warns_with_examples(good):
     assert result["status"] == "warn" and len(result["examples"]) == 1
 
 
+def test_missing_expectation_fails(good):
+    broken = good.copy()
+    broken.loc[broken.index[0], "exp_mlb_all"] = None
+    assert checks.check_slot_expectation_complete(broken)["status"] == "fail"
+    out_of_range = good.copy()
+    out_of_range.loc[out_of_range.index[0], "exp_regular_signed"] = 1.2
+    assert checks.check_slot_expectation_complete(out_of_range)["status"] == "fail"
+    assert checks.check_slot_expectation_complete(good)["status"] == "pass"
+
+
+def test_rising_curve_fails():
+    curve = pd.DataFrame({"pick_number": range(1, 6)})
+    for col in checks.EXP_COLS:
+        curve[col] = [0.5, 0.4, 0.3, 0.2, 0.1]
+    assert checks.check_slot_curve_monotone(curve)["status"] == "pass"
+    curve.loc[3, "exp_mlb_signed"] = 0.32  # a 2-point rise from pick 3 to pick 4
+    result = checks.check_slot_curve_monotone(curve)
+    assert result["status"] == "fail"
+    assert result["examples"] == [{"curve": "exp_mlb_signed", "pick_number": 4, "rise_pts": 2.0}]
+
+
+def test_miscalibrated_decile_warns():
+    ok = {"decile": 1, "n": 700, "expected": 0.20, "observed": 0.21}
+    off = {"decile": 2, "n": 700, "expected": 0.20, "observed": 0.30}
+    assert checks.check_slot_model_calibrated([ok])["status"] == "pass"
+    result = checks.check_slot_model_calibrated([ok, off])
+    assert result["status"] == "warn" and result["value"] == 1
+
+
+def test_missing_tier_fails(good):
+    broken = good.copy()
+    broken.loc[broken["draft_year"] == 2016, "outcome_tier"] = None
+    assert checks.check_outcome_tiers_complete(broken)["status"] == "fail"
+    late = good.copy()
+    late.loc[late["draft_year"] == 2024, "outcome_tier"] = "Star"
+    assert checks.check_outcome_tiers_complete(late)["status"] == "fail"
+    assert checks.check_outcome_tiers_complete(good)["status"] == "pass"
+
+
 def test_expected_max_round():
     assert [checks.expected_max_round(y) for y in (2012, 2019, 2020, 2021, 2025)] == [
         40,
@@ -108,5 +147,7 @@ def test_processed_data_has_no_fail():
     else:  # CI: interim data is not committed; use the count the committed report checked
         report = json.loads((paths.PROCESSED / "quality_report.json").read_text())
         expected = by_name(report["checks"])["row_count"]["threshold"]
-    failed = [r["name"] for r in checks.run_checks(df, expected) if r["status"] == "fail"]
+    curve = pd.read_parquet(checks.CURVE)
+    results = checks.run_checks(df, expected, curve)
+    failed = [r["name"] for r in results if r["status"] == "fail"]
     assert failed == []

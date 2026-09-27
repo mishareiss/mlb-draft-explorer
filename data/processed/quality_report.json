@@ -1,8 +1,8 @@
 {
   "rows": 12974,
   "summary": {
-    "pass": 14,
-    "warn": 1,
+    "pass": 17,
+    "warn": 2,
     "fail": 0
   },
   "checks": [
@@ -234,6 +234,51 @@
       "threshold": 0,
       "detail": "0 debuted players (final-draft rows) not marked signed",
       "examples": []
+    },
+    {
+      "name": "slot_expectation_complete",
+      "category": "model",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0,
+      "detail": "0 rows missing an exp_* value or with one outside [0, 1]",
+      "examples": []
+    },
+    {
+      "name": "outcome_tiers_complete",
+      "category": "business_logic",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0,
+      "detail": "0 rows with a missing 2012-2019 tier or a 2020+ tier; tier counts sum to 9,742 of 9,742 2012-2019 rows",
+      "examples": []
+    },
+    {
+      "name": "slot_curve_monotone",
+      "category": "model",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0,
+      "detail": "0 picks where an expected-by-pick curve is more than 0.5 points above its value at an earlier pick",
+      "examples": []
+    },
+    {
+      "name": "slot_model_calibrated",
+      "category": "model",
+      "status": "warn",
+      "value": 1,
+      "threshold": 0,
+      "detail": "of 10 leave-one-class-out deciles of exp_mlb_signed, those whose observed MLB rate is outside the 90% Wilson interval around the expected rate",
+      "examples": [
+        {
+          "decile": 6,
+          "n": 731,
+          "expected": 0.1423,
+          "observed": 0.1683,
+          "interval_low": 0.1224,
+          "interval_high": 0.1649
+        }
+      ]
     }
   ],
   "tables": {
@@ -998,6 +1043,698 @@
         "picks": 3,
         "pct": 0.5
       }
-    ]
+    ],
+    "outcome_tier_mix_by_year": [
+      {
+        "draft_year": 2012,
+        "outcome_tier_order": 0.0,
+        "outcome_tier": "Didn't sign",
+        "picks": 317,
+        "pct": 25.6
+      },
+      {
+        "draft_year": 2012,
+        "outcome_tier_order": 1.0,
+        "outcome_tier": "Never reached MLB",
+        "picks": 737,
+        "pct": 59.6
+      },
+      {
+        "draft_year": 2012,
+        "outcome_tier_order": 2.0,
+        "outcome_tier": "Cup of coffee",
+        "picks": 102,
+        "pct": 8.2
+      },
+      {
+        "draft_year": 2012,
+        "outcome_tier_order": 3.0,
+        "outcome_tier": "Role player",
+        "picks": 40,
+        "pct": 3.2
+      },
+      {
+        "draft_year": 2012,
+        "outcome_tier_order": 4.0,
+        "outcome_tier": "Regular",
+        "picks": 27,
+        "pct": 2.2
+      },
+      {
+        "draft_year": 2012,
+        "outcome_tier_order": 5.0,
+        "outcome_tier": "Star",
+        "picks": 14,
+        "pct": 1.1
+      },
+      {
+        "draft_year": 2013,
+        "outcome_tier_order": 0.0,
+        "outcome_tier": "Didn't sign",
+        "picks": 315,
+        "pct": 25.9
+      },
+      {
+        "draft_year": 2013,
+        "outcome_tier_order": 1.0,
+        "outcome_tier": "Never reached MLB",
+        "picks": 704,
+        "pct": 57.9
+      },
+      {
+        "draft_year": 2013,
+        "outcome_tier_order": 2.0,
+        "outcome_tier": "Cup of coffee",
+        "picks": 123,
+        "pct": 10.1
+      },
+      {
+        "draft_year": 2013,
+        "outcome_tier_order": 3.0,
+        "outcome_tier": "Role player",
+        "picks": 36,
+        "pct": 3.0
+      },
+      {
+        "draft_year": 2013,
+        "outcome_tier_order": 4.0,
+        "outcome_tier": "Regular",
+        "picks": 26,
+        "pct": 2.1
+      },
+      {
+        "draft_year": 2013,
+        "outcome_tier_order": 5.0,
+        "outcome_tier": "Star",
+        "picks": 11,
+        "pct": 0.9
+      },
+      {
+        "draft_year": 2014,
+        "outcome_tier_order": 0.0,
+        "outcome_tier": "Didn't sign",
+        "picks": 313,
+        "pct": 25.8
+      },
+      {
+        "draft_year": 2014,
+        "outcome_tier_order": 1.0,
+        "outcome_tier": "Never reached MLB",
+        "picks": 738,
+        "pct": 60.8
+      },
+      {
+        "draft_year": 2014,
+        "outcome_tier_order": 2.0,
+        "outcome_tier": "Cup of coffee",
+        "picks": 101,
+        "pct": 8.3
+      },
+      {
+        "draft_year": 2014,
+        "outcome_tier_order": 3.0,
+        "outcome_tier": "Role player",
+        "picks": 33,
+        "pct": 2.7
+      },
+      {
+        "draft_year": 2014,
+        "outcome_tier_order": 4.0,
+        "outcome_tier": "Regular",
+        "picks": 18,
+        "pct": 1.5
+      },
+      {
+        "draft_year": 2014,
+        "outcome_tier_order": 5.0,
+        "outcome_tier": "Star",
+        "picks": 11,
+        "pct": 0.9
+      },
+      {
+        "draft_year": 2015,
+        "outcome_tier_order": 0.0,
+        "outcome_tier": "Didn't sign",
+        "picks": 271,
+        "pct": 22.3
+      },
+      {
+        "draft_year": 2015,
+        "outcome_tier_order": 1.0,
+        "outcome_tier": "Never reached MLB",
+        "picks": 761,
+        "pct": 62.7
+      },
+      {
+        "draft_year": 2015,
+        "outcome_tier_order": 2.0,
+        "outcome_tier": "Cup of coffee",
+        "picks": 113,
+        "pct": 9.3
+      },
+      {
+        "draft_year": 2015,
+        "outcome_tier_order": 3.0,
+        "outcome_tier": "Role player",
+        "picks": 39,
+        "pct": 3.2
+      },
+      {
+        "draft_year": 2015,
+        "outcome_tier_order": 4.0,
+        "outcome_tier": "Regular",
+        "picks": 19,
+        "pct": 1.6
+      },
+      {
+        "draft_year": 2015,
+        "outcome_tier_order": 5.0,
+        "outcome_tier": "Star",
+        "picks": 11,
+        "pct": 0.9
+      },
+      {
+        "draft_year": 2016,
+        "outcome_tier_order": 0.0,
+        "outcome_tier": "Didn't sign",
+        "picks": 293,
+        "pct": 24.1
+      },
+      {
+        "draft_year": 2016,
+        "outcome_tier_order": 1.0,
+        "outcome_tier": "Never reached MLB",
+        "picks": 709,
+        "pct": 58.3
+      },
+      {
+        "draft_year": 2016,
+        "outcome_tier_order": 2.0,
+        "outcome_tier": "Cup of coffee",
+        "picks": 139,
+        "pct": 11.4
+      },
+      {
+        "draft_year": 2016,
+        "outcome_tier_order": 3.0,
+        "outcome_tier": "Role player",
+        "picks": 46,
+        "pct": 3.8
+      },
+      {
+        "draft_year": 2016,
+        "outcome_tier_order": 4.0,
+        "outcome_tier": "Regular",
+        "picks": 19,
+        "pct": 1.6
+      },
+      {
+        "draft_year": 2016,
+        "outcome_tier_order": 5.0,
+        "outcome_tier": "Star",
+        "picks": 10,
+        "pct": 0.8
+      },
+      {
+        "draft_year": 2017,
+        "outcome_tier_order": 0.0,
+        "outcome_tier": "Didn't sign",
+        "picks": 273,
+        "pct": 22.5
+      },
+      {
+        "draft_year": 2017,
+        "outcome_tier_order": 1.0,
+        "outcome_tier": "Never reached MLB",
+        "picks": 750,
+        "pct": 61.7
+      },
+      {
+        "draft_year": 2017,
+        "outcome_tier_order": 2.0,
+        "outcome_tier": "Cup of coffee",
+        "picks": 137,
+        "pct": 11.3
+      },
+      {
+        "draft_year": 2017,
+        "outcome_tier_order": 3.0,
+        "outcome_tier": "Role player",
+        "picks": 36,
+        "pct": 3.0
+      },
+      {
+        "draft_year": 2017,
+        "outcome_tier_order": 4.0,
+        "outcome_tier": "Regular",
+        "picks": 18,
+        "pct": 1.5
+      },
+      {
+        "draft_year": 2017,
+        "outcome_tier_order": 5.0,
+        "outcome_tier": "Star",
+        "picks": 1,
+        "pct": 0.1
+      },
+      {
+        "draft_year": 2018,
+        "outcome_tier_order": 0.0,
+        "outcome_tier": "Didn't sign",
+        "picks": 341,
+        "pct": 28.1
+      },
+      {
+        "draft_year": 2018,
+        "outcome_tier_order": 1.0,
+        "outcome_tier": "Never reached MLB",
+        "picks": 684,
+        "pct": 56.3
+      },
+      {
+        "draft_year": 2018,
+        "outcome_tier_order": 2.0,
+        "outcome_tier": "Cup of coffee",
+        "picks": 106,
+        "pct": 8.7
+      },
+      {
+        "draft_year": 2018,
+        "outcome_tier_order": 3.0,
+        "outcome_tier": "Role player",
+        "picks": 55,
+        "pct": 4.5
+      },
+      {
+        "draft_year": 2018,
+        "outcome_tier_order": 4.0,
+        "outcome_tier": "Regular",
+        "picks": 20,
+        "pct": 1.6
+      },
+      {
+        "draft_year": 2018,
+        "outcome_tier_order": 5.0,
+        "outcome_tier": "Star",
+        "picks": 8,
+        "pct": 0.7
+      },
+      {
+        "draft_year": 2019,
+        "outcome_tier_order": 0.0,
+        "outcome_tier": "Didn't sign",
+        "picks": 305,
+        "pct": 25.1
+      },
+      {
+        "draft_year": 2019,
+        "outcome_tier_order": 1.0,
+        "outcome_tier": "Never reached MLB",
+        "picks": 712,
+        "pct": 58.5
+      },
+      {
+        "draft_year": 2019,
+        "outcome_tier_order": 2.0,
+        "outcome_tier": "Cup of coffee",
+        "picks": 135,
+        "pct": 11.1
+      },
+      {
+        "draft_year": 2019,
+        "outcome_tier_order": 3.0,
+        "outcome_tier": "Role player",
+        "picks": 40,
+        "pct": 3.3
+      },
+      {
+        "draft_year": 2019,
+        "outcome_tier_order": 4.0,
+        "outcome_tier": "Regular",
+        "picks": 19,
+        "pct": 1.6
+      },
+      {
+        "draft_year": 2019,
+        "outcome_tier_order": 5.0,
+        "outcome_tier": "Star",
+        "picks": 6,
+        "pct": 0.5
+      }
+    ],
+    "slot_model": {
+      "method": {
+        "exp_mlb_signed": "logistic_spline",
+        "exp_mlb_all": "logistic_spline",
+        "exp_regular_signed": "logistic_spline",
+        "exp_regular_all": "logistic_spline"
+      },
+      "curves": {
+        "exp_mlb_signed": {
+          "n": 7314,
+          "base_rate": 0.2077,
+          "baseline": {
+            "brier": 0.16455,
+            "log_loss": 0.51087
+          },
+          "in_sample": {
+            "brier": 0.12951,
+            "log_loss": 0.41504
+          },
+          "leave_one_class_out": {
+            "brier": 0.12962,
+            "log_loss": 0.41552
+          },
+          "loco_deciles": [
+            {
+              "decile": 1,
+              "n": 732,
+              "expected": 0.0604,
+              "observed": 0.056
+            },
+            {
+              "decile": 2,
+              "n": 732,
+              "expected": 0.0689,
+              "observed": 0.0683
+            },
+            {
+              "decile": 3,
+              "n": 732,
+              "expected": 0.079,
+              "observed": 0.0656
+            },
+            {
+              "decile": 4,
+              "n": 732,
+              "expected": 0.0922,
+              "observed": 0.0888
+            },
+            {
+              "decile": 5,
+              "n": 731,
+              "expected": 0.112,
+              "observed": 0.1135
+            },
+            {
+              "decile": 6,
+              "n": 731,
+              "expected": 0.1423,
+              "observed": 0.1683
+            },
+            {
+              "decile": 7,
+              "n": 731,
+              "expected": 0.1899,
+              "observed": 0.2038
+            },
+            {
+              "decile": 8,
+              "n": 731,
+              "expected": 0.2673,
+              "observed": 0.249
+            },
+            {
+              "decile": 9,
+              "n": 731,
+              "expected": 0.4052,
+              "observed": 0.4049
+            },
+            {
+              "decile": 10,
+              "n": 731,
+              "expected": 0.6605,
+              "observed": 0.6594
+            }
+          ],
+          "expected_at_pick": {
+            "1": 0.9771,
+            "10": 0.849,
+            "30": 0.6988,
+            "100": 0.4882,
+            "300": 0.2061,
+            "1000": 0.0633
+          }
+        },
+        "exp_mlb_all": {
+          "n": 8450,
+          "base_rate": 0.1798,
+          "baseline": {
+            "brier": 0.14745,
+            "log_loss": 0.47103
+          },
+          "in_sample": {
+            "brier": 0.11286,
+            "log_loss": 0.36796
+          },
+          "leave_one_class_out": {
+            "brier": 0.11296,
+            "log_loss": 0.36838
+          },
+          "loco_deciles": [
+            {
+              "decile": 1,
+              "n": 845,
+              "expected": 0.0341,
+              "observed": 0.0284
+            },
+            {
+              "decile": 2,
+              "n": 845,
+              "expected": 0.0428,
+              "observed": 0.045
+            },
+            {
+              "decile": 3,
+              "n": 845,
+              "expected": 0.0535,
+              "observed": 0.0462
+            },
+            {
+              "decile": 4,
+              "n": 845,
+              "expected": 0.0675,
+              "observed": 0.0651
+            },
+            {
+              "decile": 5,
+              "n": 845,
+              "expected": 0.0873,
+              "observed": 0.0923
+            },
+            {
+              "decile": 6,
+              "n": 845,
+              "expected": 0.117,
+              "observed": 0.1243
+            },
+            {
+              "decile": 7,
+              "n": 845,
+              "expected": 0.1625,
+              "observed": 0.1822
+            },
+            {
+              "decile": 8,
+              "n": 845,
+              "expected": 0.2354,
+              "observed": 0.2142
+            },
+            {
+              "decile": 9,
+              "n": 845,
+              "expected": 0.3639,
+              "observed": 0.3763
+            },
+            {
+              "decile": 10,
+              "n": 845,
+              "expected": 0.6334,
+              "observed": 0.6237
+            }
+          ],
+          "expected_at_pick": {
+            "1": 0.9475,
+            "10": 0.8479,
+            "30": 0.7065,
+            "100": 0.4779,
+            "300": 0.2081,
+            "1000": 0.0416
+          }
+        },
+        "exp_regular_signed": {
+          "n": 7314,
+          "base_rate": 0.0325,
+          "baseline": {
+            "brier": 0.03148,
+            "log_loss": 0.14346
+          },
+          "in_sample": {
+            "brier": 0.02761,
+            "log_loss": 0.11267
+          },
+          "leave_one_class_out": {
+            "brier": 0.0278,
+            "log_loss": 0.11343
+          },
+          "loco_deciles": [
+            {
+              "decile": 1,
+              "n": 732,
+              "expected": 0.0054,
+              "observed": 0.0068
+            },
+            {
+              "decile": 2,
+              "n": 732,
+              "expected": 0.0061,
+              "observed": 0.0041
+            },
+            {
+              "decile": 3,
+              "n": 732,
+              "expected": 0.0068,
+              "observed": 0.0027
+            },
+            {
+              "decile": 4,
+              "n": 732,
+              "expected": 0.0078,
+              "observed": 0.0068
+            },
+            {
+              "decile": 5,
+              "n": 731,
+              "expected": 0.0095,
+              "observed": 0.0055
+            },
+            {
+              "decile": 6,
+              "n": 731,
+              "expected": 0.0123,
+              "observed": 0.0178
+            },
+            {
+              "decile": 7,
+              "n": 731,
+              "expected": 0.0173,
+              "observed": 0.0233
+            },
+            {
+              "decile": 8,
+              "n": 731,
+              "expected": 0.0274,
+              "observed": 0.0301
+            },
+            {
+              "decile": 9,
+              "n": 731,
+              "expected": 0.054,
+              "observed": 0.0575
+            },
+            {
+              "decile": 10,
+              "n": 731,
+              "expected": 0.1793,
+              "observed": 0.171
+            }
+          ],
+          "expected_at_pick": {
+            "1": 0.6066,
+            "10": 0.3215,
+            "30": 0.1859,
+            "100": 0.0762,
+            "300": 0.0192,
+            "1000": 0.0057
+          }
+        },
+        "exp_regular_all": {
+          "n": 8450,
+          "base_rate": 0.0282,
+          "baseline": {
+            "brier": 0.02737,
+            "log_loss": 0.12831
+          },
+          "in_sample": {
+            "brier": 0.02393,
+            "log_loss": 0.09835
+          },
+          "leave_one_class_out": {
+            "brier": 0.02409,
+            "log_loss": 0.09905
+          },
+          "loco_deciles": [
+            {
+              "decile": 1,
+              "n": 845,
+              "expected": 0.004,
+              "observed": 0.0047
+            },
+            {
+              "decile": 2,
+              "n": 845,
+              "expected": 0.0046,
+              "observed": 0.0012
+            },
+            {
+              "decile": 3,
+              "n": 845,
+              "expected": 0.0051,
+              "observed": 0.0047
+            },
+            {
+              "decile": 4,
+              "n": 845,
+              "expected": 0.0058,
+              "observed": 0.0024
+            },
+            {
+              "decile": 5,
+              "n": 845,
+              "expected": 0.007,
+              "observed": 0.0047
+            },
+            {
+              "decile": 6,
+              "n": 845,
+              "expected": 0.0091,
+              "observed": 0.013
+            },
+            {
+              "decile": 7,
+              "n": 845,
+              "expected": 0.013,
+              "observed": 0.0178
+            },
+            {
+              "decile": 8,
+              "n": 845,
+              "expected": 0.0216,
+              "observed": 0.0237
+            },
+            {
+              "decile": 9,
+              "n": 845,
+              "expected": 0.0457,
+              "observed": 0.0497
+            },
+            {
+              "decile": 10,
+              "n": 845,
+              "expected": 0.1658,
+              "observed": 0.1598
+            }
+          ],
+          "expected_at_pick": {
+            "1": 0.6206,
+            "10": 0.3148,
+            "30": 0.1855,
+            "100": 0.0774,
+            "300": 0.0178,
+            "1000": 0.0045
+          }
+        }
+      }
+    }
   }
 }

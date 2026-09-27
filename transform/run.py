@@ -3,7 +3,9 @@
 python -m transform.run
 
 Interim tables and reference CSVs are registered as `raw_*` and `ref_*` views, then the
-numbered SQL files run in order. All business logic lives in the SQL files.
+numbered SQL files run in order. All business logic lives in the SQL files. The
+expected-by-pick model (transform/slot_model.py) then adds its exp_* columns to
+draft_outcomes and builds the slot_expectation curve table.
 """
 
 from __future__ import annotations
@@ -14,11 +16,13 @@ from pathlib import Path
 import duckdb
 
 from ingest import paths
+from transform import slot_model
 
 log = logging.getLogger(__name__)
 
 MODELS = paths.ROOT / "models"
 OUT = paths.PROCESSED / "draft_outcomes.parquet"
+CURVE_OUT = paths.PROCESSED / "slot_expectation.parquet"
 INTERIM_TABLES = ["draft_picks", "people", "war_bat", "war_pitch", "bbref_draft", "bonus_backfill"]
 
 
@@ -51,19 +55,40 @@ def build(
     reference: Path = paths.REFERENCE,
     models: Path = MODELS,
 ) -> duckdb.DuckDBPyConnection:
-    """In-memory connection with every model built; `draft_outcomes` is the final table."""
+    """In-memory connection with every model built.
+
+    Final tables: `draft_outcomes` (with the slot model's columns) and `slot_expectation`.
+    """
     con = duckdb.connect()
     register_sources(con, interim, reference)
     for sql_file in sorted(models.glob("*.sql")):
         log.info("running %s", sql_file.name)
         con.execute(sql_file.read_text())
+    add_slot_expectations(con)
     return con
+
+
+def add_slot_expectations(con: duckdb.DuckDBPyConnection) -> None:
+    """Fit the slot model on draft_outcomes and join its per-row columns back on."""
+    df = con.execute("select * from draft_outcomes").df()
+    curve, _ = slot_model.fit_all(df)
+    extra = slot_model.row_columns(df, curve)
+    con.register("slot_curve_df", curve)
+    con.register("slot_rows_df", extra)
+    con.execute("create or replace table slot_expectation as select * from slot_curve_df")
+    con.execute(
+        "create or replace table draft_outcomes as select d.*, "
+        "s.* exclude (draft_year, pick_number) from draft_outcomes as d "
+        "left join slot_rows_df as s using (draft_year, pick_number) "
+        "order by draft_year, pick_number"
+    )
 
 
 def main() -> None:
     con = build()
     OUT.parent.mkdir(parents=True, exist_ok=True)
     con.execute(f"copy draft_outcomes to '{OUT}' (format parquet)")
+    con.execute(f"copy slot_expectation to '{CURVE_OUT}' (format parquet)")
     n = con.execute("select count(*) from draft_outcomes").fetchone()[0]
     log.info("wrote %d rows to %s", n, OUT)
 

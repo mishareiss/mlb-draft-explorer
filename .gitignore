@@ -1,5 +1,6 @@
 # Data: raw downloads and intermediate tables are rebuilt by `make pull`.
-# data/processed/ (draft_outcomes.parquet, quality_report.json) is committed: the app reads it.
+# data/processed/ (draft_outcomes.parquet, slot_expectation.parquet, quality_report.json) is
+# committed: the app reads it.
 data/raw/*
 data/interim/*
 !data/raw/.gitkeep
